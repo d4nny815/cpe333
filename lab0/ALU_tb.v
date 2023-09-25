@@ -1,5 +1,24 @@
 `timescale 1ns / 1ps
-
+//////////////////////////////////////////////////////////////////////////////////
+// Company:   
+// Engineer:  Daniel Gutierrez and Ryan Dosanjh
+// 
+// Create Date: 01/16/2020 11:41:46 AM
+// Design Name: 
+// Module Name: 
+// Project Name: 32bit ALU
+// Target Devices: 
+// Tool Versions: 
+// Description: Testbench file for Lab0
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 
+//     
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
 module ALU_tb ();
     reg [31:0] A, B;
     reg [2:0] ALUOp;
@@ -27,7 +46,6 @@ module ALU_tb ();
         #10
         A = 2; B = 5;
         #10
-
 
         ALUOp = 3'b110;     // SUB
         A = -2; B = -5;
