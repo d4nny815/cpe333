@@ -1,3 +1,10 @@
+// ##################
+// Header
+//
+//
+// #################
+
+
 module ALU_32b (
     input [31:0] A,
     input [31:0] B,
@@ -16,6 +23,6 @@ module ALU_32b (
             default: Result = 0;
         endcase
     end
-    // testing a change
+    
     assign Zero = Result == 32'd0;
 endmodule
