@@ -113,7 +113,7 @@ module CU_FSM(
                 csr_WE = 1'b0;
                 int_taken = 1'b0;
                 mret_exec = 1'b0;
-                NS = st_FET;
+                NS = st_FET; 
             end
 
             st_FET: begin   //waiting state
