@@ -1,6 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/HDL/ALU_32b.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_32b
-INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/HDL/ALU_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ALU_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/lab0_ALU/lab0_ALU.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
