@@ -1,0 +1,40 @@
+
+build/program.elf:     file format elf32-littleriscv
+
+Contents of section .text.init:
+ 0000 17010100 130101fe 97000000 e780c000  ................
+ 0010 6f000000                             o...            
+Contents of section .text:
+ 0014 93021000 17030000 1303c301 73105330  ............s.S0
+ 0024 b7030c11 73904230 13020000 6f000000  ....s.B0....o...
+ 0034 13021200 23a04300 73002030           ....#.C.s. 0    
+
+Disassembly of section .text.init:
+
+00000000 <entry>:
+   0:	00010117          	auipc	sp,0x10
+   4:	fe010113          	addi	sp,sp,-32 # ffe0 <__global_pointer$+0xf7a0>
+   8:	00000097          	auipc	ra,0x0
+   c:	00c080e7          	jalr	12(ra) # 14 <main>
+
+00000010 <end>:
+  10:	0000006f          	j	10 <end>
+
+Disassembly of section .text:
+
+00000014 <main>:
+  14:	00100293          	li	t0,1
+  18:	00000317          	auipc	t1,0x0
+  1c:	01c30313          	addi	t1,t1,28 # 34 <ISR>
+  20:	30531073          	csrw	mtvec,t1
+  24:	110c03b7          	lui	t2,0x110c0
+  28:	30429073          	csrw	mie,t0
+  2c:	00000213          	li	tp,0
+
+00000030 <loop>:
+  30:	0000006f          	j	30 <loop>
+
+00000034 <ISR>:
+  34:	00120213          	addi	tp,tp,1 # 1 <entry+0x1>
+  38:	0043a023          	sw	tp,0(t2) # 110c0000 <SSEG>
+  3c:	30200073          	mret

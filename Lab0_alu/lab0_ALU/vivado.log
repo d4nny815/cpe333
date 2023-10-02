@@ -1,0 +1,109 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Oct  1 23:49:39 2023
+# Process ID: 9584
+# Current directory: Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/lab0_ALU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14708 Z:\schoolfiles\school_files\cpe333_2\Lab0_alu\lab0_ALU\lab0_ALU.xpr
+# Log file: Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/lab0_ALU/vivado.log
+# Journal file: Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/lab0_ALU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/lab0_ALU/lab0_ALU.xpr
+INFO: [Project 1-313] Project file moved from 'Z:/schoolfiles/school_files/cpe333/lab0_ALU' since last save.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/lab0_ALU/lab0_ALU.gen/sources_1', nor could it be found using path 'Z:/schoolfiles/school_files/cpe333/lab0_ALU/lab0_ALU.gen/sources_1'.
+WARNING: [Project 1-312] File not found as 'Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/HDL_files/lab0/ALU_32b.v'; using path 'Z:/schoolfiles/school_files/cpe333/HDL_files/lab0/ALU_32b.v' instead.
+WARNING: [Project 1-312] File not found as 'Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/HDL_files/lab0/ALU_tb.v'; using path 'Z:/schoolfiles/school_files/cpe333/HDL_files/lab0/ALU_tb.v' instead.
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-312] File not found as 'Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/HDL_files/lab0/ALU_32b.v'; using path 'Z:/schoolfiles/school_files/cpe333/HDL_files/lab0/ALU_32b.v' instead.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/HDL_files/lab0/ALU_32b.v] -no_script -reset -force -quiet
+remove_files  Z:/schoolfiles/school_files/cpe333/HDL_files/lab0/ALU_32b.v
+export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/HDL_files/lab0/ALU_tb.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 Z:/schoolfiles/school_files/cpe333/HDL_files/lab0/ALU_tb.v
+add_files -norecurse Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/HDL/ALU_32b.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/HDL/ALU_tb.v
+update_compile_order -fileset sim_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Sun Oct  1 23:51:24 2023] Launched synth_1...
+Run output will be captured here: Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/lab0_ALU/lab0_ALU.runs/synth_1/runme.log
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/lab0_ALU/lab0_ALU.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'ALU_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/lab0_ALU/lab0_ALU.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj ALU_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/HDL/ALU_32b.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_32b
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/HDL/ALU_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/lab0_ALU/lab0_ALU.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/lab0_ALU/lab0_ALU.sim/sim_1/behav/xsim'
+"xelab -wto 79bf3835f38540d585f94c17c6322cb0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ALU_tb_behav xil_defaultlib.ALU_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 79bf3835f38540d585f94c17c6322cb0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ALU_tb_behav xil_defaultlib.ALU_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/HDL/ALU_32b.v" Line 8. Module ALU_32b doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/HDL/ALU_32b.v" Line 8. Module ALU_32b doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ALU_32b
+Compiling module xil_defaultlib.ALU_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot ALU_tb_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/lab0_ALU/lab0_ALU.sim/sim_1/behav/xsim/xsim.dir/ALU_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Oct  1 23:51:59 2023...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 923.941 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/lab0_ALU/lab0_ALU.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "ALU_tb_behav -key {Behavioral:sim_1:Functional:ALU_tb} -tclbatch {ALU_tb.tcl} -view {Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/lab0_ALU/ALU_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/lab0_ALU/ALU_tb_behav.wcfg
+source ALU_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 100 ns : File "Z:/schoolfiles/school_files/cpe333_2/Lab0_alu/HDL/ALU_tb.v" Line 65
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'ALU_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 923.941 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Oct  1 23:53:17 2023...
