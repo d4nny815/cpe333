@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct  2 12:45:35 2023
+# Process ID: 21256
+# Current directory: Z:/schoolfiles/school_files/cpe333/otter_233/cpe233_OTTER
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26560 Z:\schoolfiles\school_files\cpe333\otter_233\cpe233_OTTER\cpe233_OTTER.xpr
+# Log file: Z:/schoolfiles/school_files/cpe333/otter_233/cpe233_OTTER/vivado.log
+# Journal file: Z:/schoolfiles/school_files/cpe333/otter_233/cpe233_OTTER\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project Z:/schoolfiles/school_files/cpe333/otter_233/cpe233_OTTER/cpe233_OTTER.xpr
+INFO: [Project 1-313] Project file moved from 'Z:/schoolfiles/school_files/cpe333/otter_233_hdl/cpe233_OTTER' since last save.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'Z:/schoolfiles/school_files/cpe333/otter_233/cpe233_OTTER/cpe233_OTTER.gen/sources_1', nor could it be found using path 'Z:/schoolfiles/school_files/cpe333/otter_233_hdl/cpe233_OTTER/cpe233_OTTER.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+add_files -norecurse Z:/schoolfiles/school_files/cpe333/otter_233/otter_hdl/Otter_wrapper.sv
+update_compile_order -fileset sources_1
+add_files -fileset constrs_1 -norecurse Z:/schoolfiles/school_files/cpe333/otter_233/otter_hdl/constraints/Basys3_Master_v1_03.xdc
+add_files -norecurse {Z:/schoolfiles/school_files/cpe333/otter_233/otter_hdl/core/control_unit_fsm_v_1_07.sv Z:/schoolfiles/school_files/cpe333/otter_233/otter_hdl/core/timer_counter_v1_02.sv Z:/schoolfiles/school_files/cpe333/otter_233/otter_hdl/core/reg_nb_sync_clr_v1_01.v Z:/schoolfiles/school_files/cpe333/otter_233/otter_hdl/core/reg_file_v_1_01.sv Z:/schoolfiles/school_files/cpe333/otter_233/otter_hdl/core/branch_cond_gen.v Z:/schoolfiles/school_files/cpe333/otter_233/otter_hdl/core/control_unit_dcdr_v_1_05.sv Z:/schoolfiles/school_files/cpe333/otter_233/otter_hdl/core/riscv_mcu.v Z:/schoolfiles/school_files/cpe333/otter_233/otter_hdl/core/alu.v Z:/schoolfiles/school_files/cpe333/otter_233/otter_hdl/core/branch_addr_gen.v Z:/schoolfiles/school_files/cpe333/otter_233/otter_hdl/core/mux_4t1_nb_v1_06.v Z:/schoolfiles/school_files/cpe333/otter_233/otter_hdl/core/otter_memory_v1_06.sv Z:/schoolfiles/school_files/cpe333/otter_233/otter_hdl/core/CSR_v1_03.sv Z:/schoolfiles/school_files/cpe333/otter_233/otter_hdl/core/immed_gen.v Z:/schoolfiles/school_files/cpe333/otter_233/otter_hdl/core/mux_8t1_nb_v1_03.v}
+update_compile_order -fileset sources_1
