@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../given_files/OTTER-multicyle-1-cycle-memory/ArithLogicUnit.sv" \
+"../../../../../given_files/OTTER-multicyle-1-cycle-memory/CSR.sv" \
+"../../../../../given_files/OTTER-multicyle-1-cycle-memory/CU_Decoder.sv" \
+"../../../../../given_files/OTTER-multicyle-1-cycle-memory/ControlUnit.sv" \
+"../../../../../given_files/OTTER-multicyle-1-cycle-memory/Mult4to1.sv" \
+"../../../../../given_files/OTTER-multicyle-1-cycle-memory/OTTER_CPU.sv" \
+"../../../../../given_files/OTTER-multicyle-1-cycle-memory/ProgCount.sv" \
+"../../../../../given_files/OTTER-multicyle-1-cycle-memory/bram_dualport.sv" \
+"../../../../../given_files/OTTER-multicyle-1-cycle-memory/registerFile.sv" \
+"../../../../../HDL/simTemplate-1.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
