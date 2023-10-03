@@ -94,6 +94,7 @@ read_verilog -library xil_defaultlib -sv {
   Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/core/SevSegDisp.sv
   Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/core/control_unit_dcdr_v_1_05.sv
   Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/core/control_unit_fsm_v_1_07.sv
+  Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/core/debounce_one_shot.sv
   Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/core/otter_memory_v1_06.sv
   Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/core/reg_file_v_1_01.sv
   Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/Callenees_TestAll_OTTER_Wrapper.sv
@@ -118,8 +119,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/constraints/Basys3_Master_v1_03.xdc
-set_property used_in_implementation false [get_files Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/constraints/Basys3_Master_v1_03.xdc]
+read_xdc Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/constraints/Basys3_constraints-1.xdc
+set_property used_in_implementation false [get_files Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/constraints/Basys3_constraints-1.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
