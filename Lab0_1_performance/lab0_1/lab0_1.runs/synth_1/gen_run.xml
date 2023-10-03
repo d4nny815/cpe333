@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1696231674">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1696298936">
   <File Type="PA-TCL" Name="OTTER_Wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="OTTER_Wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="OTTER_Wrapper_reports.tcl"/>
@@ -116,6 +116,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../HDL/core/debounce_one_shot.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../HDL/core/otter_memory_v1_06.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -151,7 +158,7 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PPRDIR/../HDL/constraints/Basys3_Master_v1_03.xdc">
+    <File Path="$PPRDIR/../HDL/constraints/Basys3_constraints-1.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

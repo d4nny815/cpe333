@@ -138,7 +138,7 @@ OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1/lab0_1.runs/synth_1/OTTER_Wrapper.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/constraints/Basys3_Master_v1_03.xdc
+  read_xdc Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/constraints/Basys3_constraints-1.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
