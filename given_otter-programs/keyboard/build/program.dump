@@ -1,0 +1,46 @@
+
+build/program.elf:     file format elf32-littleriscv
+
+Contents of section .text.init:
+ 0000 17010100 130101fe 97000000 e780c000  ................
+ 0010 6f000000                             o...            
+Contents of section .text:
+ 0014 37092011 b7090c11 370a0811 97020000  7. .....7.......
+ 0024 9382c201 73905230 93021000 73904230  ....s.R0....s.B0
+ 0034 6f000000 67800000 83220900 23a05900  o...g...."..#.Y.
+ 0044 83220a00 93821200 23205a00 73002030  ."......# Z.s. 0
+
+Disassembly of section .text.init:
+
+00000000 <entry>:
+   0:	00010117          	auipc	sp,0x10
+   4:	fe010113          	addi	sp,sp,-32 # ffe0 <__global_pointer$+0xf78c>
+   8:	00000097          	auipc	ra,0x0
+   c:	00c080e7          	jalr	12(ra) # 14 <main>
+
+00000010 <end>:
+  10:	0000006f          	j	10 <end>
+
+Disassembly of section .text:
+
+00000014 <main>:
+  14:	11200937          	lui	s2,0x11200
+  18:	110c09b7          	lui	s3,0x110c0
+  1c:	11080a37          	lui	s4,0x11080
+  20:	00000297          	auipc	t0,0x0
+  24:	01c28293          	addi	t0,t0,28 # 3c <ISR>
+  28:	30529073          	csrw	mtvec,t0
+  2c:	00100293          	li	t0,1
+  30:	30429073          	csrw	mie,t0
+
+00000034 <loop>:
+  34:	0000006f          	j	34 <loop>
+  38:	00008067          	ret
+
+0000003c <ISR>:
+  3c:	00092283          	lw	t0,0(s2) # 11200000 <KEY_CHAR_PORT>
+  40:	0059a023          	sw	t0,0(s3) # 110c0000 <SSEG>
+  44:	000a2283          	lw	t0,0(s4) # 11080000 <LEDS>
+  48:	00128293          	addi	t0,t0,1
+  4c:	005a2023          	sw	t0,0(s4)
+  50:	30200073          	mret

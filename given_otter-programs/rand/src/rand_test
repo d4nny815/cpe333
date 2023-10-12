@@ -1,0 +1,20 @@
+#include<stdlib.h>
+void _srand(int seed)
+{
+	srand(seed);
+}
+int _rand(int max)
+{
+	return rand()%max;
+}
+
+int main()
+{
+	int val;
+	_srand(0);
+	while(1)
+	{
+		val=_rand(255);
+		printf("%d\n",val);
+	}
+}
