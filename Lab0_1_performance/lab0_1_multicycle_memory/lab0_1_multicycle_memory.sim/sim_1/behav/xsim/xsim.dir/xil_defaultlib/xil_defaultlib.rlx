@@ -1,0 +1,15 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/simTemplate-1.sv,1696304486,systemVerilog,,,,OTTERSim,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/ArithLogicUnit.sv,1696279022,systemVerilog,,Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/CSR.sv,,OTTER_ALU,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/CSR.sv,1696279022,systemVerilog,,Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/CU_Decoder.sv,,CSR,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/CU_Decoder.sv,1696279022,systemVerilog,,Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/ControlUnit.sv,,OTTER_CU_Decoder,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/ControlUnit.sv,1696279022,systemVerilog,,Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/Mult4to1.sv,,OTTER_CU_FSM,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/Mult4to1.sv,1696279022,systemVerilog,,Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/OTTER_CPU.sv,,Mult2to1;Mult4to1;Mult5to1;Mult6to1,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/OTTER_CPU.sv,1696279022,systemVerilog,,Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/ProgCount.sv,,OTTER_MCU,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/ProgCount.sv,1696279022,systemVerilog,,Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/bram_dualport.sv,,ProgCount,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/bram_dualport.sv,1696279022,systemVerilog,,Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/registerFile.sv,,OTTER_mem_byte;OTTER_mem_dualport,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/registerFile.sv,1696279022,systemVerilog,,Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/simTemplate-1.sv,,OTTER_registerFile,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1_multicycle_memory/lab0_1_multicycle_memory.sim/sim_1/behav/xsim/glbl.v,1696279024,verilog,,,,glbl,,uvm,,,,,,

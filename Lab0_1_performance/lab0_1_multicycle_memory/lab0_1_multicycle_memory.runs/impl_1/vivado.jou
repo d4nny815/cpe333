@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct  2 19:09:29 2023
+# Process ID: 11004
+# Current directory: Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1/lab0_1.runs/impl_1
+# Command line: vivado.exe -log OTTER_Wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source OTTER_Wrapper.tcl -notrace
+# Log file: Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1/lab0_1.runs/impl_1/OTTER_Wrapper.vdi
+# Journal file: Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1/lab0_1.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source OTTER_Wrapper.tcl -notrace

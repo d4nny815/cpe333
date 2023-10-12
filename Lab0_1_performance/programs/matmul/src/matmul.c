@@ -18,6 +18,10 @@ void matmul(int N,  const data_t A[], const data_t B[], data_t C[])
 }
 void main()
 {
-	static data_t results_data[ARRAY_SIZE];
+	// while(1) {
+  // static data_t results_data[ARRAY_SIZE];
+	// matmul(DIM_SIZE, input1_data, input2_data, results_data);
+  // }
+  static data_t results_data[ARRAY_SIZE];
 	matmul(DIM_SIZE, input1_data, input2_data, results_data);
 }
