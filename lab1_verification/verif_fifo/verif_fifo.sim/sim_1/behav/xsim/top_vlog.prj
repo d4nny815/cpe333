@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../fifo/types.sv" \
+"../../../../../fifo/fifo.sv" \
+"../../../../../fifo/verification/fifo_itf.sv" \
+"../../../../../fifo/verification/empty grader/grader.sv" \
+"../../../../../fifo/verification/testbench.sv" \
+"../../../../../fifo/verification/top.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

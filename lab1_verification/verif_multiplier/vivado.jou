@@ -1,0 +1,81 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Oct 10 11:29:37 2023
+# Process ID: 2084
+# Current directory: C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/verif_multiplier
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6420 C:\Users\D4nny\OneDrive\Documents\cpe333\lab1_verification\verif_multiplier\verif_multiplier.xpr
+# Log file: C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/verif_multiplier/vivado.log
+# Journal file: C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/verif_multiplier\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/verif_multiplier/verif_multiplier.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/verif_multiplier/top_behav.wcfg
+source top.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 12 ms
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/verif_multiplier/top_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/verif_multiplier/top_behav.wcfg}
+relaunch_sim
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+relaunch_sim
+relaunch_sim
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 12 ms
+relaunch_sim
+relaunch_sim
+run 12 ms
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 12 ms
+close_sim

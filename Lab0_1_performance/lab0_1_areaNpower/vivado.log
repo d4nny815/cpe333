@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct  2 23:03:21 2023
+# Process ID: 11796
+# Current directory: Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1_areaNpower
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25812 Z:\schoolfiles\school_files\cpe333\Lab0_1_performance\lab0_1_areaNpower\lab0_1_areaNpower.xpr
+# Log file: Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1_areaNpower/vivado.log
+# Journal file: Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1_areaNpower\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1_areaNpower/lab0_1_areaNpower.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1_areaNpower/lab0_1_areaNpower.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/core/BCD.sv] -no_script -reset -force -quiet
+remove_files  Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/core/BCD.sv
+export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/core/CathodeDriver.sv] -no_script -reset -force -quiet
+remove_files  Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/core/CathodeDriver.sv
+export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/programs/otter_memory.mem] -no_script -reset -force -quiet
+remove_files  Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/programs/otter_memory.mem
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Mon Oct  2 23:04:54 2023] Launched synth_1...
+Run output will be captured here: Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1_areaNpower/lab0_1_areaNpower.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Oct  2 23:07:48 2023] Launched impl_1...
+Run output will be captured here: Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1_areaNpower/lab0_1_areaNpower.runs/impl_1/runme.log
+reset_run impl_1
+launch_runs impl_1 -jobs 4
+[Mon Oct  2 23:08:14 2023] Launched impl_1...
+Run output will be captured here: Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1_areaNpower/lab0_1_areaNpower.runs/impl_1/runme.log
+export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/constraints/Basys3_constraints-1.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/constraints/Basys3_constraints-1.xdc
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+[Mon Oct  2 23:10:54 2023] Launched synth_1...
+Run output will be captured here: Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1_areaNpower/lab0_1_areaNpower.runs/synth_1/runme.log
+[Mon Oct  2 23:10:54 2023] Launched impl_1...
+Run output will be captured here: Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1_areaNpower/lab0_1_areaNpower.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Oct  2 23:17:01 2023...

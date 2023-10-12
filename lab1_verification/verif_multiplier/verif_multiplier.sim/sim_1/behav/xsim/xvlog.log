@@ -1,0 +1,24 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/mult/types.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module p_mult_types
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/mult/add_shift_multiplier.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module add_shift_multiplier
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/mult/verification/grader/grader_types.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module p_grader_types
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/mult/verification/grader/grader.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module grader
+WARNING: [VRFC 10-43] task call in final block is illegal [C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/mult/verification/grader/grader.sv:92]
+WARNING: [VRFC 10-43] task call in final block is illegal [C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/mult/verification/grader/grader.sv:93]
+WARNING: [VRFC 10-43] task call in final block is illegal [C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/mult/verification/grader/grader.sv:95]
+WARNING: [VRFC 10-43] task call in final block is illegal [C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/mult/verification/grader/grader.sv:96]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/mult/verification/grader/grader_itf.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module d_grader_itf
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/mult/verification/multiplier_itf.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module d_multiplier_itf
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/mult/verification/testbench.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/mult/verification/grader/transaction_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module transaction_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/mult/verification/grader/transaction_scoreboard.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module transaction_scoreboard
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/mult/verification/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top

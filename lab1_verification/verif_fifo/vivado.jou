@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Oct 12 19:35:51 2023
+# Process ID: 7208
+# Current directory: C:/Users/D4nny/Documents/cpe333/lab1_verification/verif_fifo
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2768 C:\Users\D4nny\Documents\cpe333\lab1_verification\verif_fifo\verif_fifo.xpr
+# Log file: C:/Users/D4nny/Documents/cpe333/lab1_verification/verif_fifo/vivado.log
+# Journal file: C:/Users/D4nny/Documents/cpe333/lab1_verification/verif_fifo\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/D4nny/Documents/cpe333/lab1_verification/verif_fifo/verif_fifo.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config C:/Users/D4nny/Documents/cpe333/lab1_verification/verif_fifo/top_behav.wcfg
+source top.tcl
+run 12 ms
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 12 ms
+relaunch_sim
+run 12 ms

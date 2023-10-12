@@ -65,13 +65,10 @@ $(BUILD)/$(PROJECT).dump: $(BUILD)/$(PROJECT).elf
 ifneq ($(C_FILES),)
 	$(OBJDUMP) --no-show-raw-insn -S -s  $< > $@
 else
-	$(OBJDUMP)  -d $< > $@
+	$(OBJDUMP) -S -s $< > $@
 endif
-#-d (dissasemble)
-#-s (all sections)
 #no-show-raw_insn
 #-l line numbers
-# -S    (shows the c code intermixed with assembly)
 
 # extract the binary data from data and text sections to get a binary image of memory
 $(BUILD)/mem.bin: $(BUILD)/$(PROJECT).elf

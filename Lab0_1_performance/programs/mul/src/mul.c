@@ -1,12 +1,9 @@
-
-int mul(int x, int y)
-{
-	return x * y;
+int mul(int a, int b) {
+	return a * b;
 }
-// this is a comment
+
 void main()
 {
-	for(int i=0; i<10;i++) {
-		mul(i, i);
-	}
+	int result = mul(50, 50);
+	return;
 }
