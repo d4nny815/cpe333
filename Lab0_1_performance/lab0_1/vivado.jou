@@ -2,13 +2,25 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Mon Oct  2 23:02:57 2023
-# Process ID: 11676
+# Start of session at: Wed Oct  4 21:15:29 2023
+# Process ID: 17848
 # Current directory: Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7228 Z:\schoolfiles\school_files\cpe333\Lab0_1_performance\lab0_1\lab0_1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7036 Z:\schoolfiles\school_files\cpe333\Lab0_1_performance\lab0_1\lab0_1.xpr
 # Log file: Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1/vivado.log
 # Journal file: Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1/lab0_1.xpr
 update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1/OTTERSim_behav.wcfg
+source OTTERSim.tcl
+relaunch_sim
+relaunch_sim
+run all
+relaunch_sim
+run all
+relaunch_sim
+run all
+relaunch_sim
+close_sim
