@@ -1,0 +1,11 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+GDR: Grader Running
+Enqueueing
+Ended Enqueueing
+DEnqueueing
+ended DEnqueueing
+Simultaneously
+ended Simultaneously
+GDR: Cleaning Up Grading Run...
+$finish called at time : 9135 ns : File "Z:/schoolfiles/school_files/cpe333/lab1_verification/fifo/verification/fifo_itf.sv" Line 20

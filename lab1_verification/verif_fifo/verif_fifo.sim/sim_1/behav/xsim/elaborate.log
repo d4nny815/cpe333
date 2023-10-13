@@ -4,12 +4,12 @@ Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto ae86b3e1bf
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-696] first argument of $fatal is invalid, expecting 0, 1 or 2 [C:/Users/D4nny/Documents/cpe333/lab1_verification/fifo/verification/fifo_itf.sv:35]
+WARNING: [VRFC 10-696] first argument of $fatal is invalid, expecting 0, 1 or 2 [Z:/schoolfiles/school_files/cpe333/lab1_verification/fifo/verification/fifo_itf.sv:35]
 Completed static elaboration
-INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 35, File C:/Users/D4nny/Documents/cpe333/lab1_verification/fifo/verification/fifo_itf.sv
+INFO: [XSIM 43-4329] Assuming default value 1 for the first arguement of $fatal at Line 35, File Z:/schoolfiles/school_files/cpe333/lab1_verification/fifo/verification/fifo_itf.sv
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/cpe333/lab1_verification/verif_fifo/verif_fifo.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
-WARNING: [XSIM 43-4100] "C:/Users/D4nny/Documents/cpe333/lab1_verification/verif_fifo/verif_fifo.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "Z:/schoolfiles/school_files/cpe333/lab1_verification/verif_fifo/verif_fifo.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "Z:/schoolfiles/school_files/cpe333/lab1_verification/verif_fifo/verif_fifo.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package xil_defaultlib.fifo_types

@@ -40,7 +40,7 @@ task enqueue(
     input [width_p - 1: 0] data_i
     );
 
-    itf.valid_i <= 1;
+    itf.valid_i <= 1 & itf.rdy;
     itf.data_i <= data_i;
     ##1;
     itf.valid_i <= 0;
@@ -48,19 +48,18 @@ endtask : enqueue
 
 
 task dequeue(
-    output [width_p - 1: 0] data_out
+    output [width_p - 1:0] data_out
     );
-        itf.yumi <= 1;
-        // data_o <= itf.data_o;
-        data_out <= 0;
-        // ##1;
-        // itf.yumi <= 0;
+    itf.yumi <= 1'b1 & itf.valid_o;
+    data_out <= itf.data_o; // Dequeue data from the FIFO
+    ##1;
+    itf.yumi <= 0;
 endtask : dequeue
 
 task fill_fifo();
     logic [width_p-1:0] word;
     for (int i=0; i<cap_p; i++) begin
-        word = i & 8'hffff_ffff;
+        word = i & 8'hff;
         enqueue(word);
         if (itf.rdy != 1'b1) break;
     end
@@ -69,19 +68,24 @@ endtask: fill_fifo
 task empty_fifo();
     logic [width_p-1:0] word;
     for (int i=0; i<cap_p; i++) begin
-        itf.yumi <= 1;
-        word <= itf.data_o;
-        ##1;
-        itf.yumi <= 0;
-        assert (word == i & 8'hffff_ffff) 
+        dequeue(word);
+        assert (word == i & 8'hff) 
         else   $error("ERRRORS");
         if (itf.valid_o != 1'b1) break;
     end
 endtask: empty_fifo
 
-
 task simultaneously();
-	
+    logic [width_p-1:0] enqueue_word;
+    logic [width_p-1:0] deqeueue_word;
+    enqueue(8'h8f); // start at 1 in FIFO
+    for (int i=0; i<cap_p; i++) begin
+        enqueue_word = ((~i) & 8'hff);
+        enqueue(enqueue_word);
+        dequeue(deqeueue_word);
+    end
+
+
 endtask : simultaneously
 
 
@@ -92,12 +96,17 @@ initial begin
     $display("Enqueueing");
     fill_fifo();
     $display("Ended Enqueueing");
+    reset();
 
     $display("DEnqueueing");
     empty_fifo();
     $display("ended DEnqueueing");
+    reset();
 
-
+    $display("Simultaneously");
+    simultaneously();
+    $display("ended Simultaneously");
+    reset();
 
     /***************************************************************/
     // Make sure your test bench exits by calling itf.finish();
