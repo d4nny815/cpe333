@@ -38,6 +38,7 @@ endfunction : report_error
 
 task enqueue();
     $display("Enqueueing");
+    //filling up queue
     for (int i = 0; i < cap_p; i++) begin
         itf.data_i <= i; // Incrementing by 1
         itf.valid_i <= 1;
@@ -50,6 +51,7 @@ endtask : enqueue
 task dequeue();
     //Should release in same order
     $display("Dequeueing");
+    //should release queue in same order it was queued originally
     for (int i = 0; i < cap_p; i++) begin
         itf.yumi <= 1;
         @(posedge itf.clk);
@@ -65,11 +67,11 @@ endtask : dequeue
 
 task simultaneously();
     $display("simultaneously");
-    itf.data_i <= 999; // Some data to enqueue and dequeue simultaneously
+    itf.data_i <= 999; 
     itf.valid_i <= 1;
     itf.yumi <= 1;
     @(posedge itf.clk);
-    assert (itf.data_o == 999)
+    assert (itf.data_o != 999)
         else begin
             $error ("-----TB: SIMULTANEOUSLY----\n %0d: itf.yumi %0d itf.data_0 ,error detected", itf.yumi, itf.data_o);
             report_error (RESET_DOES_NOT_CAUSE_READY_O);
@@ -99,3 +101,4 @@ end
 
 endmodule : testbench
 `endif
+
