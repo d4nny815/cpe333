@@ -53,8 +53,12 @@ task dequeue();
     for (int i = 0; i < cap_p; i++) begin
         itf.yumi <= 1;
         @(posedge itf.clk);
-        
-    end
+        assert (itf.data_o == i)
+            else begin 
+                $error ("-----TB: BAD DEQUEUE----\n %0d: int i %0d: itf.yumi %0d itf.data_0 ,error detected", i, itf.yumi, itf.data_o);
+                report_error (INCORRECT_DATA_O_ON_YUMI_I);
+            end
+    end 
     itf.yumi <= 0;
 endtask : dequeue
 
@@ -65,7 +69,11 @@ task simultaneously();
     itf.valid_i <= 1;
     itf.yumi <= 1;
     @(posedge itf.clk);
-    // Compare the output data with the expected data here
+    assert (itf.data_o == 999)
+        else begin
+            $error ("-----TB: SIMULTANEOUSLY----\n %0d: itf.yumi %0d itf.data_0 ,error detected", itf.yumi, itf.data_o);
+            report_error (RESET_DOES_NOT_CAUSE_READY_O);
+        end
     itf.valid_i <= 0;
     itf.yumi <= 0;
 endtask : simultaneously
