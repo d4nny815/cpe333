@@ -36,52 +36,48 @@ endfunction : report_error
 
 // DO NOT MODIFY CODE ABOVE THIS LINE
 
-task enqueue(
-    input [width_p - 1: 0] data_i
-    );
-
-    itf.valid_i <= 1;
-    itf.data_i <= data_i;
-    ##1;
+task enqueue();
+    $display("Enqueueing");
+    //filling up queue
+    for (int i = 0; i < cap_p; i++) begin
+        itf.data_i <= i; // Incrementing by 1
+        itf.valid_i <= 1;
+        @(posedge itf.clk);
+    end
     itf.valid_i <= 0;
 endtask : enqueue
 
 
-task dequeue(
-    output [width_p - 1: 0] data_out
-    );
+task dequeue();
+    //Should release in same order
+    $display("Dequeueing");
+    //should release queue in same order it was queued originally
+    for (int i = 0; i < cap_p; i++) begin
         itf.yumi <= 1;
-        // data_o <= itf.data_o;
-        data_out <= 0;
-        // ##1;
-        // itf.yumi <= 0;
+        @(posedge itf.clk);
+        assert (itf.data_o == i)
+            else begin 
+                $error ("-----TB: BAD DEQUEUE----\n %0d: int i %0d: itf.yumi %0d itf.data_0 ,error detected", i, itf.yumi, itf.data_o);
+                report_error (INCORRECT_DATA_O_ON_YUMI_I);
+            end
+    end 
+    itf.yumi <= 0;
 endtask : dequeue
-
-task fill_fifo();
-    logic [width_p-1:0] word;
-    for (int i=0; i<cap_p; i++) begin
-        word = i & 8'hffff_ffff;
-        enqueue(word);
-        if (itf.rdy != 1'b1) break;
-    end
-endtask: fill_fifo
-
-task empty_fifo();
-    logic [width_p-1:0] word;
-    for (int i=0; i<cap_p; i++) begin
-        itf.yumi <= 1;
-        word <= itf.data_o;
-        ##1;
-        itf.yumi <= 0;
-        assert (word == i & 8'hffff_ffff) 
-        else   $error("ERRRORS");
-        if (itf.valid_o != 1'b1) break;
-    end
-endtask: empty_fifo
 
 
 task simultaneously();
-	
+    $display("simultaneously");
+    itf.data_i <= 999; 
+    itf.valid_i <= 1;
+    itf.yumi <= 1;
+    @(posedge itf.clk);
+    assert (itf.data_o != 999)
+        else begin
+            $error ("-----TB: SIMULTANEOUSLY----\n %0d: itf.yumi %0d itf.data_0 ,error detected", itf.yumi, itf.data_o);
+            report_error (RESET_DOES_NOT_CAUSE_READY_O);
+        end
+    itf.valid_i <= 0;
+    itf.yumi <= 0;
 endtask : simultaneously
 
 
@@ -89,16 +85,14 @@ initial begin
     reset();
     /************************ Your Code Here ***********************/
     // Feel free to make helper tasks / functions, initial / always blocks, etc.
-    $display("Enqueueing");
-    fill_fifo();
-    $display("Ended Enqueueing");
-
-    $display("DEnqueueing");
-    empty_fifo();
-    $display("ended DEnqueueing");
-
-
-
+	$display("Enqueueing");
+    enqueue();
+    $display("Dequeueing");
+    dequeue();
+    $display("Together");
+    simultaneously();
+    simultaneously();
+    simultaneously();
     /***************************************************************/
     // Make sure your test bench exits by calling itf.finish();
     itf.finish();
@@ -107,4 +101,3 @@ end
 
 endmodule : testbench
 `endif
-
