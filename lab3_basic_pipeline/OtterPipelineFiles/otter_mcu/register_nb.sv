@@ -26,7 +26,7 @@ module reg_nb #(parameter n=8) (
     input clk, 
 	input clr, 
 	input ld, 
-    output [n-1:0] data_out  
+    output logic [n-1:0] data_out  
     ); 
 
     
