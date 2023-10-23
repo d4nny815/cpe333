@@ -11,6 +11,13 @@
 // Target Devices: 
 // Tool Versions: 
 // Description: 
+//
+//    mux_2t1_nb #(.n(8)) my_mux_2t1 (
+//        .SEL       (),
+//        .D0        (),
+//        .D1        (),
+//        .D_OUT     ()
+//    );
 // 
 // Dependencies: 
 // 
