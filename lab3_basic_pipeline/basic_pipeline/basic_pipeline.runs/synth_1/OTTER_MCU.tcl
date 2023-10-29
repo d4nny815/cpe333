@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/basic_pipeline/basic_pipeline.runs/synth_1/OTTER_MCU.tcl"
+  variable script "Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/basic_pipeline/basic_pipeline.runs/synth_1/OTTER_MCU.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,35 +70,36 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/basic_pipeline/basic_pipeline.cache/wt [current_project]
-set_property parent.project_path /media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/basic_pipeline/basic_pipeline.xpr [current_project]
+set_property webtalk.parent_dir Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/basic_pipeline/basic_pipeline.cache/wt [current_project]
+set_property parent.project_path Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/basic_pipeline/basic_pipeline.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo /media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/basic_pipeline/basic_pipeline.cache/ip [current_project]
+set_property ip_output_repo z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/basic_pipeline/basic_pipeline.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+read_mem Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_memory.mem
 read_verilog -library xil_defaultlib -sv {
-  /media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/Decoder.sv
-  /media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv
-  /media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv
-  /media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv
-  /media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/alu.sv
-  /media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/immed_gen.sv
-  /media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv
-  /media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv
-  /media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_memory.sv
-  /media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv
-  /media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/reg_file.sv
-  /media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/register_nb.sv
-  /media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv
+  Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/Decoder.sv
+  Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv
+  Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv
+  Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv
+  Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/alu.sv
+  Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/branch_cond_gen.sv
+  Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/immed_gen.sv
+  Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv
+  Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv
+  Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_memory.sv
+  Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv
+  Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/reg_file.sv
+  Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/register_nb.sv
+  Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

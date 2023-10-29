@@ -30,8 +30,8 @@ module reg_nb #(parameter n=8) (
     ); 
 
     
-    always_ff @(posedge clr, posedge clk) begin 
-        if (clr == 1)       // asynch clr
+    always_ff @(posedge clk) begin 
+        if (clr == 1)       // synch clr
             data_out <= 0;
         else if (ld == 1)   // synch load
             data_out <= data_in; 

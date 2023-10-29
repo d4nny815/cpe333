@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 10/19/2023 12:10:49 AM
+// Create Date: 05/10/2023 06:58:03 PM
 // Design Name: 
-// Module Name: Branch_cond_gen
+// Module Name: branch_cond_gen
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -19,9 +19,23 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+// branch_cond_gen.v
+// Members: Daniel Gutierrez
+// Description:
+// 
+// 
 
-module Branch_cond_gen(
-    input [31:0] instr,
-    output [1:0] pcSource
+module branch_cond_gen(
+    input [31:0] rs1,
+    input [31:0] rs2,
+    output logic br_eq,
+    output logic br_lt,
+    output logic br_ltu
     );
+    
+    always_comb begin
+        br_eq = (rs1 == rs2);
+        br_lt = ($signed(rs1) < $signed(rs2));
+        br_ltu = (rs1 < rs2);
+    end
 endmodule
