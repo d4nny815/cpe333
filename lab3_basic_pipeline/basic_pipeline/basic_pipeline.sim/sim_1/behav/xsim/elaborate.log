@@ -1,9 +1,33 @@
 Vivado Simulator v2022.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot OTTER_MCU_behav xil_defaultlib.OTTER_MCU xil_defaultlib.glbl -log elaborate.log 
-Using 8 slave threads.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-3180] cannot find port 'immed_gen' on this module [/media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:117]
-ERROR: [VRFC 10-2538] module instantiation should have an instance name [/media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:242]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 32 for port 'MEM_DIN2' [Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:62]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'PC_plus4_E' [Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:179]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 4 for port 'alu_fun' [Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:197]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'PC_plus4_E' [Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:230]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'rf_wr_sel_M' [Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:255]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'rf_wr_sel_W' [Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:261]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux_2t1_nb(n=32)
+Compiling module xil_defaultlib.reg_nb(n=32)
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.Pipeline_reg_fetch_decode
+Compiling module xil_defaultlib.branch_cond_gen
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.RegFile
+Compiling module xil_defaultlib.immed_gen
+Compiling module xil_defaultlib.Pipeline_reg_decode_execute
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Pipeline_reg_execute_memory
+Compiling module xil_defaultlib.Pipeline_reg_memory_writeback
+Compiling module xil_defaultlib.mux_4t1_nb(n=32)
+Compiling module xil_defaultlib.OTTER_MCU
+Compiling module xil_defaultlib.test_pipeline
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_pipeline_behav
