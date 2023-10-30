@@ -55,7 +55,7 @@ module OTTER_MCU (
     Memory OTTER_MEMORY (
         .MEM_CLK        (CLK),
         .MEM_RDEN1      (1'b1),   // TODO: memRead1; HARDWIRED
-        .MEM_RDEN2      (1'b1),   // TODO: idk if this is supposed to be hardwired  
+        .MEM_RDEN2      (memRead2_M),    
         .MEM_WE2        (memWrite_M),
         .MEM_ADDR1      (PC_F[15:2]),
         .MEM_ADDR2      (ALU_result_M),
@@ -78,7 +78,8 @@ module OTTER_MCU (
     // control unit outputs
     logic regWrite_D, memWrite_D, memRead2_D, alu_srcA_D, alu_srcB_D, jump_D, branch_D, br_eq, br_lt, br_ltu;
     logic [1:0] rf_wr_sel_D;
-    logic [2:0] alu_fun_D, immed_sel; 
+    logic [2:0] immed_sel;
+    logic [3:0] alu_fun_D; 
 
     Pipeline_reg_fetch_decode pipeline_reg_F_D(
         .CLK            (CLK),
@@ -109,7 +110,7 @@ module OTTER_MCU (
         .jump           (jump_D),
         .branch         (branch_D),
         .alu_fun        (alu_fun_D),
-        .alu_srcA       (alu_srcA_D),
+        .alu_src        (alu_src_D),
         .alu_srcB       (alu_srcB_D),
         .immed_sel      (immed_sel),
         .rf_wr_sel      (rf_wr_sel_D)
@@ -136,7 +137,7 @@ module OTTER_MCU (
 // Execute (ALU) Stage
 // ********************************************************************************************************************
     // pipeline reg signals
-    logic regWrite_E, memWrite_E, memRead2_E, alu_srcA_E, alu_srcB_E, jump_E, branch_E;
+    logic regWrite_E, memWrite_E, memRead2_E, alu_src_E, alu_srcB_E, jump_E, branch_E;
     logic [1:0] rf_wr_sel_E;
     logic [2:0] alu_fun_E;
     logic [31:0] PC_E, rs1_E, rs2_E, immed_ext_E, ALU_result_E, Instr_E;
@@ -155,13 +156,14 @@ module OTTER_MCU (
         .jump_D         (jump_D),
         .branch_D       (branch_D),
         .alu_fun_D      (alu_fun_D),
-        .alu_srcA_D     (alu_srcA_D),
+        .alu_src_D      (alu_src_D),
         .alu_srcB_D     (alu_srcB_D),
         .rf_wr_sel_D    (rf_wr_sel_D),
         .rs1_D          (rs1_D),
         .rs2_D          (rs2_D),
         .immed_ext_D    (immed_ext_D),
         .PC_plus4_D     (PC_plus4_D),
+        //
         .PC_E           (PC_E),
         .Instr_E        (Instr_E),
         .regWrite_E     (regWrite_E),
@@ -170,20 +172,13 @@ module OTTER_MCU (
         .jump_E         (jump_E),
         .branch_E       (branch_E),
         .alu_fun_E      (alu_fun_E),
-        .alu_srcA_E     (alu_srcA_E),
+        .alu_src_E      (alu_src_E),
         .alu_srcB_E     (alu_srcB_E),
         .rf_wr_sel_E    (rf_wr_sel_E),
         .rs1_E          (rs1_E),
         .rs2_E          (rs2_E),
         .immed_ext_E    (immed_ext_E),
         .PC_plus4_E     (PC_plus4_E)
-    );
-
-    mux_2t1_nb #(.n(32)) ALU_srcA_mux (
-        .SEL            (alu_srcA_E),
-        .D0             (rs1_E),
-        .D1             (PC_E),
-        .D_OUT          (ALU_srcA_data)
     );
 
     mux_2t1_nb #(.n(32)) ALU_srcB_mux (
@@ -197,8 +192,15 @@ module OTTER_MCU (
         .alu_fun        (alu_fun_E),
         .srcA           (ALU_srcA_data), 
         .srcB           (ALU_srcB_data), 
-        .result         (ALU_result_E),
+        .result         (ALU_result),
         .zero           (ALU_zero_E)
+    );
+
+    mux_2t1_nb #(.n(32)) ALU_mux (
+        .SEL            (alu_src_E),
+        .D0             (ALU_result),
+        .D1             (PCPC_target_addr_E),
+        .D_OUT          (ALU_result_E)
     );
 
     assign pcSource_E = branch_E | jump_E;

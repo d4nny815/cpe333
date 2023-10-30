@@ -30,8 +30,8 @@ module Decoder(
     output logic memRead2,
     output logic jump,
     output logic branch,
-    output logic [2:0] alu_fun,
-    output logic alu_srcA,
+    output logic [3:0] alu_fun,
+    output logic alu_src,
     output logic alu_srcB,
     output logic [2:0] immed_sel,
     output logic [1:0] rf_wr_sel
@@ -65,12 +65,12 @@ module Decoder(
         BGEU = 3'b111
     } func3_t;    
     func3_t FUNC3; //- define variable of new opcode type
-    assign FUNC3 = func3_t'(instr[11:8]); //- Cast input enum 
+    assign FUNC3 = func3_t'(instr[14:12]); //- Cast input enum 
 
 
     always_comb begin
         regWrite = 1'b1; memWrite = 1'b0; memRead2 = 1'b0; jump = 1'b0;
-        branch = 1'b0; alu_fun = 3'b000; alu_srcA = 1'b0; alu_srcB = 1'b0; 
+        branch = 1'b0; alu_fun = 3'b000; alu_src = 1'b0; alu_srcB = 1'b0; 
         immed_sel = 3'b000; rf_wr_sel = 2'b00;
 
         case (OPCODE)
@@ -78,18 +78,16 @@ module Decoder(
                 alu_fun = 4'b1010;              // lui
                 alu_srcB = 1'b1;                // immd ext
                 immed_sel = 3'b011;             // U-type
-                rf_wr_sel = 2'b11;              // alu result
             end
 
             AUIPC: begin
                 alu_fun = 4'b0000;              // add
-                alu_srcA = 1'b1;                // pc
+                alu_src = 1'b1;                 // pc target
                 alu_srcB = 1'b1;                // immd ext
                 immed_sel = 3'b011;             // U-type
-                rf_wr_sel = 2'b11;              // alu result
             end
 
-            // TODO
+            // TODO : pc +4 reg mux
             JAL: begin
             end
 
@@ -114,6 +112,7 @@ module Decoder(
             end
 
             LOAD: begin
+                // TODO: read mem reg mux
             end
 
             STORE: begin
@@ -124,7 +123,6 @@ module Decoder(
             end
 
             OP_IMM: begin
-                rf_wr_sel = 2'b11;              // alu result
                 immed_sel = 3'b000;             // I-type
                 alu_srcB = 1'b1;                // immd ext
                 case(FUNC3)
@@ -146,7 +144,6 @@ module Decoder(
             end
 
             OP_RG3: begin
-                rf_wr_sel = 2'b11;              // ALU output
                 case(FUNC3)
                     3'b000: begin
                         if (instr[30] == 1)
