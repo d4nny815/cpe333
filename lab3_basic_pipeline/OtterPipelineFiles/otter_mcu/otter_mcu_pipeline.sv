@@ -55,7 +55,7 @@ module OTTER_MCU (
     Memory OTTER_MEMORY (
         .MEM_CLK        (CLK),
         .MEM_RDEN1      (1'b1),   // TODO: memRead1; HARDWIRED
-        .MEM_RDEN2      (1'b1),   // TODO: idk if this is supposed to be hardwired  
+        .MEM_RDEN2      (memRead2_M),    
         .MEM_WE2        (memWrite_M),
         .MEM_ADDR1      (PC_F[15:2]),
         .MEM_ADDR2      (ALU_result_M),
@@ -162,6 +162,7 @@ module OTTER_MCU (
         .rs2_D          (rs2_D),
         .immed_ext_D    (immed_ext_D),
         .PC_plus4_D     (PC_plus4_D),
+        //
         .PC_E           (PC_E),
         .Instr_E        (Instr_E),
         .regWrite_E     (regWrite_E),

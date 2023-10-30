@@ -30,7 +30,7 @@ module Pipeline_reg_fetch_decode(
     output logic [31:0] PC_plus4_D
     );
 
-    always_ff @(negedge CLK) begin
+    always_ff @(posedge CLK) begin
         Instr_D <= Instr_F;
         PC_D <= PC_F;
         PC_plus4_D <= PC_plus4_F;

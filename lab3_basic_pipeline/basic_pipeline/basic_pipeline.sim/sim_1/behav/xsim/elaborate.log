@@ -1,15 +1,15 @@
 Vivado Simulator v2022.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
+Running: /tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 32 for port 'MEM_DIN2' [Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:62]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'PC_plus4_E' [Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:179]
-WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 4 for port 'alu_fun' [Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:197]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'PC_plus4_E' [Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:230]
-WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'rf_wr_sel_M' [Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:255]
-WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'rf_wr_sel_W' [Z:/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:261]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 32 for port 'MEM_DIN2' [/media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:62]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'PC_plus4_E' [/media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:179]
+WARNING: [VRFC 10-3091] actual bit length 3 differs from formal bit length 4 for port 'alu_fun' [/media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:197]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'PC_plus4_E' [/media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:230]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'rf_wr_sel_M' [/media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:255]
+WARNING: [VRFC 10-3091] actual bit length 2 differs from formal bit length 1 for port 'rf_wr_sel_W' [/media/danny/exSSD/schoolfiles/school_files/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:261]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
