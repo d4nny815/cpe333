@@ -29,7 +29,7 @@ module Pipeline_reg_decode_execute(
     input memRead2_D,
     input jump_D,
     input branch_D,
-    input [2:0] alu_fun_D,
+    input [3:0] alu_fun_D,
     input alu_src_D,
     input alu_srcB_D,
     input [1:0] rf_wr_sel_D,

@@ -78,7 +78,8 @@ module OTTER_MCU (
     // control unit outputs
     logic regWrite_D, memWrite_D, memRead2_D, alu_srcA_D, alu_srcB_D, jump_D, branch_D, br_eq, br_lt, br_ltu;
     logic [1:0] rf_wr_sel_D;
-    logic [2:0] alu_fun_D, immed_sel; 
+    logic [2:0] immed_sel;
+    logic [3:0] alu_fun_D; 
 
     Pipeline_reg_fetch_decode pipeline_reg_F_D(
         .CLK            (CLK),
