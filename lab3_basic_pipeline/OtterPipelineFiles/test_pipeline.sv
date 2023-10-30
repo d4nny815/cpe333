@@ -43,7 +43,7 @@ module test_pipeline();
         rst = 1'b1;
         #6;
         rst = 1'b0;
-        #150;
+        #190;
         $finish;
     end
 

@@ -140,7 +140,7 @@ module OTTER_MCU (
     logic regWrite_E, memWrite_E, memRead2_E, alu_src_E, alu_srcB_E, jump_E, branch_E;
     logic [1:0] rf_wr_sel_E;
     logic [2:0] alu_fun_E;
-    logic [31:0] PC_E, rs1_E, rs2_E, immed_ext_E, ALU_result_E, Instr_E;
+    logic [31:0] PC_E, rs1_E, rs2_E, immed_ext_E, ALU_result, ALU_result_E, Instr_E;
 
     // internal stage signals
     logic [31:0] ALU_srcA_data, ALU_srcB_data, PC_target_addr_E;
