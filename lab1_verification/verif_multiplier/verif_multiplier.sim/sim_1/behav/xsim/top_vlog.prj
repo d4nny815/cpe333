@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../mult/types.sv" \
+"../../../../../mult/add_shift_multiplier.sv" \
+"../../../../../mult/verification/grader/grader_types.sv" \
+"../../../../../mult/verification/grader/grader.sv" \
+"../../../../../mult/verification/grader/grader_itf.sv" \
+"../../../../../mult/verification/multiplier_itf.sv" \
+"../../../../../mult/verification/testbench.sv" \
+"../../../../../mult/verification/grader/transaction_monitor.sv" \
+"../../../../../mult/verification/grader/transaction_scoreboard.sv" \
+"../../../../../mult/verification/top.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

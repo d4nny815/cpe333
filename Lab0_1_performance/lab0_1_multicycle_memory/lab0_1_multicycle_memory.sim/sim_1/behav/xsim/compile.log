@@ -1,0 +1,29 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/ArithLogicUnit.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OTTER_ALU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/CSR.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CSR
+WARNING: [VRFC 10-8426] non-net output port 'mepc' cannot be initialized at declaration in SystemVerilog mode [Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/CSR.sv:30]
+WARNING: [VRFC 10-8426] non-net output port 'mtvec' cannot be initialized at declaration in SystemVerilog mode [Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/CSR.sv:31]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/CU_Decoder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OTTER_CU_Decoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/ControlUnit.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OTTER_CU_FSM
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/Mult4to1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Mult6to1
+INFO: [VRFC 10-311] analyzing module Mult5to1
+INFO: [VRFC 10-311] analyzing module Mult4to1
+INFO: [VRFC 10-311] analyzing module Mult2to1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/OTTER_CPU.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OTTER_MCU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/ProgCount.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ProgCount
+WARNING: [VRFC 10-8426] non-net output port 'PC_COUNT' cannot be initialized at declaration in SystemVerilog mode [Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/ProgCount.sv:28]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/bram_dualport.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OTTER_mem_dualport
+INFO: [VRFC 10-311] analyzing module OTTER_mem_byte
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/given_files/OTTER-multicyle-1-cycle-memory/registerFile.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OTTER_registerFile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/HDL/simTemplate-1.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OTTERSim
+INFO: [VRFC 10-2263] Analyzing Verilog file "Z:/schoolfiles/school_files/cpe333/Lab0_1_performance/lab0_1_multicycle_memory/lab0_1_multicycle_memory.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

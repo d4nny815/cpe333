@@ -12,16 +12,26 @@ module OTTERSim();
     logic clk, rst, wr;
     logic [31:0] in, out, addr;
     
-    OTTER_MCU UUT(.RST(rst), .intr(), .iobus_in(in), .clk(clk), .iobus_wr(wr), .iobus_out(out), .iobus_addr(addr));
+    OTTER_MCU UUT(
+        .RST            (rst), 
+        .intr           (), 
+        .iobus_in       (in), 
+        .clk            (clk), 
+        .iobus_wr       (wr), 
+        .iobus_out      (out), 
+        .iobus_addr     (addr)
+    );
 
     initial begin
-    clk = 0; end
-    
+    clk = 0;
+    rst = 1; 
+    end
+
     always begin
     #10 clk = ~clk; end  
 
     always begin
-    #60 rst = 1'b0;
-    in = 32'h2; end
+    #30 rst = 1'b0;
+     in = 32'h2; end
     
 endmodule

@@ -1,0 +1,28 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto ef8a6193dfeb42b6a0184ad1ef65f7a5 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot top_behav xil_defaultlib.top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/verif_multiplier/verif_multiplier.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/verif_multiplier/verif_multiplier.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.mult_types
+Compiling package std.std
+Compiling package xil_defaultlib.grader_types
+Compiling module xil_defaultlib.multiplier_itf
+Compiling module xil_defaultlib.add_shift_multiplier
+Compiling module xil_defaultlib.tb_clk
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.grader_itf
+Compiling module xil_defaultlib.mon_clk
+Compiling module xil_defaultlib.transaction_monitor
+Compiling module xil_defaultlib.scb_clk
+Compiling module xil_defaultlib.transaction_scoreboard
+Compiling module xil_defaultlib.grader
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_behav

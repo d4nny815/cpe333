@@ -1,0 +1,72 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+GDR: Grader Running
+MON: Reset detected at time 0 with multiplier in state: NONE
+SCB: Received reset at time 0
+SCB: Multiplier in state NONE
+MON: Reset detected at time 12000 with multiplier in state: NONE
+SCB: Received reset at time 12000
+SCB: Multiplier in state NONE
+MON: Reset detected at time 22000 with multiplier in state: NONE
+SCB: Received reset at time 22000
+SCB: Multiplier in state NONE
+MON: Reset detected at time 32000 with multiplier in state: NONE
+SCB: Received reset at time 32000
+SCB: Multiplier in state NONE
+MON: Reset detected at time 42000 with multiplier in state: NONE
+SCB: Received reset at time 42000
+SCB: Multiplier in state NONE
+TB: TESTING start_i signal asserted while in run states
+TB: start asserted in ADD
+SCB: 102000: Detected inflight start
+SCB: 112000: Detected inflight start
+TB: start asserted in SHIFT
+SCB: 132000: Detected inflight start
+SCB: 142000: Detected inflight start
+TB: PASSED start asserted in run state
+MON: Reset detected at time 252000 with multiplier in state: DONE
+SCB: Received reset at time 252000
+SCB: Multiplier in state DONE
+MON: Reset detected at time 262000 with multiplier in state: NONE
+SCB: Received reset at time 262000
+SCB: Multiplier in state NONE
+MON: Reset detected at time 272000 with multiplier in state: NONE
+SCB: Received reset at time 272000
+SCB: Multiplier in state NONE
+MON: Reset detected at time 282000 with multiplier in state: NONE
+SCB: Received reset at time 282000
+SCB: Multiplier in state NONE
+MON: Reset detected at time 292000 with multiplier in state: NONE
+SCB: Received reset at time 292000
+SCB: Multiplier in state NONE
+TB: Testing reset in run states
+TB: reset asserted in ADD
+SCB: MULT Reset at time 351000
+MON: Reset detected at time 352000 with multiplier in state: ADD
+SCB: Received reset at time 352000
+SCB: Multiplier in state ADD
+TB: reset asserted in SHIFT
+SCB: MULT Reset at time 381000
+MON: Reset detected at time 382000 with multiplier in state: SHIFT
+SCB: Received reset at time 382000
+SCB: Multiplier in state SHIFT
+TB: PASSED reset asserted in run state
+MON: Reset detected at time 392000 with multiplier in state: NONE
+SCB: Received reset at time 392000
+SCB: Multiplier in state NONE
+MON: Reset detected at time 402000 with multiplier in state: NONE
+SCB: Received reset at time 402000
+SCB: Multiplier in state NONE
+MON: Reset detected at time 412000 with multiplier in state: NONE
+SCB: Received reset at time 412000
+SCB: Multiplier in state NONE
+MON: Reset detected at time 422000 with multiplier in state: NONE
+SCB: Received reset at time 422000
+SCB: Multiplier in state NONE
+MON: Reset detected at time 432000 with multiplier in state: NONE
+SCB: Received reset at time 432000
+SCB: Multiplier in state NONE
+TB: TESTING every possible comb of muliplicand and multiplier
+TB: PASSED every possible comb
+Cleaning-up Test Run...
+$finish called at time : 11142570 ns : File "C:/Users/D4nny/OneDrive/Documents/cpe333/lab1_verification/mult/verification/multiplier_itf.sv" Line 48
