@@ -258,6 +258,7 @@ module OTTER_MCU (
         .ALU_result_M   (ALU_result_M),
         .memRead_data_M (memRead_data_M),
         .PC_plus4_M     (PC_plus4_M),
+        
         .regWrite_W     (regWrite_W),
         .rf_wr_sel_W    (rf_wr_sel_W),
         .rd_W           (rd_W),
@@ -268,10 +269,10 @@ module OTTER_MCU (
 
     mux_4t1_nb #(.n(32)) rf_write_data_mux (
         .SEL            (rf_wr_sel_W),
-        .D0             (PC_plus4_W), 
-	    .D1             (32'd0), 
-	    .D2             (memRead_data_W), 
-	    .D3             (ALU_result_W), 
+        .D0             (ALU_result_M), 
+	    .D1             (memRead_data_W), 
+	    .D2             (PC_plus4_W), 
+	    .D3             (2'b00), 
         .D_OUT          (rf_write_data_W)
     );              
 endmodule
