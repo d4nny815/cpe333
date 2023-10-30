@@ -139,11 +139,11 @@ module OTTER_MCU (
     // pipeline reg signals
     logic regWrite_E, memWrite_E, memRead2_E, alu_src_E, alu_srcB_E, jump_E, branch_E;
     logic [1:0] rf_wr_sel_E;
-    logic [2:0] alu_fun_E;
+    logic [3:0] alu_fun_E;
     logic [31:0] PC_E, rs1_E, rs2_E, immed_ext_E, ALU_result, ALU_result_E, Instr_E;
 
     // internal stage signals
-    logic [31:0] ALU_srcA_data, ALU_srcB_data, PC_target_addr_E;
+    logic [31:0] ALU_srcA_data, ALU_srcB_data, PC_target_addr_E, PC_plus4_E;
     logic ALU_zero_E, pcSource_E;
 
     Pipeline_reg_decode_execute pipeline_reg_D_E (
@@ -190,7 +190,7 @@ module OTTER_MCU (
 
     ALU OTTER_ALU(
         .alu_fun        (alu_fun_E),
-        .srcA           (ALU_srcA_data), 
+        .srcA           (rs1_E), 
         .srcB           (ALU_srcB_data), 
         .result         (ALU_result),
         .zero           (ALU_zero_E)

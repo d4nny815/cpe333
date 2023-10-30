@@ -44,7 +44,7 @@ module Pipeline_reg_decode_execute(
     output logic memRead2_E,
     output logic jump_E,
     output logic branch_E,
-    output logic [2:0] alu_fun_E,
+    output logic [3:0] alu_fun_E,
     output logic alu_src_E,
     output logic alu_srcB_E,
     output logic [1:0] rf_wr_sel_E,
