@@ -54,7 +54,7 @@ module RegFile(
             reg_file[i] = 0;
     end
     
-    always_ff @(posedge clk)
+    always_ff @(negedge clk)
     begin
         if ( (en == 1) && (wa != 0) )
             reg_file[wa] <= wd;       
