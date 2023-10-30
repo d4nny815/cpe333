@@ -139,11 +139,11 @@ module OTTER_MCU (
     // pipeline reg signals
     logic regWrite_E, memWrite_E, memRead2_E, alu_src_E, alu_srcB_E, jump_E, branch_E;
     logic [1:0] rf_wr_sel_E;
-    logic [2:0] alu_fun_E;
+    logic [3:0] alu_fun_E;
     logic [31:0] PC_E, rs1_E, rs2_E, immed_ext_E, ALU_result, ALU_result_E, Instr_E;
 
     // internal stage signals
-    logic [31:0] ALU_srcA_data, ALU_srcB_data, PC_target_addr_E;
+    logic [31:0] ALU_srcA_data, ALU_srcB_data, PC_target_addr_E, PC_plus4_E;
     logic ALU_zero_E, pcSource_E;
 
     Pipeline_reg_decode_execute pipeline_reg_D_E (
@@ -190,7 +190,7 @@ module OTTER_MCU (
 
     ALU OTTER_ALU(
         .alu_fun        (alu_fun_E),
-        .srcA           (ALU_srcA_data), 
+        .srcA           (rs1_E), 
         .srcB           (ALU_srcB_data), 
         .result         (ALU_result),
         .zero           (ALU_zero_E)
@@ -227,7 +227,7 @@ module OTTER_MCU (
         .rf_wr_sel_E    (rf_wr_sel_E),
         .ALU_result_E   (ALU_result_E),
         .write_data_E   (rs2_E),
-        .rd_E           (PC_E[11:7]),
+        .rd_E           (Instr_E[11:7]),
         .memWrite_size_E(PC_E[14:12]),
         .PC_plus4_E     (PC_plus4_E),
         .regWrite_M     (regWrite_M),
@@ -259,7 +259,6 @@ module OTTER_MCU (
         .ALU_result_M   (ALU_result_M),
         .memRead_data_M (memRead_data_M),
         .PC_plus4_M     (PC_plus4_M),
-        
         .regWrite_W     (regWrite_W),
         .rf_wr_sel_W    (rf_wr_sel_W),
         .rd_W           (rd_W),
@@ -270,10 +269,10 @@ module OTTER_MCU (
 
     mux_4t1_nb #(.n(32)) rf_write_data_mux (
         .SEL            (rf_wr_sel_W),
-        .D0             (ALU_result_M), 
+        .D0             (ALU_result_W ), 
 	    .D1             (memRead_data_W), 
 	    .D2             (PC_plus4_W), 
-	    .D3             (2'b00), 
+	    .D3             (32'd0), 
         .D_OUT          (rf_write_data_W)
     );              
 endmodule

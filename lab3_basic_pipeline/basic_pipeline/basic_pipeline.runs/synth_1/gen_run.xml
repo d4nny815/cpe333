@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1698622244">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1698696378">
   <File Type="RDS-RDS" Name="OTTER_MCU.vds"/>
   <File Type="REPORTS-TCL" Name="OTTER_MCU_reports.tcl"/>
   <File Type="PA-TCL" Name="OTTER_MCU.tcl"/>
