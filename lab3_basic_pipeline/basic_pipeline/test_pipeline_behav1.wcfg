@@ -16,7 +16,7 @@
       <Cursor1Time time="150.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="224"></NameColumnWidth>
+      <NameColumnWidth column_width="216"></NameColumnWidth>
       <ValueColumnWidth column_width="128"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="44" />
@@ -95,6 +95,7 @@
    <wvobject type="array" fp_name="/test_pipeline/my_otter/pipeline_reg_D_E/alu_fun_E">
       <obj_property name="ElementShortName">alu_fun_E[3:0]</obj_property>
       <obj_property name="ObjectShortName">alu_fun_E[3:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/test_pipeline/my_otter/pipeline_reg_D_E/alu_src_E">
       <obj_property name="ElementShortName">alu_src_E</obj_property>
