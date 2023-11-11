@@ -59,7 +59,7 @@ module OTTER_MCU (
         .MEM_WE2        (memWrite_M),
         .MEM_ADDR1      (PC_F[15:2]),
         .MEM_ADDR2      (ALU_result_M),
-        .MEM_DIN2       (rd_M),  
+        .MEM_DIN2       (write_data_M),  
         .MEM_SIZE       (memWrite_size_M[1:0]),
         .MEM_SIGN       (memWrite_size_M[2]),
         .IO_IN          (IOBUS_IN),
@@ -68,7 +68,7 @@ module OTTER_MCU (
         .MEM_DOUT2      (memRead_data_M)  
     ); 
     
-    assign IOBUS_OUT = rd_M;
+    assign IOBUS_OUT = write_data_M;
 
 //*********************************************************************************************************************
 // Decode (Register File) stage
@@ -181,16 +181,36 @@ module OTTER_MCU (
         .PC_plus4_E     (PC_plus4_E)
     );
 
+
+    logic [31:0] ALU_forward_muxA, ALU_forward_muxB; 
+    mux_4t1_nb #(.n(32)) forwardA_mux (
+        .SEL            (forwardA_E),
+        .D0             (rs1_E), 
+	    .D1             (rf_write_data_W), 
+	    .D2             (ALU_result_M), 
+	    .D3             (0), 
+        .D_OUT          (ALU_forward_muxA)
+    ); 
+
+    mux_4t1_nb #(.n(32)) forwardB_mux (
+        .SEL            (forwardB_E),
+        .D0             (rs2_E), 
+	    .D1             (rf_write_data_W), 
+	    .D2             (ALU_result_M), 
+	    .D3             (0), 
+        .D_OUT          (ALU_forward_muxB)
+   ); 
+
     mux_2t1_nb #(.n(32)) ALU_srcB_mux (
         .SEL            (alu_srcB_E),
-        .D0             (rs2_E),
+        .D0             (ALU_forward_muxB),
         .D1             (immed_ext_E),
         .D_OUT          (ALU_srcB_data)
     );
 
     ALU OTTER_ALU(
         .alu_fun        (alu_fun_E),
-        .srcA           (rs1_E), 
+        .srcA           (ALU_forward_muxA), 
         .srcB           (ALU_srcB_data), 
         .result         (ALU_result),
         .zero           (ALU_zero_E)
@@ -226,7 +246,7 @@ module OTTER_MCU (
         .memWrite_E     (memWrite_E),
         .rf_wr_sel_E    (rf_wr_sel_E),
         .ALU_result_E   (ALU_result_E),
-        .write_data_E   (rs2_E),
+        .write_data_E   (ALU_forward_muxB),
         .rd_E           (Instr_E[11:7]),
         .memWrite_size_E(PC_E[14:12]),
         .PC_plus4_E     (PC_plus4_E),
@@ -274,5 +294,23 @@ module OTTER_MCU (
 	    .D2             (PC_plus4_W), 
 	    .D3             (32'd0), 
         .D_OUT          (rf_write_data_W)
-    );              
+    );           
+
+
+// ********************************************************************************************************************
+// HAZARD UNUT
+// ********************************************************************************************************************
+    logic [1:0] forwardA_E, forwardB_E;
+    
+    Hazard hazard_unit (
+        .rs1_E          (Instr_E[19:15]),
+        .rs2_E          (Instr_E[24:20]),
+        .rd_M           (rd_M),
+        .rd_W           (rd_W),
+        .regWrite_M     (regWrite_M),
+        .regWrite_W     (regWrite_W),
+        .forwardA_E     (forwardA_E),
+        .forwardB_E     (forwardB_E)
+    );
+
 endmodule

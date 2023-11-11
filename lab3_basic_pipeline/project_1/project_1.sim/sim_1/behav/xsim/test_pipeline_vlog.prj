@@ -1,0 +1,23 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../../OtterPipelineFiles/otter_mcu/Decoder.sv" \
+"../../../../../OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv" \
+"../../../../../OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv" \
+"../../../../../OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv" \
+"../../../../../OtterPipelineFiles/otter_mcu/alu.sv" \
+"../../../../../OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv" \
+"../../../../../OtterPipelineFiles/otter_mcu/immed_gen.sv" \
+"../../../../../OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv" \
+"../../../../../OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv" \
+"../../../../../OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv" \
+"../../../../../OtterPipelineFiles/otter_mcu/otter_memory.sv" \
+"../../../../../OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv" \
+"../../../../../OtterPipelineFiles/otter_mcu/reg_file.sv" \
+"../../../../../OtterPipelineFiles/otter_mcu/register_nb.sv" \
+"../../../../../OtterPipelineFiles/test_pipeline.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

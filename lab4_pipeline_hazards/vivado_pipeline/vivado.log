@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Nov 11 14:30:40 2023
+# Process ID: 27032
+# Current directory: C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/vivado_pipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10436 C:\Users\ryana\CPE333\cpe333\lab4_pipeline_hazards\vivado_pipeline\vivado_pipeline.xpr
+# Log file: C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/vivado_pipeline/vivado.log
+# Journal file: C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/vivado_pipeline\vivado.jou
+# Running On: LAPTOP-I3MDA0LJ, OS: Windows, CPU Frequency: 1996 MHz, CPU Physical cores: 8, Host memory: 16497 MB
+#-----------------------------------------------------------
+start_gui

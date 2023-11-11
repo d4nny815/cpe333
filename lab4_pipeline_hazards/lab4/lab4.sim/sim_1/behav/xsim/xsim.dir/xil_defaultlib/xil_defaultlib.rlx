@@ -1,0 +1,21 @@
+0.7
+2020.2
+Apr 18 2022
+16:05:34
+C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv,1699739768,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Decoder.sv,,branch_cond_gen,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Decoder.sv,1699739768,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv,,Decoder,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv,1699739768,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv,,Pipeline_reg_decode_execute,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv,1699739768,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv,,Pipeline_reg_execute_memory,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv,1699739768,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/alu.sv,,Pipeline_reg_memory_writeback,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/alu.sv,1699739768,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/hazard.sv,,ALU,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/hazard.sv,1699743784,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/immed_gen.sv,,Hazard,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/immed_gen.sv,1699743922,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv,,immed_gen,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv,1699739768,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv,,mux_2t1_nb,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv,1699739768,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv,,mux_4t1_nb,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv,1699745280,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_memory.sv,,OTTER_MCU,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_memory.sv,1699739768,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv,,Memory,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv,1699739768,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/reg_file.sv,,Pipeline_reg_fetch_decode,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/reg_file.sv,1699739768,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/register_nb.sv,,RegFile,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/register_nb.sv,1699739768,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv,,reg_nb,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv,1699743500,systemVerilog,,,,test_pipeline,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/lab4/lab4.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,uvm,,,,,,
