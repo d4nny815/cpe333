@@ -4,6 +4,26 @@ Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'D1' [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:222]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'D1' [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:224]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux_2t1_nb(n=32)
+Compiling module xil_defaultlib.reg_nb(n=32)
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.Pipeline_reg_fetch_decode
+Compiling module xil_defaultlib.branch_cond_gen
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.RegFile
+Compiling module xil_defaultlib.immed_gen
+Compiling module xil_defaultlib.Pipeline_reg_decode_execute
+Compiling module xil_defaultlib.mux_4t1_nb(n=32)
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Pipeline_reg_execute_memory
+Compiling module xil_defaultlib.Pipeline_reg_memory_writeback
+Compiling module xil_defaultlib.Hazard_Unit
+Compiling module xil_defaultlib.OTTER_MCU
+Compiling module xil_defaultlib.test_pipeline
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_pipeline_behav

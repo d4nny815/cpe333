@@ -37,8 +37,8 @@ module OTTER_MCU (
     assign PC_plus4_F = PC_F + 4;
     
     mux_2t1_nb #(.n(32)) PC_2t1_mux (
-        // .SEL            (pcSource_E),
-        .SEL            (1'b0),
+        .SEL            (pcSource_E),
+        // .SEL            (1'b0),
         .D0             (PC_plus4_F),
         .D1             (PC_target_addr_E),
         .D_OUT          (PC_i)
@@ -46,7 +46,7 @@ module OTTER_MCU (
 
     reg_nb #(.n(32)) Program_Counter (
         .data_in        (PC_i), 
-        .ld             (1'b1), // TODO: pcWrite; HARDWIRED
+        .ld             (stall_F), 
         .clk            (CLK), 
         .clr            (RESET), 
         .data_out       (PC_F)
@@ -54,7 +54,7 @@ module OTTER_MCU (
 
     Memory OTTER_MEMORY (
         .MEM_CLK        (CLK),
-        .MEM_RDEN1      (1'b1),   // TODO: memRead1; HARDWIRED
+        .MEM_RDEN1      (1'b1),   
         .MEM_RDEN2      (memRead2_M),    
         .MEM_WE2        (memWrite_M),
         .MEM_ADDR1      (PC_F[15:2]),
@@ -83,6 +83,7 @@ module OTTER_MCU (
 
     Pipeline_reg_fetch_decode pipeline_reg_F_D(
         .CLK            (CLK),
+        .stall_D        (stall_D),
         .Instr_F        (Instr_F), 
         .PC_F           (PC_F),
         .PC_plus4_F     (PC_plus4_F),
@@ -148,6 +149,7 @@ module OTTER_MCU (
 
     Pipeline_reg_decode_execute pipeline_reg_D_E (
         .CLK            (CLK),
+        .flush_E        (flush_E),
         .PC_D           (PC_D),
         .Instr_D        (Instr_D),
         .regWrite_D     (regWrite_D),
@@ -244,6 +246,7 @@ module OTTER_MCU (
         .CLK            (CLK),
         .regWrite_E     (regWrite_E),
         .memWrite_E     (memWrite_E),
+        .memRead2_E     (memRead2_E),
         .rf_wr_sel_E    (rf_wr_sel_E),
         .ALU_result_E   (ALU_result_E),
         .write_data_E   (ALU_forward_muxB),
@@ -252,6 +255,7 @@ module OTTER_MCU (
         .PC_plus4_E     (PC_plus4_E),
         .regWrite_M     (regWrite_M),
         .memWrite_M     (memWrite_M),
+        .memRead2_M     (memRead2_M),
         .rf_wr_sel_M    (rf_wr_sel_M),
         .ALU_result_M   (ALU_result_M),
         .write_data_M   (write_data_M),
@@ -301,16 +305,23 @@ module OTTER_MCU (
 // HAZARD UNUT
 // ********************************************************************************************************************
     logic [1:0] forwardA_E, forwardB_E;
-    
-    Hazard hazard_unit (
+    logic stall_F, stall_D, flush_E;
+    Hazard_Unit hazard_unit (
+        .rs1_D          (Instr_D[19:15]),
+        .rs2_D          (Instr_D[24:20]),
         .rs1_E          (Instr_E[19:15]),
         .rs2_E          (Instr_E[24:20]),
+        .rd_E           (Instr_E[11:7]),
         .rd_M           (rd_M),
         .rd_W           (rd_W),
+        .rf_wr_sel_E    (rf_wr_sel_E),
         .regWrite_M     (regWrite_M),
         .regWrite_W     (regWrite_W),
         .forwardA_E     (forwardA_E),
-        .forwardB_E     (forwardB_E)
+        .forwardB_E     (forwardB_E),
+        .stall_F        (stall_F),
+        .stall_D        (stall_D),
+        .flush_E        (flush_E)
     );
 
 endmodule

@@ -22,6 +22,7 @@
 
 module Pipeline_reg_decode_execute(
     input CLK,
+    input flush_E,
     input [31:0] PC_D,
     input [31:0] Instr_D,
     input regWrite_D,
@@ -55,21 +56,40 @@ module Pipeline_reg_decode_execute(
     );
 
     always_ff @(posedge CLK ) begin 
-        PC_E <= PC_D;
-        Instr_E <= Instr_D;
-        regWrite_E <= regWrite_D;
-        memWrite_E <= memWrite_D;
-        memRead2_E <= memRead2_D;
-        jump_E <= jump_D;
-        branch_E <= branch_D;
-        alu_fun_E <= alu_fun_D;
-        alu_src_E <= alu_src_D;
-        alu_srcB_E <= alu_srcB_D;
-        rf_wr_sel_E <= rf_wr_sel_D;
-        rs1_E <= rs1_D;
-        rs2_E <= rs2_D;
-        immed_ext_E <= immed_ext_D;
-        PC_plus4_E <= PC_plus4_D;
+        if (flush_E == 1) begin
+            PC_E <= 0;
+            Instr_E <= 0;
+            regWrite_E <= 0;
+            memWrite_E <= 0;
+            memRead2_E <= 0;
+            jump_E <= 0;
+            branch_E <= 0;
+            alu_fun_E <= 0;
+            alu_src_E <= 0;
+            alu_srcB_E <= 0;
+            rf_wr_sel_E <= 0;
+            rs1_E <= 0;
+            rs2_E <= 0;
+            immed_ext_E <= 0;
+            PC_plus4_E <= 0;
+        end
+        else begin
+            PC_E <= PC_D;
+            Instr_E <= Instr_D;
+            regWrite_E <= regWrite_D;
+            memWrite_E <= memWrite_D;
+            memRead2_E <= memRead2_D;
+            jump_E <= jump_D;
+            branch_E <= branch_D;
+            alu_fun_E <= alu_fun_D;
+            alu_src_E <= alu_src_D;
+            alu_srcB_E <= alu_srcB_D;
+            rf_wr_sel_E <= rf_wr_sel_D;
+            rs1_E <= rs1_D;
+            rs2_E <= rs2_D;
+            immed_ext_E <= immed_ext_D;
+            PC_plus4_E <= PC_plus4_D;
+        end
     end
 
 endmodule

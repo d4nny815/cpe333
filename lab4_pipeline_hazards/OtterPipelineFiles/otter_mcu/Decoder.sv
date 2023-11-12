@@ -70,7 +70,7 @@ module Decoder(
 
     always_comb begin
         regWrite = 1'b1; memWrite = 1'b0; memRead2 = 1'b0; jump = 1'b0;
-        branch = 1'b0; alu_fun = 3'b000; alu_src = 1'b0; alu_srcB = 1'b0; 
+        branch = 1'b0; alu_fun = 4'b0000; alu_src = 1'b0; alu_srcB = 1'b0; 
         immed_sel = 3'b000; rf_wr_sel = 2'b00;
 
         case (OPCODE)
@@ -112,7 +112,10 @@ module Decoder(
             end
 
             LOAD: begin
-                // TODO: read mem reg mux
+                alu_fun = 4'b0000;              // add
+                alu_srcB = 1'b1;                // I-type
+                rf_wr_sel = 2'b01;              // mem data output
+                memRead2 = 1'b1;
             end
 
             STORE: begin
@@ -120,6 +123,7 @@ module Decoder(
                 alu_srcB = 1'b1;                // immd ext
                 immed_sel = 3'b001;             // S-type
                 memWrite = 1'b1;                // mem write
+                regWrite = 1'b0;                
             end
 
             OP_IMM: begin

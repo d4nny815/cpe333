@@ -26,6 +26,7 @@ module Pipeline_reg_execute_memory(
     input CLK,
     input regWrite_E,
     input memWrite_E,
+    input memRead2_E,
     input [1:0] rf_wr_sel_E,
     input [31:0] ALU_result_E,
     input [31:0] write_data_E,
@@ -34,6 +35,7 @@ module Pipeline_reg_execute_memory(
     input [31:0] PC_plus4_E,
     output logic regWrite_M,
     output logic memWrite_M,
+    output logic memRead2_M,
     output logic [1:0] rf_wr_sel_M,
     output logic [31:0] ALU_result_M,
     output logic [31:0] write_data_M,
@@ -46,6 +48,7 @@ module Pipeline_reg_execute_memory(
         regWrite_M <= regWrite_E;
         rf_wr_sel_M <= rf_wr_sel_E;
         memWrite_M <= memWrite_E;
+        memRead2_M <= memRead2_E;
         ALU_result_M <= ALU_result_E;
         write_data_M <= write_data_E;
         rd_M <= rd_E;

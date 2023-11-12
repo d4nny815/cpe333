@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Sat Nov 11 14:51:38 2023
-# Process ID: 13288
+# Start of session at: Sat Nov 11 16:37:41 2023
+# Process ID: 6044
 # Current directory: C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/lab4/lab4.runs/synth_1
 # Command line: vivado.exe -log OTTER_MCU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_MCU.tcl
 # Log file: C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/lab4/lab4.runs/synth_1/OTTER_MCU.vds
