@@ -12,12 +12,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="301.001 ns"></ZoomEndTime>
-      <Cursor1Time time="190.000 ns"></Cursor1Time>
+      <ZoomEndTime time="421.909 ns"></ZoomEndTime>
+      <Cursor1Time time="301.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="216"></NameColumnWidth>
-      <ValueColumnWidth column_width="118"></ValueColumnWidth>
+      <ValueColumnWidth column_width="113"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="100" />
    <wvobject fp_name="/test_pipeline/my_otter/pipeline_reg_F_D/CLK" type="logic">

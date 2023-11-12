@@ -84,6 +84,7 @@ module OTTER_MCU (
     Pipeline_reg_fetch_decode pipeline_reg_F_D(
         .CLK            (CLK),
         .stall_D        (stall_D),
+        .flush_D        (flush_D),
         .Instr_F        (Instr_F), 
         .PC_F           (PC_F),
         .PC_plus4_F     (PC_plus4_F),
@@ -92,19 +93,8 @@ module OTTER_MCU (
         .PC_plus4_D     (PC_plus4_D)
     );
 
-    branch_cond_gen branch_conditional(
-        .rs1            (rs1_D),
-        .rs2            (rs2_D),
-        .br_eq          (br_eq),
-        .br_lt          (br_lt),
-        .br_ltu         (br_ltu)
-    );
-
     Decoder Control_Unit (
         .instr          (Instr_D),
-        .br_eq          (br_eq), 
-        .br_lt          (br_lt), 
-        .br_ltu         (br_ltu),
         .regWrite       (regWrite_D),
         .memWrite       (memWrite_D),
         .memRead2       (memRead2_D),
@@ -145,7 +135,7 @@ module OTTER_MCU (
 
     // internal stage signals
     logic [31:0] ALU_srcA_data, ALU_srcB_data, PC_target_addr_E, PC_plus4_E;
-    logic ALU_zero_E, pcSource_E;
+    logic ALU_zero_E, pcSource_E, branch_conditional_E;
 
     Pipeline_reg_decode_execute pipeline_reg_D_E (
         .CLK            (CLK),
@@ -181,6 +171,13 @@ module OTTER_MCU (
         .rs2_E          (rs2_E),
         .immed_ext_E    (immed_ext_E),
         .PC_plus4_E     (PC_plus4_E)
+    );
+
+    branch_cond_gen branch_conditional(
+        .rs1            (ALU_forward_muxA),
+        .rs2            (ALU_forward_muxB),
+        .instr          (Instr_E[14:12]),
+        .branch         (branch_conditional_E)
     );
 
 
@@ -225,7 +222,7 @@ module OTTER_MCU (
         .D_OUT          (ALU_result_E)
     );
 
-    assign pcSource_E = branch_E | jump_E;
+    assign pcSource_E = (branch_E & branch_conditional_E) | jump_E;
     assign PC_target_addr_E = PC_E + immed_ext_E;
 
 
@@ -305,7 +302,7 @@ module OTTER_MCU (
 // HAZARD UNUT
 // ********************************************************************************************************************
     logic [1:0] forwardA_E, forwardB_E;
-    logic stall_F, stall_D, flush_E;
+    logic stall_F, stall_D, flush_E, flush_D;
     Hazard_Unit hazard_unit (
         .rs1_D          (Instr_D[19:15]),
         .rs2_D          (Instr_D[24:20]),
@@ -321,7 +318,9 @@ module OTTER_MCU (
         .forwardB_E     (forwardB_E),
         .stall_F        (stall_F),
         .stall_D        (stall_D),
-        .flush_E        (flush_E)
+        .flush_E        (flush_E),
+        .pcSource_E     (pcSource_E),
+        .flush_D        (flush_D)
     );
 
 endmodule

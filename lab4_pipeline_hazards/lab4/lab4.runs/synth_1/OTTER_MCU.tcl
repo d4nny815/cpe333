@@ -80,6 +80,7 @@ set_property webtalk.parent_dir C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazar
 set_property parent.project_path C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/lab4/lab4.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
+set_property ip_output_repo c:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/lab4/lab4.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }

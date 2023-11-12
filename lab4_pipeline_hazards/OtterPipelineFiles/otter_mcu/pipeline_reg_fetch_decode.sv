@@ -23,6 +23,7 @@
 module Pipeline_reg_fetch_decode(
     input CLK,
     input stall_D,
+    input flush_D,
     input [31:0] Instr_F, 
     input [31:0] PC_F,
     input [31:0] PC_plus4_F,
@@ -32,6 +33,13 @@ module Pipeline_reg_fetch_decode(
     );
 
     always_ff @(posedge CLK) begin
+        if (flush_D == 1) begin
+            Instr_D <= 0;
+            PC_D <= 0;
+            PC_plus4_D <= 0;
+
+        end
+
         if (stall_D == 0) begin
             Instr_D <= Instr_F;
             PC_D <= PC_F;

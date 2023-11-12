@@ -22,9 +22,6 @@
 // TODO: implement the decoder module
 module Decoder(
     input [31:0] instr,
-    input br_eq, 
-    input br_lt, 
-    input br_ltu,
     output logic regWrite,
     output logic memWrite,
     output logic memRead2,
@@ -89,26 +86,23 @@ module Decoder(
 
             // TODO : pc +4 reg mux
             JAL: begin
+                jump = 1'b1;                    // jump
+                immed_sel = 3'b100;             // j-type
+                alu_src = 1'b1;                 // pc target
+                rf_wr_sel = 2'b10;              // PC + 4
             end
 
             // TODO
             JALR: begin
+                jump = 1'b1;                    // jump
+                alu_fun = 4'b0000;              // add
+                alu_srcB = 1'b1;                // i-type
+                rf_wr_sel = 2'b10;              // PC + 4
             end
 
             BRANCH: begin
                 immed_sel = 3'b010;             // B-type
-                if (FUNC3 == BEQ && br_eq == 1)
-                    branch = 1'b1;
-                else if (FUNC3 == BNE && br_eq == 0)
-                    branch = 1'b1;
-                else if (FUNC3 == BLT && br_lt == 1)
-                    branch = 1'b1;
-                else if (FUNC3 == BGE && br_lt == 0)
-                    branch = 1'b1;
-                else if (FUNC3 == BLTU && br_ltu == 1)
-                    branch = 1'b1;
-                else if (FUNC3 == BGEU && br_ltu == 0)
-                    branch = 1'b1;
+                branch = 1'b1;
             end
 
             LOAD: begin

@@ -12,3 +12,9 @@
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/lab4/lab4.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source test_pipeline.tcl
+open_wave_config {C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/basic_pipeline/test_pipeline_behav1.wcfg}
+relaunch_sim
+relaunch_sim
