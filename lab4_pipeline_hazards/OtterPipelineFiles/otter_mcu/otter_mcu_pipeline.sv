@@ -218,7 +218,7 @@ module OTTER_MCU (
     mux_2t1_nb #(.n(32)) ALU_mux (
         .SEL            (alu_src_E),
         .D0             (ALU_result),
-        .D1             (PCPC_target_addr_E),
+        .D1             (PC_target_addr_E),
         .D_OUT          (ALU_result_E)
     );
 

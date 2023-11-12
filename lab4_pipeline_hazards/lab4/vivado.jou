@@ -18,3 +18,76 @@ source test_pipeline.tcl
 open_wave_config {C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/basic_pipeline/test_pipeline_behav1.wcfg}
 relaunch_sim
 relaunch_sim
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+relaunch_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_sim
+launch_simulation
+source test_pipeline.tcl
+open_wave_config {C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/basic_pipeline/test_pipeline_behav1.wcfg}
+relaunch_sim
+save_wave_config {C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/basic_pipeline/test_pipeline_behav1.wcfg}
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation
+source test_pipeline.tcl
+open_wave_config {C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/basic_pipeline/test_pipeline_behav1.wcfg}
+relaunch_sim
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation
+source test_pipeline.tcl
+open_wave_config {C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/basic_pipeline/test_pipeline_behav1.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+relaunch_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_sim
+launch_simulation
+source test_pipeline.tcl
+open_wave_config {C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/basic_pipeline/test_pipeline_behav1.wcfg}
+relaunch_sim
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns

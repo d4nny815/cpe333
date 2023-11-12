@@ -156,7 +156,7 @@ module Decoder(
                     3'b111: alu_fun = 4'b0010;  // and
                     3'b001: alu_fun = 4'b0101;  // sll
                     3'b101: begin
-                        if (instr[30:25] == 6'b010000)
+                        if (instr[30] == 1)
                             alu_fun = 4'b0111;  // sra
                         else 
                             alu_fun = 4'b0110;  // srl

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Sat Nov 11 18:25:16 2023
+| Date         : Sat Nov 11 18:35:04 2023
 | Host         : LAPTOP-I3MDA0LJ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file OTTER_MCU_utilization_synth.rpt -pb OTTER_MCU_utilization_synth.pb
 | Design       : OTTER_MCU
