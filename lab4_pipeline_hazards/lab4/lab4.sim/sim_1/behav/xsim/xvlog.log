@@ -12,7 +12,6 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ryana/CPE333/cpe333/
 INFO: [VRFC 10-311] analyzing module ALU
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/hazard.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Hazard_Unit
-WARNING: [VRFC 10-3824] variable 'load' must explicitly be declared as automatic or static [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/hazard.sv:48]
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/immed_gen.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module immed_gen
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv" into library xil_defaultlib
@@ -23,15 +22,15 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ryana/CPE333/cpe333/
 INFO: [VRFC 10-311] analyzing module OTTER_MCU
 WARNING: [VRFC 10-2938] 'PC_target_addr_E' is already implicitly declared on line 43 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:137]
 WARNING: [VRFC 10-2938] 'pcSource_E' is already implicitly declared on line 40 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:138]
-WARNING: [VRFC 10-2938] 'ALU_forward_muxA' is already implicitly declared on line 177 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:184]
-WARNING: [VRFC 10-2938] 'memWrite_M' is already implicitly declared on line 59 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:234]
-WARNING: [VRFC 10-2938] 'ALU_result_M' is already implicitly declared on line 61 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:238]
-WARNING: [VRFC 10-2938] 'memRead_data_M' is already implicitly declared on line 68 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:241]
-WARNING: [VRFC 10-2938] 'regWrite_W' is already implicitly declared on line 113 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:271]
-WARNING: [VRFC 10-2938] 'rd_W' is already implicitly declared on line 116 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:273]
-WARNING: [VRFC 10-2938] 'rf_write_data_W' is already implicitly declared on line 111 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:274]
-WARNING: [VRFC 10-2938] 'forwardA_E' is already implicitly declared on line 186 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:305]
-WARNING: [VRFC 10-2938] 'stall_F' is already implicitly declared on line 49 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:306]
+WARNING: [VRFC 10-2938] 'ALU_forward_muxA' is already implicitly declared on line 177 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:183]
+WARNING: [VRFC 10-2938] 'memWrite_M' is already implicitly declared on line 59 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:232]
+WARNING: [VRFC 10-2938] 'ALU_result_M' is already implicitly declared on line 61 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:236]
+WARNING: [VRFC 10-2938] 'memRead_data_M' is already implicitly declared on line 68 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:239]
+WARNING: [VRFC 10-2938] 'regWrite_W' is already implicitly declared on line 113 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:269]
+WARNING: [VRFC 10-2938] 'rd_W' is already implicitly declared on line 116 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:271]
+WARNING: [VRFC 10-2938] 'rf_write_data_W' is already implicitly declared on line 111 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:272]
+WARNING: [VRFC 10-2938] 'forwardA_E' is already implicitly declared on line 185 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:303]
+WARNING: [VRFC 10-2938] 'stall_F' is already implicitly declared on line 49 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:304]
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_memory.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Memory
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv" into library xil_defaultlib

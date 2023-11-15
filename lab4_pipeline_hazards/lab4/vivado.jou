@@ -91,3 +91,43 @@ run 10 ns
 run 10 ns
 run 10 ns
 run 10 ns
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation
+source test_pipeline.tcl
+open_wave_config {C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/basic_pipeline/test_pipeline_behav1.wcfg}
+relaunch_sim
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 10000 ns
+relaunch_sim
+run 10000 ns
+relaunch_sim
+run 5000 ns
+relaunch_sim
+run 5000 ns
+relaunch_sim
+run 5000 ns
+relaunch_sim
+run 5000 ns
+relaunch_sim
+run 5000 ns
+run 5000 ns
+relaunch_sim
+run 5000 ns
+relaunch_sim
+run 5000 ns
+save_wave_config {C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/basic_pipeline/test_pipeline_behav1.wcfg}
+close_sim

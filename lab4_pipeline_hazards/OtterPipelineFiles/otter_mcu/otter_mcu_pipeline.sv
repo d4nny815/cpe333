@@ -180,7 +180,6 @@ module OTTER_MCU (
         .branch         (branch_conditional_E)
     );
 
-
     logic [31:0] ALU_forward_muxA, ALU_forward_muxB; 
     mux_4t1_nb #(.n(32)) forwardA_mux (
         .SEL            (forwardA_E),
@@ -223,7 +222,7 @@ module OTTER_MCU (
     );
 
     assign pcSource_E = (branch_E & branch_conditional_E) | jump_E;
-    assign PC_target_addr_E = PC_E + immed_ext_E;
+    assign PC_target_addr_E = (Instr_E[6:0] == 7'b1100111) ? ALU_result_E : PC_E + immed_ext_E ;
 
 
 // ********************************************************************************************************************
@@ -322,5 +321,6 @@ module OTTER_MCU (
         .pcSource_E     (pcSource_E),
         .flush_D        (flush_D)
     );
+
 
 endmodule

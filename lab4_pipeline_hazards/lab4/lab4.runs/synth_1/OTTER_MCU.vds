@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Sat Nov 11 18:34:17 2023
-# Process ID: 16572
+# Start of session at: Wed Nov 15 13:06:55 2023
+# Process ID: 13400
 # Current directory: C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/lab4/lab4.runs/synth_1
 # Command line: vivado.exe -log OTTER_MCU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_MCU.tcl
 # Log file: C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/lab4/lab4.runs/synth_1/OTTER_MCU.vds
@@ -11,6 +11,7 @@
 # Running On: LAPTOP-I3MDA0LJ, OS: Windows, CPU Frequency: 1996 MHz, CPU Physical cores: 8, Host memory: 16497 MB
 #-----------------------------------------------------------
 source OTTER_MCU.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1288.281 ; gain = 0.000
 Command: read_checkpoint -auto_incremental -incremental C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/vivado_pipeline/vivado_pipeline.srcs/utils_1/imports/synth_1/OTTER_MCU.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/vivado_pipeline/vivado_pipeline.srcs/utils_1/imports/synth_1/OTTER_MCU.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -22,28 +23,27 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 29960
-WARNING: [Synth 8-10180] variable 'load' must explicitly be declared as automatic or static [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/hazard.sv:48]
+INFO: [Synth 8-7075] Helper process launched with PID 24500
 WARNING: [Synth 8-8895] 'PC_target_addr_E' is already implicitly declared on line 43 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:137]
 WARNING: [Synth 8-8895] 'pcSource_E' is already implicitly declared on line 40 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:138]
-WARNING: [Synth 8-8895] 'ALU_forward_muxA' is already implicitly declared on line 177 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:184]
-WARNING: [Synth 8-8895] 'ALU_forward_muxB' is already implicitly declared on line 178 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:184]
-WARNING: [Synth 8-8895] 'memWrite_M' is already implicitly declared on line 59 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:233]
-WARNING: [Synth 8-8895] 'memRead2_M' is already implicitly declared on line 58 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:233]
-WARNING: [Synth 8-8895] 'ALU_result_M' is already implicitly declared on line 61 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:237]
-WARNING: [Synth 8-8895] 'write_data_M' is already implicitly declared on line 62 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:237]
-WARNING: [Synth 8-8895] 'memRead_data_M' is already implicitly declared on line 68 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:240]
-WARNING: [Synth 8-8895] 'regWrite_W' is already implicitly declared on line 113 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:270]
-WARNING: [Synth 8-8895] 'rd_W' is already implicitly declared on line 116 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:272]
-WARNING: [Synth 8-8895] 'rf_write_data_W' is already implicitly declared on line 111 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:273]
-WARNING: [Synth 8-8895] 'forwardA_E' is already implicitly declared on line 186 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:304]
-WARNING: [Synth 8-8895] 'forwardB_E' is already implicitly declared on line 195 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:304]
-WARNING: [Synth 8-8895] 'stall_F' is already implicitly declared on line 49 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:305]
-WARNING: [Synth 8-8895] 'stall_D' is already implicitly declared on line 86 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:305]
-WARNING: [Synth 8-8895] 'flush_E' is already implicitly declared on line 142 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:305]
-WARNING: [Synth 8-8895] 'flush_D' is already implicitly declared on line 87 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:305]
+WARNING: [Synth 8-8895] 'ALU_forward_muxA' is already implicitly declared on line 177 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:183]
+WARNING: [Synth 8-8895] 'ALU_forward_muxB' is already implicitly declared on line 178 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:183]
+WARNING: [Synth 8-8895] 'memWrite_M' is already implicitly declared on line 59 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:232]
+WARNING: [Synth 8-8895] 'memRead2_M' is already implicitly declared on line 58 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:232]
+WARNING: [Synth 8-8895] 'ALU_result_M' is already implicitly declared on line 61 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:236]
+WARNING: [Synth 8-8895] 'write_data_M' is already implicitly declared on line 62 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:236]
+WARNING: [Synth 8-8895] 'memRead_data_M' is already implicitly declared on line 68 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:239]
+WARNING: [Synth 8-8895] 'regWrite_W' is already implicitly declared on line 113 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:269]
+WARNING: [Synth 8-8895] 'rd_W' is already implicitly declared on line 116 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:271]
+WARNING: [Synth 8-8895] 'rf_write_data_W' is already implicitly declared on line 111 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:272]
+WARNING: [Synth 8-8895] 'forwardA_E' is already implicitly declared on line 185 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:303]
+WARNING: [Synth 8-8895] 'forwardB_E' is already implicitly declared on line 194 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:303]
+WARNING: [Synth 8-8895] 'stall_F' is already implicitly declared on line 49 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:304]
+WARNING: [Synth 8-8895] 'stall_D' is already implicitly declared on line 86 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:304]
+WARNING: [Synth 8-8895] 'flush_E' is already implicitly declared on line 142 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:304]
+WARNING: [Synth 8-8895] 'flush_D' is already implicitly declared on line 87 [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:304]
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1286.160 ; gain = 0.000
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1288.281 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'OTTER_MCU' [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'mux_2t1_nb' [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv:31]
@@ -85,7 +85,6 @@ INFO: [Synth 8-6155] done synthesizing module 'Pipeline_reg_memory_writeback' (0
 INFO: [Synth 8-6157] synthesizing module 'Hazard_Unit' [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/hazard.sv:3]
 INFO: [Synth 8-6155] done synthesizing module 'Hazard_Unit' (0#1) [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/hazard.sv:3]
 INFO: [Synth 8-6155] done synthesizing module 'OTTER_MCU' (0#1) [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
-WARNING: [Synth 8-3848] Net PCPC_target_addr_E in module/entity OTTER_MCU does not have driver. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:221]
 WARNING: [Synth 8-7129] Port ir[6] in module immed_gen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ir[5] in module immed_gen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ir[4] in module immed_gen is either unconnected or has no load
@@ -94,6 +93,11 @@ WARNING: [Synth 8-7129] Port ir[2] in module immed_gen is either unconnected or 
 WARNING: [Synth 8-7129] Port ir[1] in module immed_gen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ir[0] in module immed_gen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port instr[31] in module Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[29] in module Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[28] in module Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[27] in module Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[26] in module Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[25] in module Decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port instr[24] in module Decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port instr[23] in module Decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port instr[22] in module Decoder is either unconnected or has no load
@@ -111,17 +115,17 @@ WARNING: [Synth 8-7129] Port instr[8] in module Decoder is either unconnected or
 WARNING: [Synth 8-7129] Port instr[7] in module Decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port INTR in module OTTER_MCU is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1286.160 ; gain = 0.000
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1288.281 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1286.160 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1288.281 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1286.160 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1288.281 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
@@ -141,7 +145,7 @@ INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of 
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1286.160 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1288.281 ; gain = 0.000
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -170,7 +174,6 @@ Detailed RTL Component Info :
 	   4 Input   32 Bit        Muxes := 3     
 	   8 Input    4 Bit        Muxes := 2     
 	  10 Input    4 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 2     
 	  10 Input    3 Bit        Muxes := 1     
 	  10 Input    2 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 2     
@@ -203,6 +206,11 @@ WARNING: [Synth 8-7129] Port ir[2] in module immed_gen is either unconnected or 
 WARNING: [Synth 8-7129] Port ir[1] in module immed_gen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ir[0] in module immed_gen is either unconnected or has no load
 WARNING: [Synth 8-7129] Port instr[31] in module Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[29] in module Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[28] in module Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[27] in module Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[26] in module Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[25] in module Decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port instr[24] in module Decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port instr[23] in module Decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port instr[22] in module Decoder is either unconnected or has no load
@@ -213,6 +221,11 @@ WARNING: [Synth 8-7129] Port instr[18] in module Decoder is either unconnected o
 WARNING: [Synth 8-7129] Port instr[17] in module Decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port instr[16] in module Decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port instr[15] in module Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[11] in module Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[10] in module Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[9] in module Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[8] in module Decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[7] in module Decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port INTR in module OTTER_MCU is either unconnected or has no load
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
@@ -231,7 +244,7 @@ INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of 
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1286.160 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:33 . Memory (MB): peak = 1288.281 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -262,7 +275,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1286.160 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:33 . Memory (MB): peak = 1288.281 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -289,6 +302,364 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+Found timing loop:
+     0: i_1613/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1613/I1 (LUT2)
+     2: i_714/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_714/I1 (LUT4)
+     4: i_1613/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1613"
+Found timing loop:
+     0: i_1614/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1614/I0 (LUT2)
+     2: i_716/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_716/I1 (LUT4)
+     4: i_1614/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I0 -to O i_1614"
+Found timing loop:
+     0: i_1615/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1615/I1 (LUT2)
+     2: i_718/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_718/I1 (LUT4)
+     4: i_1615/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1615"
+Found timing loop:
+     0: i_1616/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1616/I1 (LUT2)
+     2: i_720/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_720/I1 (LUT4)
+     4: i_1616/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1616"
+Found timing loop:
+     0: i_1617/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1617/I1 (LUT2)
+     2: i_722/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_722/I1 (LUT4)
+     4: i_1617/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1617"
+Found timing loop:
+     0: i_1618/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1618/I1 (LUT2)
+     2: i_724/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_724/I1 (LUT4)
+     4: i_1618/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1618"
+Found timing loop:
+     0: i_1619/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1619/I1 (LUT2)
+     2: i_726/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_726/I1 (LUT4)
+     4: i_1619/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1619"
+Found timing loop:
+     0: i_1620/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1620/I1 (LUT2)
+     2: i_728/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_728/I1 (LUT4)
+     4: i_1620/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1620"
+Found timing loop:
+     0: i_1621/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1621/I1 (LUT2)
+     2: i_730/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_730/I1 (LUT4)
+     4: i_1621/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1621"
+Found timing loop:
+     0: i_1622/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1622/I1 (LUT2)
+     2: i_732/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_732/I1 (LUT4)
+     4: i_1622/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1622"
+Found timing loop:
+     0: i_1623/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1623/I1 (LUT2)
+     2: i_734/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_734/I1 (LUT4)
+     4: i_1623/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1623"
+Found timing loop:
+     0: i_1624/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1624/I0 (LUT2)
+     2: i_736/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_736/I1 (LUT4)
+     4: i_1624/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I0 -to O i_1624"
+Found timing loop:
+     0: i_1625/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1625/I1 (LUT2)
+     2: i_738/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_738/I1 (LUT4)
+     4: i_1625/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1625"
+Found timing loop:
+     0: i_1626/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1626/I1 (LUT2)
+     2: i_740/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_740/I1 (LUT4)
+     4: i_1626/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1626"
+Found timing loop:
+     0: i_1627/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1627/I1 (LUT3)
+     2: i_744/O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_744/I3 (LUT5)
+     4: i_1627/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1627"
+Found timing loop:
+     0: i_1501/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1501/I1 (LUT2)
+     2: i_1628/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_1628/I1 (LUT3)
+     4: i_767/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     5: i_767/I5 (LUT6)
+     6: i_1501/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1501"
+Found timing loop:
+     0: i_1629/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1629/I1 (LUT3)
+     2: i_769/O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_769/I3 (LUT5)
+     4: i_1629/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1629"
+Found timing loop:
+     0: i_1630/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1630/I1 (LUT3)
+     2: i_772/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_772/I0 (LUT6)
+     4: i_1630/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1630"
+Found timing loop:
+     0: i_1631/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1631/I1 (LUT3)
+     2: i_775/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_775/I0 (LUT6)
+     4: i_1631/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1631"
+Found timing loop:
+     0: i_1633/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1633/I1 (LUT3)
+     2: i_778/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_778/I0 (LUT6)
+     4: i_1633/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1633"
+Found timing loop:
+     0: i_1635/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1635/I1 (LUT3)
+     2: i_781/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_781/I4 (LUT6)
+     4: i_1635/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1635"
+Found timing loop:
+     0: i_1637/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1637/I1 (LUT3)
+     2: i_784/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_784/I4 (LUT6)
+     4: i_1637/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1637"
+Found timing loop:
+     0: i_1638/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1638/I1 (LUT3)
+     2: i_787/O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_787/I3 (LUT5)
+     4: i_1638/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1638"
+Found timing loop:
+     0: i_1639/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1639/I1 (LUT3)
+     2: i_790/O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_790/I3 (LUT5)
+     4: i_1639/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1639"
+Found timing loop:
+     0: i_1640/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1640/I1 (LUT3)
+     2: i_793/O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_793/I3 (LUT5)
+     4: i_1640/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1640"
+Found timing loop:
+     0: i_1642/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1642/I1 (LUT3)
+     2: i_796/O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_796/I3 (LUT5)
+     4: i_1642/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1642"
+Found timing loop:
+     0: i_1473/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1473/I1 (LUT2)
+     2: i_1612/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_1612/I1 (LUT3)
+     4: i_799/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     5: i_799/I5 (LUT6)
+     6: i_1473/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1473"
+Found timing loop:
+     0: i_1643/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1643/I1 (LUT3)
+     2: i_802/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_802/I0 (LUT6)
+     4: i_1643/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1643"
+Found timing loop:
+     0: i_1641/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1641/I1 (LUT3)
+     2: i_804/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_804/I4 (LUT6)
+     4: i_1641/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1641"
+Found timing loop:
+     0: i_1636/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1636/I1 (LUT3)
+     2: i_809/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_809/I4 (LUT6)
+     4: i_1636/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1636"
+Found timing loop:
+     0: i_1634/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1634/I1 (LUT3)
+     2: i_813/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_813/I4 (LUT6)
+     4: i_1634/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1634"
+Found timing loop:
+     0: i_1632/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: i_1632/I1 (LUT3)
+     2: i_817/O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     3: i_817/I0 (LUT5)
+     4: i_1632/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_1632"
 INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
@@ -322,7 +693,7 @@ INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_14
 INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 1286.160 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1288.281 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -340,37 +711,135 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1286.160 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:40 . Memory (MB): peak = 1288.281 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1286.160 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:40 . Memory (MB): peak = 1288.281 ; gain = 0.000
 ---------------------------------------------------------------------------------
+Found timing loop:
+     0: \ALU_result_M[15]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: \ALU_result_M[15]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[15]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[15]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[14]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: \ALU_result_M[14]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[14]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[14]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[13]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: \ALU_result_M[13]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[13]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[13]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[12]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: \ALU_result_M[12]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[12]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[12]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[11]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: \ALU_result_M[11]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[11]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[11]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[10]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: \ALU_result_M[10]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[10]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[10]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[9]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: \ALU_result_M[9]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[9]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[9]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[8]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: \ALU_result_M[8]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[8]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[8]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[7]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: \ALU_result_M[7]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[7]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[7]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[6]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: \ALU_result_M[6]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[6]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[6]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[5]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: \ALU_result_M[5]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[5]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[5]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[4]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: \ALU_result_M[4]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[4]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[4]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[3]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: \ALU_result_M[3]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[3]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[3]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[2]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+     1: \ALU_result_M[2]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[2]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[2]_i_1 "
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1286.160 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:40 . Memory (MB): peak = 1288.281 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1286.160 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:40 . Memory (MB): peak = 1288.281 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1286.160 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:40 . Memory (MB): peak = 1288.281 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1286.160 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:40 . Memory (MB): peak = 1288.281 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -388,18 +857,18 @@ Report Cell Usage:
 +------+---------+------+
 |1     |BUFG     |     1|
 |2     |CARRY4   |    51|
-|3     |LUT1     |     4|
-|4     |LUT2     |   108|
-|5     |LUT3     |   107|
-|6     |LUT4     |   253|
-|7     |LUT5     |   217|
-|8     |LUT6     |   720|
-|9     |MUXF7    |   128|
+|3     |LUT1     |    89|
+|4     |LUT2     |   125|
+|5     |LUT3     |   181|
+|6     |LUT4     |   212|
+|7     |LUT5     |   297|
+|8     |LUT6     |   679|
+|9     |MUXF7    |   133|
 |10    |MUXF8    |    64|
 |11    |RAM32M   |    10|
 |12    |RAM32X1D |     4|
 |13    |RAMB36E1 |    16|
-|14    |FDRE     |   600|
+|14    |FDRE     |   607|
 |15    |IBUF     |    34|
 |16    |OBUF     |    65|
 +------+---------+------+
@@ -408,40 +877,41 @@ Report Instance Areas:
 +------+---------------------+------------------------------+------+
 |      |Instance             |Module                        |Cells |
 +------+---------------------+------------------------------+------+
-|1     |top                  |                              |  2382|
-|2     |  OTTER_ALU          |ALU                           |    43|
-|3     |  OTTER_MEMORY       |Memory                        |   545|
+|1     |top                  |                              |  2568|
+|2     |  OTTER_ALU          |ALU                           |    24|
+|3     |  OTTER_MEMORY       |Memory                        |   560|
 |4     |  OTTER_reg_file     |RegFile                       |    14|
 |5     |  Program_Counter    |reg_nb                        |    57|
 |6     |  branch_conditional |branch_cond_gen               |    11|
-|7     |  pipeline_reg_D_E   |Pipeline_reg_decode_execute   |   983|
-|8     |  pipeline_reg_E_M   |Pipeline_reg_execute_memory   |   303|
-|9     |  pipeline_reg_F_D   |Pipeline_reg_fetch_decode     |   153|
-|10    |  pipeline_reg_M_W   |Pipeline_reg_memory_writeback |   139|
+|7     |  pipeline_reg_D_E   |Pipeline_reg_decode_execute   |  1054|
+|8     |  pipeline_reg_E_M   |Pipeline_reg_execute_memory   |   311|
+|9     |  pipeline_reg_F_D   |Pipeline_reg_fetch_decode     |   151|
+|10    |  pipeline_reg_M_W   |Pipeline_reg_memory_writeback |   252|
 +------+---------------------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1286.160 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:40 . Memory (MB): peak = 1288.281 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 64 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1286.160 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:34 . Memory (MB): peak = 1286.160 ; gain = 0.000
+Synthesis finished with 0 errors, 46 critical warnings and 77 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:40 . Memory (MB): peak = 1288.281 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:40 . Memory (MB): peak = 1288.281 ; gain = 0.000
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1286.160 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 273 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1288.281 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 278 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 46 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1286.160 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1288.281 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 14 instances were transformed.
   RAM32M => RAM32M (inverted pins: WCLK) (RAMD32(x6), RAMS32(x2)): 10 instances
   RAM32X1D => RAM32X1D (inverted pins: WCLK) (RAMD32(x2)): 4 instances
 
-Synth Design complete, checksum: 23015660
+Synth Design complete, checksum: c35c4508
 INFO: [Common 17-83] Releasing license: Synthesis
-117 Infos, 64 Warnings, 0 Critical Warnings and 0 Errors encountered.
+117 Infos, 77 Warnings, 46 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:37 . Memory (MB): peak = 1286.160 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:43 . Memory (MB): peak = 1288.281 ; gain = 0.000
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/Users/ryana/CPE333/cpe333/lab4_pipeline_hazards/lab4/lab4.runs/synth_1/OTTER_MCU.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file OTTER_MCU_utilization_synth.rpt -pb OTTER_MCU_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Nov 11 18:35:04 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 15 13:07:52 2023...

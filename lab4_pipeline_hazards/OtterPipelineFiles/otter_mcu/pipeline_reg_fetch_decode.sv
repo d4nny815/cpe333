@@ -40,7 +40,7 @@ module Pipeline_reg_fetch_decode(
 
         end
 
-        if (stall_D == 0) begin
+        else if (stall_D == 0) begin
             Instr_D <= Instr_F;
             PC_D <= PC_F;
             PC_plus4_D <= PC_plus4_F;

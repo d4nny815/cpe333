@@ -20,6 +20,7 @@ module Hazard_Unit (
     output logic flush_D
     );
     
+    logic load;
     always_comb begin
         if ((rs1_E == rd_M) && regWrite_M && (rs1_E != 0)) begin
             forwardA_E = 2'b10;
@@ -45,7 +46,7 @@ module Hazard_Unit (
     end
 
     always_comb begin
-        logic load = ((rf_wr_sel_E == 2'b01) & ((rs1_D == rd_E) | (rs2_D == rd_E)));
+        load = ((rf_wr_sel_E == 2'b01) & ((rs1_D == rd_E) | (rs2_D == rd_E)));
         stall_F = load;
         stall_D = load;
         flush_E = load | pcSource_E;

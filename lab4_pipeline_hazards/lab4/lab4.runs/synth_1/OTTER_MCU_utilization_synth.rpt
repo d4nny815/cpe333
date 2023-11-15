@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Sat Nov 11 18:35:04 2023
+| Date         : Wed Nov 15 13:07:52 2023
 | Host         : LAPTOP-I3MDA0LJ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file OTTER_MCU_utilization_synth.rpt -pb OTTER_MCU_utilization_synth.pb
 | Design       : OTTER_MCU
@@ -31,15 +31,15 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 1316 |     0 |          0 |     20800 |  6.33 |
-|   LUT as Logic             | 1268 |     0 |          0 |     20800 |  6.10 |
+| Slice LUTs*                | 1395 |     0 |          0 |     20800 |  6.71 |
+|   LUT as Logic             | 1347 |     0 |          0 |     20800 |  6.48 |
 |   LUT as Memory            |   48 |     0 |          0 |      9600 |  0.50 |
 |     LUT as Distributed RAM |   48 |     0 |            |           |       |
 |     LUT as Shift Register  |    0 |     0 |            |           |       |
-| Slice Registers            |  600 |     0 |          0 |     41600 |  1.44 |
-|   Register as Flip Flop    |  600 |     0 |          0 |     41600 |  1.44 |
+| Slice Registers            |  607 |     0 |          0 |     41600 |  1.46 |
+|   Register as Flip Flop    |  607 |     0 |          0 |     41600 |  1.46 |
 |   Register as Latch        |    0 |     0 |          0 |     41600 |  0.00 |
-| F7 Muxes                   |  128 |     0 |          0 |     16300 |  0.79 |
+| F7 Muxes                   |  133 |     0 |          0 |     16300 |  0.82 |
 | F8 Muxes                   |   64 |     0 |          0 |      8150 |  0.79 |
 +----------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -60,7 +60,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 600   |          Yes |       Reset |            - |
+| 607   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -153,13 +153,14 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  720 |                 LUT |
-| FDRE     |  600 |        Flop & Latch |
-| LUT4     |  253 |                 LUT |
-| LUT5     |  217 |                 LUT |
-| MUXF7    |  128 |               MuxFx |
-| LUT2     |  108 |                 LUT |
-| LUT3     |  107 |                 LUT |
+| LUT6     |  679 |                 LUT |
+| FDRE     |  607 |        Flop & Latch |
+| LUT5     |  297 |                 LUT |
+| LUT4     |  212 |                 LUT |
+| LUT3     |  181 |                 LUT |
+| MUXF7    |  133 |               MuxFx |
+| LUT2     |  125 |                 LUT |
+| LUT1     |   89 |                 LUT |
 | RAMD32   |   68 |  Distributed Memory |
 | OBUF     |   65 |                  IO |
 | MUXF8    |   64 |               MuxFx |
@@ -167,7 +168,6 @@ Table of Contents
 | IBUF     |   34 |                  IO |
 | RAMS32   |   20 |  Distributed Memory |
 | RAMB36E1 |   16 |        Block Memory |
-| LUT1     |    4 |                 LUT |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
