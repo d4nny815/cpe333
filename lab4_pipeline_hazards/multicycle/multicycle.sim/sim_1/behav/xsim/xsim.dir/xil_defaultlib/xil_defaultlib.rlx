@@ -1,0 +1,20 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/CSR_v1_03.sv,1694049052,systemVerilog,,Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/control_unit_dcdr_v_1_05.sv,,CSR,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/alu.v,1694049054,verilog,,Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/branch_addr_gen.v,,alu,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/branch_addr_gen.v,1694049054,verilog,,Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/branch_cond_gen.v,,branch_addr_gen,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/branch_cond_gen.v,1694049054,verilog,,Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/immed_gen.v,,branch_cond_gen,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/control_unit_dcdr_v_1_05.sv,1694049054,systemVerilog,,Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/control_unit_fsm_v_1_07.sv,,CU_DCDR,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/control_unit_fsm_v_1_07.sv,1694049054,systemVerilog,,Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/otter_memory_v1_06.sv,,CU_FSM,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/immed_gen.v,1694049054,verilog,,Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/mux_4t1_nb_v1_06.v,,immed_gen,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/mux_4t1_nb_v1_06.v,1694049054,verilog,,Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/mux_8t1_nb_v1_03.v,,mux_4t1_nb,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/mux_8t1_nb_v1_03.v,1694049054,verilog,,Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/reg_nb_sync_clr_v1_01.v,,mux_8t1_nb,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/otter_memory_v1_06.sv,1694049054,systemVerilog,,Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/reg_file_v_1_01.sv,,Memory,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/reg_file_v_1_01.sv,1694049054,systemVerilog,,Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.srcs/sim_1/new/test_multicycle.sv,,RegFile,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/reg_nb_sync_clr_v1_01.v,1694049054,verilog,,Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/riscv_mcu.v,,reg_nb_sclr,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/riscv_mcu.v,1700128166,verilog,,,,OTTER_MCU,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv,1700125226,systemVerilog,,,,test_pipeline,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.sim/sim_1/behav/xsim/glbl.v,1665704904,verilog,,,,glbl,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.srcs/sim_1/new/test_multicycle.sv,1700126804,systemVerilog,,,,test_multicycle,,uvm,,,,,,

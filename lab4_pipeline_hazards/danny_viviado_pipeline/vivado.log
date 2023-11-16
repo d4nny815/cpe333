@@ -1,0 +1,675 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Thu Nov 16 01:21:33 2023
+# Process ID: 16208
+# Current directory: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23760 Z:\schoolfiles\school_files\cpe333\lab4_pipeline_hazards\danny_viviado_pipeline\danny_viviado_pipeline.xpr
+# Log file: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/vivado.log
+# Journal file: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline\vivado.jou
+# Running On: RaijinPC, OS: Windows, CPU Frequency: 4200 MHz, CPU Physical cores: 32, Host memory: 33457 MB
+#-----------------------------------------------------------
+start_gui
+open_project Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+update_compile_order -fileset sources_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/utils_1/imports/synth_1/OTTER_MCU.dcp with file Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1/OTTER_MCU.dcp
+launch_runs synth_1 -jobs 4
+[Thu Nov 16 01:22:12 2023] Launched synth_1...
+Run output will be captured here: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1/runme.log
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_pipeline' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim/otter_memory.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj test_pipeline_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_cond_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Decoder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_decode_execute
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_execute_memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_memory_writeback
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/hazard.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Hazard_Unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/immed_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immed_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2t1_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4t1_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OTTER_MCU
+WARNING: [VRFC 10-2938] 'PC_target_addr_E' is already implicitly declared on line 42 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:136]
+WARNING: [VRFC 10-2938] 'pcSource_E' is already implicitly declared on line 40 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:137]
+WARNING: [VRFC 10-2938] 'ALU_forward_muxA' is already implicitly declared on line 176 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:182]
+WARNING: [VRFC 10-2938] 'memWrite_M' is already implicitly declared on line 58 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:231]
+WARNING: [VRFC 10-2938] 'ALU_result_M' is already implicitly declared on line 60 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:235]
+WARNING: [VRFC 10-2938] 'memRead_data_M' is already implicitly declared on line 67 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:238]
+WARNING: [VRFC 10-2938] 'regWrite_W' is already implicitly declared on line 112 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:268]
+WARNING: [VRFC 10-2938] 'rd_W' is already implicitly declared on line 115 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:270]
+WARNING: [VRFC 10-2938] 'rf_write_data_W' is already implicitly declared on line 110 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:271]
+WARNING: [VRFC 10-2938] 'forwardA_E' is already implicitly declared on line 184 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:302]
+WARNING: [VRFC 10-2938] 'stall_F' is already implicitly declared on line 48 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:303]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_fetch_decode
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/reg_file.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/register_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_pipeline
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux_2t1_nb(n=32)
+Compiling module xil_defaultlib.reg_nb(n=32)
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.Pipeline_reg_fetch_decode
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.RegFile
+Compiling module xil_defaultlib.immed_gen
+Compiling module xil_defaultlib.Pipeline_reg_decode_execute
+Compiling module xil_defaultlib.branch_cond_gen
+Compiling module xil_defaultlib.mux_4t1_nb(n=32)
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Pipeline_reg_execute_memory
+Compiling module xil_defaultlib.Pipeline_reg_memory_writeback
+Compiling module xil_defaultlib.Hazard_Unit
+Compiling module xil_defaultlib.OTTER_MCU
+Compiling module xil_defaultlib.test_pipeline
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_pipeline_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_pipeline_behav -key {Behavioral:sim_1:Functional:test_pipeline} -tclbatch {test_pipeline.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source test_pipeline.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_pipeline_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1312.258 ; gain = 0.000
+open_wave_config {Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/test_pipeline_behav1.wcfg}
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_pipeline' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim/otter_memory.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj test_pipeline_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+run 100 us
+$finish called at time : 1011 ns : File "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv" Line 57
+run 100 us
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/utils_1/imports/synth_1/OTTER_MCU.dcp with file Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1/OTTER_MCU.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Thu Nov 16 01:30:16 2023] Launched synth_1...
+Run output will be captured here: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1/runme.log
+run 100 us
+run 100 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_pipeline' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim/otter_memory.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj test_pipeline_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_cond_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Decoder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_decode_execute
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_execute_memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_memory_writeback
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/hazard.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Hazard_Unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/immed_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immed_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2t1_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4t1_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OTTER_MCU
+WARNING: [VRFC 10-2938] 'PC_target_addr_E' is already implicitly declared on line 42 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:136]
+WARNING: [VRFC 10-2938] 'pcSource_E' is already implicitly declared on line 40 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:137]
+WARNING: [VRFC 10-2938] 'ALU_forward_muxA' is already implicitly declared on line 176 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:182]
+WARNING: [VRFC 10-2938] 'memWrite_M' is already implicitly declared on line 58 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:231]
+WARNING: [VRFC 10-2938] 'ALU_result_M' is already implicitly declared on line 60 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:235]
+WARNING: [VRFC 10-2938] 'memRead_data_M' is already implicitly declared on line 67 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:238]
+WARNING: [VRFC 10-2938] 'regWrite_W' is already implicitly declared on line 112 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:268]
+WARNING: [VRFC 10-2938] 'rd_W' is already implicitly declared on line 115 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:270]
+WARNING: [VRFC 10-2938] 'rf_write_data_W' is already implicitly declared on line 110 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:271]
+WARNING: [VRFC 10-2938] 'forwardA_E' is already implicitly declared on line 184 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:302]
+WARNING: [VRFC 10-2938] 'stall_F' is already implicitly declared on line 48 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:303]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_fetch_decode
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/reg_file.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/register_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_pipeline
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux_2t1_nb(n=32)
+Compiling module xil_defaultlib.reg_nb(n=32)
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.Pipeline_reg_fetch_decode
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.RegFile
+Compiling module xil_defaultlib.immed_gen
+Compiling module xil_defaultlib.Pipeline_reg_decode_execute
+Compiling module xil_defaultlib.branch_cond_gen
+Compiling module xil_defaultlib.mux_4t1_nb(n=32)
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Pipeline_reg_execute_memory
+Compiling module xil_defaultlib.Pipeline_reg_memory_writeback
+Compiling module xil_defaultlib.Hazard_Unit
+Compiling module xil_defaultlib.OTTER_MCU
+Compiling module xil_defaultlib.test_pipeline
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_pipeline_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_pipeline_behav -key {Behavioral:sim_1:Functional:test_pipeline} -tclbatch {test_pipeline.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source test_pipeline.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_pipeline_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1312.258 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj test_pipeline_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+run 100 us
+$finish called at time : 1011 ns : File "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv" Line 57
+run 100 us
+run 100 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/utils_1/imports/synth_1/OTTER_MCU.dcp with file Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1/OTTER_MCU.dcp
+launch_runs synth_1 -jobs 4
+[Thu Nov 16 01:37:59 2023] Launched synth_1...
+Run output will be captured here: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1/runme.log
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_pipeline' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim/otter_memory.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj test_pipeline_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_cond_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Decoder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_decode_execute
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_execute_memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_memory_writeback
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/hazard.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Hazard_Unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/immed_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immed_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2t1_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4t1_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OTTER_MCU
+WARNING: [VRFC 10-2938] 'PC_target_addr_E' is already implicitly declared on line 42 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:136]
+WARNING: [VRFC 10-2938] 'pcSource_E' is already implicitly declared on line 40 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:137]
+WARNING: [VRFC 10-2938] 'ALU_forward_muxA' is already implicitly declared on line 176 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:182]
+WARNING: [VRFC 10-2938] 'memWrite_M' is already implicitly declared on line 58 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:231]
+WARNING: [VRFC 10-2938] 'ALU_result_M' is already implicitly declared on line 60 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:235]
+WARNING: [VRFC 10-2938] 'memRead_data_M' is already implicitly declared on line 67 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:238]
+WARNING: [VRFC 10-2938] 'regWrite_W' is already implicitly declared on line 112 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:268]
+WARNING: [VRFC 10-2938] 'rd_W' is already implicitly declared on line 115 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:270]
+WARNING: [VRFC 10-2938] 'rf_write_data_W' is already implicitly declared on line 110 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:271]
+WARNING: [VRFC 10-2938] 'forwardA_E' is already implicitly declared on line 184 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:302]
+WARNING: [VRFC 10-2938] 'stall_F' is already implicitly declared on line 48 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:303]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_fetch_decode
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/reg_file.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/register_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_pipeline
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux_2t1_nb(n=32)
+Compiling module xil_defaultlib.reg_nb(n=32)
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.Pipeline_reg_fetch_decode
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.RegFile
+Compiling module xil_defaultlib.immed_gen
+Compiling module xil_defaultlib.Pipeline_reg_decode_execute
+Compiling module xil_defaultlib.branch_cond_gen
+Compiling module xil_defaultlib.mux_4t1_nb(n=32)
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Pipeline_reg_execute_memory
+Compiling module xil_defaultlib.Pipeline_reg_memory_writeback
+Compiling module xil_defaultlib.Hazard_Unit
+Compiling module xil_defaultlib.OTTER_MCU
+Compiling module xil_defaultlib.test_pipeline
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_pipeline_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_pipeline_behav -key {Behavioral:sim_1:Functional:test_pipeline} -tclbatch {test_pipeline.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source test_pipeline.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_pipeline_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1312.258 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj test_pipeline_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj test_pipeline_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Time resolution is 1 ps
+run 100 us
+$finish called at time : 1011 ns : File "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv" Line 57
+run 100 us
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/utils_1/imports/synth_1/OTTER_MCU.dcp with file Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1/OTTER_MCU.dcp
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Thu Nov 16 01:45:38 2023] Launched synth_1...
+Run output will be captured here: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1/runme.log
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj test_pipeline_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_cond_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Decoder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_decode_execute
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_execute_memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_memory_writeback
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/hazard.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Hazard_Unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/immed_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immed_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2t1_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4t1_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OTTER_MCU
+WARNING: [VRFC 10-2938] 'PC_target_addr_E' is already implicitly declared on line 42 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:136]
+WARNING: [VRFC 10-2938] 'pcSource_E' is already implicitly declared on line 40 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:137]
+WARNING: [VRFC 10-2938] 'ALU_forward_muxA' is already implicitly declared on line 176 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:182]
+WARNING: [VRFC 10-2938] 'memWrite_M' is already implicitly declared on line 58 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:231]
+WARNING: [VRFC 10-2938] 'ALU_result_M' is already implicitly declared on line 60 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:235]
+WARNING: [VRFC 10-2938] 'memRead_data_M' is already implicitly declared on line 67 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:238]
+WARNING: [VRFC 10-2938] 'regWrite_W' is already implicitly declared on line 112 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:268]
+WARNING: [VRFC 10-2938] 'rd_W' is already implicitly declared on line 115 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:270]
+WARNING: [VRFC 10-2938] 'rf_write_data_W' is already implicitly declared on line 110 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:271]
+WARNING: [VRFC 10-2938] 'forwardA_E' is already implicitly declared on line 184 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:302]
+WARNING: [VRFC 10-2938] 'stall_F' is already implicitly declared on line 48 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:303]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_fetch_decode
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/reg_file.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/register_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_pipeline
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot test_pipeline_behav xil_defaultlib.test_pipeline xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux_2t1_nb(n=32)
+Compiling module xil_defaultlib.reg_nb(n=32)
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.Pipeline_reg_fetch_decode
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.RegFile
+Compiling module xil_defaultlib.immed_gen
+Compiling module xil_defaultlib.Pipeline_reg_decode_execute
+Compiling module xil_defaultlib.branch_cond_gen
+Compiling module xil_defaultlib.mux_4t1_nb(n=32)
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Pipeline_reg_execute_memory
+Compiling module xil_defaultlib.Pipeline_reg_memory_writeback
+Compiling module xil_defaultlib.Hazard_Unit
+Compiling module xil_defaultlib.OTTER_MCU
+Compiling module xil_defaultlib.test_pipeline
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_pipeline_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1406.242 ; gain = 0.000
+run 100 us
+$finish called at time : 1011 ns : File "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv" Line 57
+run 100 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/utils_1/imports/synth_1/OTTER_MCU.dcp with file Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1/OTTER_MCU.dcp
+launch_runs synth_1 -jobs 4
+[Thu Nov 16 01:50:11 2023] Launched synth_1...
+Run output will be captured here: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 16 01:50:53 2023...

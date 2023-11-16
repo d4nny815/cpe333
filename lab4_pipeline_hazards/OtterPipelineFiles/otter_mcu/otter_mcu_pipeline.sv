@@ -12,7 +12,7 @@
 // Description: 
 // 
 // Dependencies: 
-// 
+//  
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
@@ -20,14 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module OTTER_MCU (
+module OTTER_MCU (  
     input CLK,
-    input INTR,
-    input RESET,
-    input [31:0] IOBUS_IN,
-    output [31:0] IOBUS_OUT,
+    input INTR,  
+    input RESET, 
+    input [31:0] IOBUS_IN, 
+    output [31:0] IOBUS_OUT, 
     output [31:0] IOBUS_ADDR,
-    output logic IOBUS_WR 
+    output logic IOBUS_WR  
     );       
 
 //*********************************************************************************************************************
@@ -38,7 +38,6 @@ module OTTER_MCU (
     
     mux_2t1_nb #(.n(32)) PC_2t1_mux (
         .SEL            (pcSource_E),
-        // .SEL            (1'b0),
         .D0             (PC_plus4_F),
         .D1             (PC_target_addr_E),
         .D_OUT          (PC_i)

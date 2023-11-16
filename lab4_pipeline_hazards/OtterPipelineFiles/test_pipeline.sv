@@ -29,9 +29,19 @@ module test_pipeline();
         .INTR       (1'b0),
         .IOBUS_IN   (32'b0),
         .IOBUS_OUT  (),
-        .IOBUS_ADDR (),
+        .IOBUS_ADDR (), 
         .IOBUS_WR   () 
-    );
+    ); 
+
+//    OTTER_MCU my_otter (
+//    .RST (rst), 
+//    .intr (1'b0),
+//    .iobus_in (32'b0),
+//    .clk (clk),
+//    .iobus_wr (),
+//    .iobus_out (),
+//    .iobus_addr ()
+//    );
 
     always begin
     #10 clk = ~clk; 
@@ -43,7 +53,7 @@ module test_pipeline();
         rst = 1'b1;
         #6;
         rst = 1'b0;
-        #400;
+        #1000;
         $finish;
     end
 
