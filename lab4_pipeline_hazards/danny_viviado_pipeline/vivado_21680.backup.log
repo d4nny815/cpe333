@@ -2,10 +2,10 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Nov 16 01:15:25 2023
-# Process ID: 27856
+# Start of session at: Fri Nov 17 17:55:51 2023
+# Process ID: 21680
 # Current directory: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent23972 Z:\schoolfiles\school_files\cpe333\lab4_pipeline_hazards\danny_viviado_pipeline\danny_viviado_pipeline.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24860 Z:\schoolfiles\school_files\cpe333\lab4_pipeline_hazards\danny_viviado_pipeline\danny_viviado_pipeline.xpr
 # Log file: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/vivado.log
 # Journal file: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline\vivado.jou
 # Running On: RaijinPC, OS: Windows, CPU Frequency: 4200 MHz, CPU Physical cores: 32, Host memory: 33457 MB
@@ -66,6 +66,11 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
 update_compile_order -fileset sources_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/utils_1/imports/synth_1/OTTER_MCU.dcp with file Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1/OTTER_MCU.dcp
+launch_runs synth_1 -jobs 4
+[Fri Nov 17 17:56:07 2023] Launched synth_1...
+Run output will be captured here: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1/runme.log
 launch_simulation
 Command: launch_simulation 
 INFO: [Vivado 12-12493] Simulation top is 'test_pipeline'
@@ -134,18 +139,56 @@ Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-ERROR: [VRFC 10-3180] cannot find port 'iobus_addr' on this module [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv:43]
-ERROR: [VRFC 10-3180] cannot find port 'iobus_out' on this module [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv:42]
-ERROR: [VRFC 10-3180] cannot find port 'iobus_wr' on this module [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv:41]
-ERROR: [VRFC 10-3180] cannot find port 'clk' on this module [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv:40]
-ERROR: [VRFC 10-3180] cannot find port 'iobus_in' on this module [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv:39]
-ERROR: [VRFC 10-3180] cannot find port 'intr' on this module [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv:38]
-ERROR: [VRFC 10-3180] cannot find port 'RST' on this module [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv:37]
-ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux_2t1_nb(n=32)
+Compiling module xil_defaultlib.reg_nb(n=32)
+Compiling module xil_defaultlib.Memory
+Compiling module xil_defaultlib.Pipeline_reg_fetch_decode
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.RegFile
+Compiling module xil_defaultlib.immed_gen
+Compiling module xil_defaultlib.Pipeline_reg_decode_execute
+Compiling module xil_defaultlib.branch_cond_gen
+Compiling module xil_defaultlib.mux_4t1_nb(n=32)
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.Pipeline_reg_execute_memory
+Compiling module xil_defaultlib.Pipeline_reg_memory_writeback
+Compiling module xil_defaultlib.Hazard_Unit
+Compiling module xil_defaultlib.OTTER_MCU
+Compiling module xil_defaultlib.test_pipeline
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_pipeline_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim/elaborate.log'
-ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim/elaborate.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_pipeline_behav -key {Behavioral:sim_1:Functional:test_pipeline} -tclbatch {test_pipeline.tcl} -view {Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/test_pipeline_behav1.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/test_pipeline_behav1.wcfg
+source test_pipeline.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_pipeline_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1411.191 ; gain = 0.000
+run 100 us
+$finish called at time : 1011 ns : File "Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv" Line 46
+run 100 us
+run 100 us
+run 100 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 16 01:21:31 2023...
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 17 18:00:30 2023...

@@ -2,10 +2,10 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Nov 16 01:24:53 2023
-# Process ID: 6844
+# Start of session at: Fri Nov 17 18:00:37 2023
+# Process ID: 27132
 # Current directory: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent43256 Z:\schoolfiles\school_files\cpe333\lab4_pipeline_hazards\multicycle\multicycle.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27576 Z:\schoolfiles\school_files\cpe333\lab4_pipeline_hazards\multicycle\multicycle.xpr
 # Log file: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/vivado.log
 # Journal file: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle\vivado.jou
 # Running On: RaijinPC, OS: Windows, CPU Frequency: 4200 MHz, CPU Physical cores: 32, Host memory: 33457 MB
@@ -13,60 +13,14 @@
 start_gui
 open_project Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.xpr
 update_compile_order -fileset sources_1
-file mkdir Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.srcs/sim_1/new
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.srcs/sim_1/new/test_multicycle.sv w ]
-add_files -fileset sim_1 Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.srcs/sim_1/new/test_multicycle.sv
-update_compile_order -fileset sim_1
-export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/test_pipeline.sv
-update_compile_order -fileset sim_1
 reset_run synth_1
 launch_runs synth_1 -jobs 4
 wait_on_run synth_1
 launch_simulation
+open_wave_config Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/test_multicycle_behav.wcfg
 source test_multicycle.tcl
 relaunch_sim
 run 100 us
-run 100 us
-run 100 us
-run 100 us
-close_sim
-launch_simulation
-source test_multicycle.tcl
-relaunch_sim
-relaunch_sim
-run 100 us
-run 100 us
-export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/riscv_mcu.v] -no_script -reset -force -quiet
-remove_files  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/riscv_mcu.v
-export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/otter_memory_v1_06.sv] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/control_unit_fsm_v_1_07.sv] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/control_unit_dcdr_v_1_05.sv] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/CSR_v1_03.sv] -no_script -reset -force -quiet
-remove_files  {Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/otter_memory_v1_06.sv Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/control_unit_fsm_v_1_07.sv Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/control_unit_dcdr_v_1_05.sv Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/CSR_v1_03.sv}
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/reg_nb_sync_clr_v1_01.v] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/mux_8t1_nb_v1_03.v] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/mux_4t1_nb_v1_06.v] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/immed_gen.v] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/branch_cond_gen.v] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/branch_addr_gen.v] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/alu.v] -no_script -reset -force -quiet
-export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/reg_file_v_1_01.sv] -no_script -reset -force -quiet
-remove_files  {Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/reg_nb_sync_clr_v1_01.v Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/mux_8t1_nb_v1_03.v Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/mux_4t1_nb_v1_06.v Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/immed_gen.v Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/branch_cond_gen.v Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/branch_addr_gen.v Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/alu.v Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/multicycle_core/reg_file_v_1_01.sv}
-add_files -norecurse {Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/control_unit_fsm_v_1_07.sv Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/timer_counter_v1_02.sv Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/otter_memory_v1_06.sv Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/immed_gen.v Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/mux_4t1_nb_v1_06.v Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/alu.v Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/branch_addr_gen.v Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/control_unit_dcdr_v_1_05.sv Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/riscv_mcu.v Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/reg_nb_sync_clr_v1_01.v Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/branch_cond_gen.v Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/reg_file_v_1_01.sv Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/CSR_v1_03.sv Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/mux_8t1_nb_v1_03.v}
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-relaunch_sim
-reset_run synth_1
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
-relaunch_sim
-close_sim
-launch_simulation
-source test_multicycle.tcl
-relaunch_sim
 run 100 us
 run 100 us
 close_sim
@@ -74,8 +28,38 @@ reset_run synth_1
 launch_runs synth_1 -jobs 4
 wait_on_run synth_1
 launch_simulation
+open_wave_config Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/test_multicycle_behav.wcfg
 source test_multicycle.tcl
-relaunch_sim
 run 100 us
 run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 100 us
+run 10 ms
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation
+open_wave_config Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/test_multicycle_behav.wcfg
+source test_multicycle.tcl
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ms
+run 50 ms
+run 500 ms
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation
+open_wave_config Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/test_multicycle_behav.wcfg
+source test_multicycle.tcl
+run 500 ms
+run 1 ms
+run 1 ms
+run 10 ms
 close_sim

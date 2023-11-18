@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="138.465 ns"></ZoomEndTime>
-      <Cursor1Time time="30.374 ns"></Cursor1Time>
+      <ZoomStartTime time="5,023.497 ns"></ZoomStartTime>
+      <ZoomEndTime time="5,180.324 ns"></ZoomEndTime>
+      <Cursor1Time time="5,110.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="216"></NameColumnWidth>
-      <ValueColumnWidth column_width="82"></ValueColumnWidth>
+      <ValueColumnWidth column_width="78"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="90" />
+   <WVObjectSize size="91" />
    <wvobject fp_name="/test_pipeline/my_otter/pipeline_reg_F_D/CLK" type="logic">
       <obj_property name="ElementShortName">CLK</obj_property>
       <obj_property name="ObjectShortName">CLK</obj_property>
@@ -164,6 +164,10 @@
    <wvobject fp_name="/test_pipeline/my_otter/pipeline_reg_E_M/memWrite_M" type="logic">
       <obj_property name="ElementShortName">memWrite_M</obj_property>
       <obj_property name="ObjectShortName">memWrite_M</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_pipeline/my_otter/pipeline_reg_E_M/memRead2_M" type="logic">
+      <obj_property name="ElementShortName">memRead2_M</obj_property>
+      <obj_property name="ObjectShortName">memRead2_M</obj_property>
    </wvobject>
    <wvobject fp_name="/test_pipeline/my_otter/pipeline_reg_E_M/rf_wr_sel_M" type="array">
       <obj_property name="ElementShortName">rf_wr_sel_M[1:0]</obj_property>

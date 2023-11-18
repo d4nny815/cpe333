@@ -22,8 +22,8 @@
 
 module OTTER_MCU (  
     input CLK,
-    input INTR,  
-    input RESET, 
+    input INTR,   
+    input RESET,  
     input [31:0] IOBUS_IN, 
     output [31:0] IOBUS_OUT, 
     output [31:0] IOBUS_ADDR,
@@ -235,7 +235,7 @@ module OTTER_MCU (
     logic [31:0] ALU_result_M, write_data_M, PC_plus4_M;
 
     // internal stage signals
-    logic [31:0] memRead_data_M;
+    logic [31:0] memRead_data_M; 
 
     Pipeline_reg_execute_memory pipeline_reg_E_M (
         .CLK            (CLK),
@@ -246,10 +246,10 @@ module OTTER_MCU (
         .ALU_result_E   (ALU_result_E),
         .write_data_E   (ALU_forward_muxB),
         .rd_E           (Instr_E[11:7]),
-        .memWrite_size_E(PC_E[14:12]),
+        .memWrite_size_E(Instr_E[14:12]),
         .PC_plus4_E     (PC_plus4_E),
         .regWrite_M     (regWrite_M),
-        .memWrite_M     (memWrite_M),
+        .memWrite_M     (memWrite_M), 
         .memRead2_M     (memRead2_M),
         .rf_wr_sel_M    (rf_wr_sel_M),
         .ALU_result_M   (ALU_result_M),
@@ -257,7 +257,7 @@ module OTTER_MCU (
         .rd_M           (rd_M),
         .memWrite_size_M(memWrite_size_M),
         .PC_plus4_M     (PC_plus4_M)
-    );
+    ); 
     
     assign IOBUS_ADDR = ALU_result_M;
 

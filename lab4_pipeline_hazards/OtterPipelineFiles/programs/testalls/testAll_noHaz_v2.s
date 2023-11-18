@@ -349,10 +349,7 @@ Load_tests:
 	nop
 	nop
 	#Load test
-	auipc	t0,0x0 
-	nop
-	nop
-	addi	t0,t0,220 # PC+220=0x4b4 <TESTLOAD>
+	la t0, TESTLOAD
 	nop
 	nop
 	lw t1, 0(t0)
@@ -366,10 +363,7 @@ STORE_tests:
 	nop
 	nop
 	#Store test
-	auipc	t0,0x0 
-	nop
-	nop
-	addi	t0,t0,160 # PC+160= 0x4b0 <TESTSTORE>
+	la t0, TESTSTORE
 	nop
 	nop
 	sw a0, 0(t0)
@@ -389,10 +383,7 @@ U_tests:
 	nop
 	
 	#Load upper immediate test
-	auipc	t0,0x0 
-	nop
-	nop
-	addi	t0,t0,96 # PC+88=0x4b4 <TESTU>
+	la t0, TESTU
 	nop
 	nop
 	lw t1, 0(t0) #t1 should now hold the value 6000

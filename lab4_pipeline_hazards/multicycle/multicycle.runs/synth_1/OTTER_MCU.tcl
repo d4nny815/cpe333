@@ -86,21 +86,21 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_mem Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_memory.mem
 read_verilog -library xil_defaultlib -sv {
-  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/CSR_v1_03.sv
-  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/control_unit_dcdr_v_1_05.sv
-  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/control_unit_fsm_v_1_07.sv
-  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/otter_memory_v1_06.sv
-  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/reg_file_v_1_01.sv
+  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.srcs/sources_1/imports/OtterPipelineFiles/core/CSR_v1_03.sv
+  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.srcs/sources_1/imports/OtterPipelineFiles/core/control_unit_dcdr_v_1_05.sv
+  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.srcs/sources_1/imports/OtterPipelineFiles/core/control_unit_fsm_v_1_07.sv
+  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.srcs/sources_1/imports/OtterPipelineFiles/core/otter_memory_v1_06.sv
+  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.srcs/sources_1/imports/OtterPipelineFiles/core/reg_file_v_1_01.sv
 }
 read_verilog -library xil_defaultlib {
-  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/alu.v
-  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/branch_addr_gen.v
-  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/branch_cond_gen.v
-  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/immed_gen.v
-  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/mux_4t1_nb_v1_06.v
-  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/mux_8t1_nb_v1_03.v
-  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/reg_nb_sync_clr_v1_01.v
-  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/core/riscv_mcu.v
+  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.srcs/sources_1/imports/OtterPipelineFiles/core/alu.v
+  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.srcs/sources_1/imports/OtterPipelineFiles/core/branch_addr_gen.v
+  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.srcs/sources_1/imports/OtterPipelineFiles/core/branch_cond_gen.v
+  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.srcs/sources_1/imports/OtterPipelineFiles/core/immed_gen.v
+  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.srcs/sources_1/imports/OtterPipelineFiles/core/mux_4t1_nb_v1_06.v
+  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.srcs/sources_1/imports/OtterPipelineFiles/core/mux_8t1_nb_v1_03.v
+  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.srcs/sources_1/imports/OtterPipelineFiles/core/reg_nb_sync_clr_v1_01.v
+  Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/multicycle/multicycle.srcs/sources_1/imports/OtterPipelineFiles/core/riscv_mcu.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

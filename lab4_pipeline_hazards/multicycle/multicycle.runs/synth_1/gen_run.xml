@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1700128174" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/OTTER_MCU.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1700273668" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/OTTER_MCU.dcp">
   <File Type="PA-TCL" Name="OTTER_MCU.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="OTTER_MCU_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="OTTER_MCU_reports.tcl"/>
@@ -11,92 +11,118 @@
   <File Type="VDS-TIMING-PB" Name="OTTER_MCU_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../OtterPipelineFiles/core/alu.v">
+    <File Path="$PSRCDIR/sources_1/imports/OtterPipelineFiles/core/alu.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../OtterPipelineFiles/core/alu.v"/>
+        <Attr Name="ImportTime" Val="1694049054"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../OtterPipelineFiles/core/branch_addr_gen.v">
+    <File Path="$PSRCDIR/sources_1/imports/OtterPipelineFiles/core/branch_addr_gen.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../OtterPipelineFiles/core/branch_addr_gen.v"/>
+        <Attr Name="ImportTime" Val="1694049054"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../OtterPipelineFiles/core/branch_cond_gen.v">
+    <File Path="$PSRCDIR/sources_1/imports/OtterPipelineFiles/core/branch_cond_gen.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../OtterPipelineFiles/core/branch_cond_gen.v"/>
+        <Attr Name="ImportTime" Val="1694049054"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../OtterPipelineFiles/core/immed_gen.v">
+    <File Path="$PSRCDIR/sources_1/imports/OtterPipelineFiles/core/immed_gen.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../OtterPipelineFiles/core/immed_gen.v"/>
+        <Attr Name="ImportTime" Val="1694049054"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../OtterPipelineFiles/core/mux_4t1_nb_v1_06.v">
+    <File Path="$PSRCDIR/sources_1/imports/OtterPipelineFiles/core/mux_4t1_nb_v1_06.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../OtterPipelineFiles/core/mux_4t1_nb_v1_06.v"/>
+        <Attr Name="ImportTime" Val="1694049054"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../OtterPipelineFiles/core/mux_8t1_nb_v1_03.v">
+    <File Path="$PSRCDIR/sources_1/imports/OtterPipelineFiles/core/mux_8t1_nb_v1_03.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../OtterPipelineFiles/core/mux_8t1_nb_v1_03.v"/>
+        <Attr Name="ImportTime" Val="1694049054"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../OtterPipelineFiles/core/reg_nb_sync_clr_v1_01.v">
+    <File Path="$PSRCDIR/sources_1/imports/OtterPipelineFiles/core/reg_nb_sync_clr_v1_01.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../OtterPipelineFiles/core/reg_nb_sync_clr_v1_01.v"/>
+        <Attr Name="ImportTime" Val="1694049054"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../OtterPipelineFiles/core/CSR_v1_03.sv">
+    <File Path="$PSRCDIR/sources_1/imports/OtterPipelineFiles/core/CSR_v1_03.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../OtterPipelineFiles/core/CSR_v1_03.sv"/>
+        <Attr Name="ImportTime" Val="1694049052"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../OtterPipelineFiles/core/control_unit_dcdr_v_1_05.sv">
+    <File Path="$PSRCDIR/sources_1/imports/OtterPipelineFiles/core/control_unit_dcdr_v_1_05.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../OtterPipelineFiles/core/control_unit_dcdr_v_1_05.sv"/>
+        <Attr Name="ImportTime" Val="1694049054"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../OtterPipelineFiles/core/control_unit_fsm_v_1_07.sv">
+    <File Path="$PSRCDIR/sources_1/imports/OtterPipelineFiles/core/control_unit_fsm_v_1_07.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../OtterPipelineFiles/core/control_unit_fsm_v_1_07.sv"/>
+        <Attr Name="ImportTime" Val="1694049054"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../OtterPipelineFiles/core/otter_memory_v1_06.sv">
+    <File Path="$PSRCDIR/sources_1/imports/OtterPipelineFiles/core/otter_memory_v1_06.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../OtterPipelineFiles/core/otter_memory_v1_06.sv"/>
+        <Attr Name="ImportTime" Val="1694049054"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../OtterPipelineFiles/core/reg_file_v_1_01.sv">
+    <File Path="$PSRCDIR/sources_1/imports/OtterPipelineFiles/core/reg_file_v_1_01.sv">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../OtterPipelineFiles/core/reg_file_v_1_01.sv"/>
+        <Attr Name="ImportTime" Val="1694049054"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../OtterPipelineFiles/core/riscv_mcu.v">
+    <File Path="$PSRCDIR/sources_1/imports/OtterPipelineFiles/core/riscv_mcu.v">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../OtterPipelineFiles/core/riscv_mcu.v"/>
+        <Attr Name="ImportTime" Val="1700128166"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -105,14 +131,6 @@
     <File Path="$PPRDIR/../OtterPipelineFiles/otter_memory.mem">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../OtterPipelineFiles/core/timer_counter_v1_02.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
