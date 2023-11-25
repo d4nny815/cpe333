@@ -17,11 +17,12 @@ Command: synth_design -top OTTER_MCU -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 3196
+INFO: [Synth 8-7075] Helper process launched with PID 35636
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 INFO: [Synth 8-11241] undeclared symbol 'pcSource_E', assumed default net type 'wire' [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:40]
 INFO: [Synth 8-11241] undeclared symbol 'PC_target_addr_E', assumed default net type 'wire' [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:42]
@@ -61,7 +62,7 @@ WARNING: [Synth 8-8895] 'stall_D' is already implicitly declared on line 85 [Z:/
 WARNING: [Synth 8-8895] 'flush_E' is already implicitly declared on line 141 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:303]
 WARNING: [Synth 8-8895] 'flush_D' is already implicitly declared on line 86 [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:303]
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 825.828 ; gain = 407.512
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1196.289 ; gain = 409.645
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'OTTER_MCU' [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'mux_2t1_nb' [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv:31]
@@ -133,19 +134,353 @@ WARNING: [Synth 8-7129] Port instr[8] in module Decoder is either unconnected or
 WARNING: [Synth 8-7129] Port instr[7] in module Decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port INTR in module OTTER_MCU is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 932.223 ; gain = 513.906
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1302.262 ; gain = 515.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 932.223 ; gain = 513.906
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1302.262 ; gain = 515.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1302.262 ; gain = 515.617
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1302.262 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc]
+WARNING: [Vivado 12-584] No ports matched 'clk'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:20]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports clk]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:20]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-584] No ports matched 'switches[0]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[0]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[1]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[1]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[2]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[2]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[3]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[3]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[4]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[4]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[5]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[5]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[6]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[6]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[7]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[7]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[8]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[8]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[9]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[9]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[10]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[10]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[11]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[11]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[12]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[12]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[13]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[13]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[14]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[14]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[15]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'switches[15]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[0]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[0]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[1]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[1]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[2]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[2]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[3]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[3]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[4]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[4]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[5]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[5]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[6]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[6]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[7]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[7]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[8]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[8]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[9]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[9]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[10]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[10]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[11]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[11]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[12]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[12]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[13]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[13]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[14]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[14]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[15]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'leds[15]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'segs[7]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'segs[7]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'segs[6]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'segs[6]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'segs[5]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'segs[5]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'segs[4]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'segs[4]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:101]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'segs[3]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'segs[3]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'segs[2]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'segs[2]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'segs[1]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'segs[1]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'segs[0]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'segs[0]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:117]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:117]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:118]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:118]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'buttons[0]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:123]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:123]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'buttons[0]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:124]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:124]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'buttons[1]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:125]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:125]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'buttons[1]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:126]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:126]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'buttons[2]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:127]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:127]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'buttons[2]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:128]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:128]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'buttons[3]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:129]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:129]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'buttons[3]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:130]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:130]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'buttons[4]'. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:131]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:131]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:131]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc:132]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1397.867 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1397.867 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1397.867 ; gain = 611.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 932.223 ; gain = 513.906
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1397.867 ; gain = 611.223
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1397.867 ; gain = 611.223
+---------------------------------------------------------------------------------
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
@@ -163,9 +498,8 @@ INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of 
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 932.223 ; gain = 513.906
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1397.867 ; gain = 611.223
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -210,7 +544,6 @@ BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
@@ -261,7 +594,7 @@ INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of 
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1215.586 ; gain = 797.270
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1397.867 ; gain = 611.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -287,12 +620,17 @@ Note: The table above is a preliminary report that shows the Distributed RAMs at
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
-No constraint files found.
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1397.867 ; gain = 611.223
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1224.441 ; gain = 806.125
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1397.867 ; gain = 611.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -352,7 +690,7 @@ INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_14
 INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1224.656 ; gain = 806.340
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1397.867 ; gain = 611.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -370,37 +708,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1224.656 ; gain = 806.340
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1397.867 ; gain = 611.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1224.656 ; gain = 806.340
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1397.867 ; gain = 611.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1224.656 ; gain = 806.340
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1397.867 ; gain = 611.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1224.656 ; gain = 806.340
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1397.867 ; gain = 611.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1224.656 ; gain = 806.340
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1397.867 ; gain = 611.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1224.656 ; gain = 806.340
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1397.867 ; gain = 611.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -429,49 +767,34 @@ Report Cell Usage:
 |11    |RAM32M   |    10|
 |12    |RAM32X1D |     4|
 |13    |RAMB36E1 |    16|
-|14    |FDRE     |   607|
-|15    |IBUF     |    34|
-|16    |OBUF     |    65|
+|15    |FDRE     |   607|
+|16    |IBUF     |    34|
+|17    |OBUF     |    65|
 +------+---------+------+
-
-Report Instance Areas: 
-+------+---------------------+------------------------------+------+
-|      |Instance             |Module                        |Cells |
-+------+---------------------+------------------------------+------+
-|1     |top                  |                              |  2556|
-|2     |  OTTER_ALU          |ALU                           |    24|
-|3     |  OTTER_MEMORY       |Memory                        |   560|
-|4     |  OTTER_reg_file     |RegFile                       |    14|
-|5     |  Program_Counter    |reg_nb                        |    57|
-|6     |  branch_conditional |branch_cond_gen               |    11|
-|7     |  pipeline_reg_D_E   |Pipeline_reg_decode_execute   |  1047|
-|8     |  pipeline_reg_E_M   |Pipeline_reg_execute_memory   |   389|
-|9     |  pipeline_reg_F_D   |Pipeline_reg_fetch_decode     |   149|
-|10    |  pipeline_reg_M_W   |Pipeline_reg_memory_writeback |   171|
-+------+---------------------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1224.656 ; gain = 806.340
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1397.867 ; gain = 611.223
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 77 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1224.656 ; gain = 806.340
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1224.656 ; gain = 806.340
+Synthesis finished with 0 errors, 0 critical warnings and 30 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1397.867 ; gain = 515.617
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1397.867 ; gain = 611.223
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1236.547 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1397.867 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 287 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 46 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1240.188 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1397.867 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 14 instances were transformed.
   RAM32M => RAM32M (inverted pins: WCLK) (RAMD32(x6), RAMS32(x2)): 10 instances
   RAM32X1D => RAM32X1D (inverted pins: WCLK) (RAMD32(x2)): 4 instances
 
-Synth Design complete, checksum: d8e0755
+Synth Design complete, checksum: b042a6ec
 INFO: [Common 17-83] Releasing license: Synthesis
-137 Infos, 77 Warnings, 0 Critical Warnings and 0 Errors encountered.
+143 Infos, 177 Warnings, 101 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1240.188 ; gain = 829.711
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 1397.867 ; gain = 988.000
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1/OTTER_MCU.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file OTTER_MCU_utilization_synth.rpt -pb OTTER_MCU_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Nov 17 18:20:19 2023...
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 25 12:14:21 2023...

@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1700273994" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/OTTER_MCU.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1700943232" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/OTTER_MCU.dcp">
   <File Type="PA-TCL" Name="OTTER_MCU.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="OTTER_MCU_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="OTTER_MCU_reports.tcl"/>
   <File Type="RDS-RDS" Name="OTTER_MCU.vds"/>
   <File Type="RDS-UTIL" Name="OTTER_MCU_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="OTTER_MCU_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="OTTER_MCU.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="OTTER_MCU_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="OTTER_MCU_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv">
@@ -130,6 +127,14 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../cpe233/exp6/exp6.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc"/>
+        <Attr Name="ImportTime" Val="1683166406"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>

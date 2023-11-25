@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="5,023.497 ns"></ZoomStartTime>
-      <ZoomEndTime time="5,180.324 ns"></ZoomEndTime>
-      <Cursor1Time time="5,110.000 ns"></Cursor1Time>
+      <ZoomStartTime time="443.500 ns"></ZoomStartTime>
+      <ZoomEndTime time="835.301 ns"></ZoomEndTime>
+      <Cursor1Time time="492.900 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="216"></NameColumnWidth>
-      <ValueColumnWidth column_width="78"></ValueColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="91" />
+   <WVObjectSize size="100" />
    <wvobject fp_name="/test_pipeline/my_otter/pipeline_reg_F_D/CLK" type="logic">
       <obj_property name="ElementShortName">CLK</obj_property>
       <obj_property name="ObjectShortName">CLK</obj_property>
@@ -39,6 +39,8 @@
    <wvobject fp_name="/test_pipeline/my_otter/pipeline_reg_F_D/PC_F" type="array">
       <obj_property name="ElementShortName">PC_F[31:0]</obj_property>
       <obj_property name="ObjectShortName">PC_F[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/test_pipeline/my_otter/pipeline_reg_F_D/PC_plus4_F" type="array">
       <obj_property name="ElementShortName">PC_plus4_F[31:0]</obj_property>
@@ -224,6 +226,42 @@
    <wvobject fp_name="/test_pipeline/my_otter/pipeline_reg_M_W/PC_plus4_W" type="array">
       <obj_property name="ElementShortName">PC_plus4_W[31:0]</obj_property>
       <obj_property name="ObjectShortName">PC_plus4_W[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_pipeline/my_otter/OTTER_reg_file/wd" type="array">
+      <obj_property name="ElementShortName">wd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wd[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_pipeline/my_otter/OTTER_reg_file/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_pipeline/my_otter/OTTER_reg_file/en" type="logic">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_pipeline/my_otter/OTTER_reg_file/adr1" type="array">
+      <obj_property name="ElementShortName">adr1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">adr1[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_pipeline/my_otter/OTTER_reg_file/adr2" type="array">
+      <obj_property name="ElementShortName">adr2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">adr2[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_pipeline/my_otter/OTTER_reg_file/wa" type="array">
+      <obj_property name="ElementShortName">wa[4:0]</obj_property>
+      <obj_property name="ObjectShortName">wa[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_pipeline/my_otter/OTTER_reg_file/rs1" type="array">
+      <obj_property name="ElementShortName">rs1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_pipeline/my_otter/OTTER_reg_file/rs2" type="array">
+      <obj_property name="ElementShortName">rs2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rs2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_pipeline/my_otter/OTTER_reg_file/reg_file" type="array">
+      <obj_property name="ElementShortName">reg_file[0:31][31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_file[0:31][31:0]</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider683">
       <obj_property name="label">HAZARD UNIT Signals</obj_property>

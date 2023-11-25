@@ -9,22 +9,22 @@
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description: 
+// Description:  
 // 
 // Dependencies: 
-//  
+//   
 // Revision:
-// Revision 0.01 - File Created
+// Revision 0.01 - File Created 
 // Additional Comments:
 // 
-//////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////// ////////////////////////////////////////
 
 
-module OTTER_MCU (  
-    input CLK,
-    input INTR,   
-    input RESET,  
-    input [31:0] IOBUS_IN, 
+module OTTER_MCU (     
+    input CLK, 
+    input INTR,     
+    input RESET,     
+    input [31:0] IOBUS_IN,  
     output [31:0] IOBUS_OUT, 
     output [31:0] IOBUS_ADDR,
     output logic IOBUS_WR  

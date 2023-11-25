@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1700944631">
+  <File Type="ROUTE-PWR" Name="OTTER_MCU_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="OTTER_MCU.tcl"/>
+  <File Type="BITSTR-MMI" Name="OTTER_MCU.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="OTTER_MCU_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="OTTER_MCU_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="OTTER_MCU_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="OTTER_MCU_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="OTTER_MCU_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="OTTER_MCU_opt.dcp"/>
+  <File Type="OPT-DRC" Name="OTTER_MCU_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="OTTER_MCU.hwdef"/>
+  <File Type="PWROPT-DCP" Name="OTTER_MCU_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="OTTER_MCU_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="OTTER_MCU_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="OTTER_MCU_placed.dcp"/>
+  <File Type="PLACE-IO" Name="OTTER_MCU_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="OTTER_MCU_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="OTTER_MCU_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="OTTER_MCU_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="OTTER_MCU_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="OTTER_MCU_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="OTTER_MCU_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="OTTER_MCU.bin"/>
+  <File Type="PLACE-TIMING" Name="OTTER_MCU_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="OTTER_MCU_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="OTTER_MCU.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="OTTER_MCU_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="OTTER_MCU_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="OTTER_MCU_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="OTTER_MCU.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="OTTER_MCU_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="OTTER_MCU_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="OTTER_MCU_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="OTTER_MCU_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="OTTER_MCU_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="OTTER_MCU_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="OTTER_MCU_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="OTTER_MCU_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="OTTER_MCU_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="OTTER_MCU_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="OTTER_MCU_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="OTTER_MCU_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="OTTER_MCU_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="OTTER_MCU_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="OTTER_MCU_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="OTTER_MCU_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="OTTER_MCU_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="OTTER_MCU_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="OTTER_MCU_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="OTTER_MCU_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="OTTER_MCU_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="OTTER_MCU_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="OTTER_MCU_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="OTTER_MCU_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="OTTER_MCU_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="OTTER_MCU_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="OTTER_MCU_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="OTTER_MCU.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="OTTER_MCU_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="OTTER_MCU_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="OTTER_MCU.nky"/>
+  <File Type="BITSTR-BMM" Name="OTTER_MCU_bd.bmm"/>
+  <File Type="PDI-FILE" Name="OTTER_MCU.pdi"/>
+  <File Type="RCFI_FILE" Name="OTTER_MCU.rcfi"/>
+  <File Type="CFI_FILE" Name="OTTER_MCU.cfi"/>
+  <File Type="RNPI_FILE" Name="OTTER_MCU.rnpi"/>
+  <File Type="NPI_FILE" Name="OTTER_MCU.npi"/>
+  <File Type="RBD_FILE" Name="OTTER_MCU.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="OTTER_MCU.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="OTTER_MCU.sysdef"/>
+  <File Type="BG-BGN" Name="OTTER_MCU.bgn"/>
+  <File Type="BG-DRC" Name="OTTER_MCU.drc"/>
+  <File Type="RDI-RDI" Name="OTTER_MCU.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-RQS" Name="OTTER_MCU_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="OTTER_MCU_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OtterPipelineFiles/otter_mcu/Decoder.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OtterPipelineFiles/otter_mcu/alu.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OtterPipelineFiles/otter_mcu/hazard.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OtterPipelineFiles/otter_mcu/immed_gen.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OtterPipelineFiles/otter_mcu/otter_memory.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OtterPipelineFiles/otter_mcu/reg_file.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OtterPipelineFiles/otter_mcu/register_nb.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../OtterPipelineFiles/otter_memory.mem">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="OTTER_MCU"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../cpe233/exp6/exp6.srcs/constrs_1/imports/hardware support modules/Basys3_Master_v1_03.xdc"/>
+        <Attr Name="ImportTime" Val="1683166406"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/OTTER_MCU.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
