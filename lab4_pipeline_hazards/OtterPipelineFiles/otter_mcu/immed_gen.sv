@@ -25,7 +25,7 @@
 // formats from the instruction register
 
 module immed_gen (
-    input [31:0] ir,
+    input [31:7] ir,
     input [2:0] immed_sel,
     output logic [31:0] immed_ext
     );

@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Sun Nov 26 04:35:24 2023
-# Process ID: 32308
+# Start of session at: Sun Nov 26 13:42:07 2023
+# Process ID: 36424
 # Current directory: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1
 # Command line: vivado.exe -log OTTER_MCU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_MCU.tcl
 # Log file: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1/OTTER_MCU.vds
@@ -22,10 +22,10 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 5564
+INFO: [Synth 8-7075] Helper process launched with PID 36836
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 826.953 ; gain = 410.988
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 826.414 ; gain = 409.066
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'OTTER_MCU' [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'mux_2t1_nb' [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv:31]
@@ -42,9 +42,9 @@ INFO: [Synth 8-6155] done synthesizing module 'Memory' (0#1) [Z:/schoolfiles/sch
 INFO: [Synth 8-6157] synthesizing module 'Pipeline_reg_fetch_decode' [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv:23]
 INFO: [Synth 8-6155] done synthesizing module 'Pipeline_reg_fetch_decode' (0#1) [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'Decoder' [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Decoder.sv:23]
-INFO: [Synth 8-226] default block is never used [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Decoder.sv:125]
-INFO: [Synth 8-226] default block is never used [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Decoder.sv:144]
-INFO: [Synth 8-155] case statement is not full and has no default [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Decoder.sv:73]
+INFO: [Synth 8-226] default block is never used [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Decoder.sv:127]
+INFO: [Synth 8-226] default block is never used [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Decoder.sv:146]
+INFO: [Synth 8-155] case statement is not full and has no default [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Decoder.sv:75]
 INFO: [Synth 8-6155] done synthesizing module 'Decoder' (0#1) [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/Decoder.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'RegFile' [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/reg_file.sv:37]
 INFO: [Synth 8-6155] done synthesizing module 'RegFile' (0#1) [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/reg_file.sv:37]
@@ -67,47 +67,19 @@ INFO: [Synth 8-6155] done synthesizing module 'Pipeline_reg_memory_writeback' (0
 INFO: [Synth 8-6157] synthesizing module 'Hazard_Unit' [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/hazard.sv:3]
 INFO: [Synth 8-6155] done synthesizing module 'Hazard_Unit' (0#1) [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/hazard.sv:3]
 INFO: [Synth 8-6155] done synthesizing module 'OTTER_MCU' (0#1) [Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
-WARNING: [Synth 8-7129] Port ir[6] in module immed_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ir[5] in module immed_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ir[4] in module immed_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ir[3] in module immed_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ir[2] in module immed_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ir[1] in module immed_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ir[0] in module immed_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[31] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[29] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[28] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[27] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[26] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[25] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[24] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[23] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[22] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[21] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[20] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[19] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[18] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[17] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[16] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[15] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[11] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[10] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[9] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[8] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[7] in module Decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port INTR in module OTTER_MCU is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 932.648 ; gain = 516.684
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 934.734 ; gain = 517.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 932.648 ; gain = 516.684
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 934.734 ; gain = 517.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 932.648 ; gain = 516.684
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 934.734 ; gain = 517.387
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
@@ -127,7 +99,7 @@ INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of 
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 932.648 ; gain = 516.684
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 934.734 ; gain = 517.387
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -179,34 +151,6 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port ir[6] in module immed_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ir[5] in module immed_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ir[4] in module immed_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ir[3] in module immed_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ir[2] in module immed_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ir[1] in module immed_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ir[0] in module immed_gen is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[31] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[29] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[28] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[27] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[26] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[25] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[24] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[23] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[22] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[21] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[20] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[19] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[18] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[17] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[16] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[15] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[11] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[10] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[9] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[8] in module Decoder is either unconnected or has no load
-WARNING: [Synth 8-7129] Port instr[7] in module Decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port INTR in module OTTER_MCU is either unconnected or has no load
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
@@ -225,7 +169,7 @@ INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of 
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1216.824 ; gain = 800.859
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1217.113 ; gain = 799.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -256,7 +200,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1225.652 ; gain = 809.688
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1225.934 ; gain = 808.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -316,7 +260,7 @@ INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_14
 INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1225.855 ; gain = 809.891
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1226.164 ; gain = 808.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -334,37 +278,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1225.855 ; gain = 809.891
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1226.164 ; gain = 808.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1225.855 ; gain = 809.891
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1226.164 ; gain = 808.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1225.855 ; gain = 809.891
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1226.164 ; gain = 808.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1225.855 ; gain = 809.891
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1226.164 ; gain = 808.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1225.855 ; gain = 809.891
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1226.164 ; gain = 808.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1225.855 ; gain = 809.891
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1226.164 ; gain = 808.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -414,18 +358,18 @@ Report Instance Areas:
 |10    |  pipeline_reg_M_W   |Pipeline_reg_memory_writeback |   167|
 +------+---------------------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1225.855 ; gain = 809.891
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1226.164 ; gain = 808.816
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 59 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1225.855 ; gain = 809.891
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1225.855 ; gain = 809.891
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1226.164 ; gain = 808.816
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1226.164 ; gain = 808.816
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1237.730 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1238.020 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 279 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 46 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1241.414 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1241.691 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 14 instances were transformed.
   RAM32M => RAM32M (inverted pins: WCLK) (RAMD32(x6), RAMS32(x2)): 10 instances
@@ -433,9 +377,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 Synth Design complete, checksum: 8aec781
 INFO: [Common 17-83] Releasing license: Synthesis
-118 Infos, 59 Warnings, 0 Critical Warnings and 0 Errors encountered.
+118 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1241.414 ; gain = 831.684
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1241.691 ; gain = 832.055
 INFO: [Common 17-1381] The checkpoint 'Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1/OTTER_MCU.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file OTTER_MCU_utilization_synth.rpt -pb OTTER_MCU_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 26 04:35:47 2023...
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 26 13:42:30 2023...
