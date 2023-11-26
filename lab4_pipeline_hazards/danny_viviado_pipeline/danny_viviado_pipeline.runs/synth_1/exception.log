@@ -1,4 +1,0 @@
-ERROR: Exception caught trying to open file Z:\schoolfiles\school_files\cpe333\lab4_pipeline_hazards\danny_viviado_pipeline\danny_viviado_pipeline.runs\synth_1/runme.log
-	Exception name: Error
-	Exception error code: 70
-	Exception message: Permission denied

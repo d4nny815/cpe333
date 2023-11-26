@@ -84,7 +84,6 @@ module Decoder(
                 immed_sel = 3'b011;             // U-type
             end
 
-            // TODO : pc +4 reg mux
             JAL: begin
                 jump = 1'b1;                    // jump
                 immed_sel = 3'b100;             // j-type
@@ -92,7 +91,6 @@ module Decoder(
                 rf_wr_sel = 2'b10;              // PC + 4
             end
 
-            // TODO
             JALR: begin
                 jump = 1'b1;                    // jump
                 alu_fun = 4'b0000;              // add
@@ -101,6 +99,7 @@ module Decoder(
             end
 
             BRANCH: begin
+                regWrite = 1'b0;                // no reg write
                 immed_sel = 3'b010;             // B-type
                 branch = 1'b1;
             end

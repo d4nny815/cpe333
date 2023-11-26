@@ -9,10 +9,10 @@
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description:  
+// Description:   
 // 
-// Dependencies: 
-//   
+// Dependencies:  
+//    
 // Revision:
 // Revision 0.01 - File Created 
 // Additional Comments:
@@ -20,20 +20,60 @@
 ////////////////////////////////////////// ////////////////////////////////////////
 
 
-module OTTER_MCU (     
-    input CLK, 
-    input INTR,     
-    input RESET,     
-    input [31:0] IOBUS_IN,  
-    output [31:0] IOBUS_OUT, 
+module OTTER_MCU (       
+    input CLK,   
+    input INTR,       
+    input RESET,      
+    input [31:0] IOBUS_IN,    
+    output [31:0] IOBUS_OUT,    
     output [31:0] IOBUS_ADDR,
-    output logic IOBUS_WR  
-    );       
+    output logic IOBUS_WR   
+    );        
 
-//*********************************************************************************************************************
+    logic [31:0] PC_i, PC_F, PC_plus4_F, Instr_F;
+
+    logic [31:0] Instr_D, PC_D, PC_plus4_D; // from pipeline reg
+    logic [31:0] rs1_D, rs2_D, immed_ext_D; // for pipeline reg
+    // control unit outputs
+    logic regWrite_D, memWrite_D, memRead2_D, alu_src_D, alu_srcB_D, jump_D, branch_D, br_eq, br_lt, br_ltu;
+    logic [1:0] rf_wr_sel_D;
+    logic [2:0] immed_sel;
+    logic [3:0] alu_fun_D; 
+
+    // pipeline reg signals
+    logic regWrite_E, memWrite_E, memRead2_E, alu_src_E, alu_srcB_E, jump_E, branch_E;
+    logic [1:0] rf_wr_sel_E;
+    logic [3:0] alu_fun_E;
+    logic [31:0] PC_E, rs1_E, rs2_E, immed_ext_E, ALU_result, ALU_result_E, Instr_E;
+
+    // internal stage signals
+    logic [31:0] ALU_srcA_data, ALU_srcB_data, PC_target_addr_E, PC_plus4_E;
+    logic ALU_zero_E, pcSource_E, branch_conditional_E;
+
+    logic [31:0] ALU_forward_muxA, ALU_forward_muxB; 
+
+    // pipeline register signals
+    logic regWrite_M, memWrite_M, memRead2_M;
+    logic [1:0] rf_wr_sel_M;
+    logic [2:0] memWrite_size_M;
+    logic [4:0] rd_M;
+    logic [31:0] ALU_result_M, write_data_M, PC_plus4_M;
+
+    // internal stage signals
+    logic [31:0] memRead_data_M; 
+
+    //pipeline register signals
+    logic regWrite_W;
+    logic [1:0] rf_wr_sel_W;
+    logic [4:0] rd_W;
+    logic [31:0] ALU_result_W, memRead_data_W, PC_plus4_W, rf_write_data_W;
+
+     logic [1:0] forwardA_E, forwardB_E;
+    logic stall_F, stall_D, flush_E, flush_D;
+
+// *********************************************************************************************************************
 // Fetch (Instruction Memory) Stage
 // ********************************************************************************************************************
-    logic [31:0] PC_i, PC_F, PC_plus4_F, Instr_F;
     assign PC_plus4_F = PC_F + 4;
     
     mux_2t1_nb #(.n(32)) PC_2t1_mux (
@@ -72,13 +112,7 @@ module OTTER_MCU (
 //*********************************************************************************************************************
 // Decode (Register File) stage
 // ********************************************************************************************************************
-    logic [31:0] Instr_D, PC_D, PC_plus4_D; // from pipeline reg
-    logic [31:0] rs1_D, rs2_D, immed_ext_D; // for pipeline reg
-    // control unit outputs
-    logic regWrite_D, memWrite_D, memRead2_D, alu_srcA_D, alu_srcB_D, jump_D, branch_D, br_eq, br_lt, br_ltu;
-    logic [1:0] rf_wr_sel_D;
-    logic [2:0] immed_sel;
-    logic [3:0] alu_fun_D; 
+    
 
     Pipeline_reg_fetch_decode pipeline_reg_F_D(
         .CLK            (CLK),
@@ -91,6 +125,7 @@ module OTTER_MCU (
         .PC_D           (PC_D),
         .PC_plus4_D     (PC_plus4_D)
     );
+
 
     Decoder Control_Unit (
         .instr          (Instr_D),
@@ -126,15 +161,7 @@ module OTTER_MCU (
 // ********************************************************************************************************************
 // Execute (ALU) Stage
 // ********************************************************************************************************************
-    // pipeline reg signals
-    logic regWrite_E, memWrite_E, memRead2_E, alu_src_E, alu_srcB_E, jump_E, branch_E;
-    logic [1:0] rf_wr_sel_E;
-    logic [3:0] alu_fun_E;
-    logic [31:0] PC_E, rs1_E, rs2_E, immed_ext_E, ALU_result, ALU_result_E, Instr_E;
-
-    // internal stage signals
-    logic [31:0] ALU_srcA_data, ALU_srcB_data, PC_target_addr_E, PC_plus4_E;
-    logic ALU_zero_E, pcSource_E, branch_conditional_E;
+    
 
     Pipeline_reg_decode_execute pipeline_reg_D_E (
         .CLK            (CLK),
@@ -179,7 +206,6 @@ module OTTER_MCU (
         .branch         (branch_conditional_E)
     );
 
-    logic [31:0] ALU_forward_muxA, ALU_forward_muxB; 
     mux_4t1_nb #(.n(32)) forwardA_mux (
         .SEL            (forwardA_E),
         .D0             (rs1_E), 
@@ -187,7 +213,7 @@ module OTTER_MCU (
 	    .D2             (ALU_result_M), 
 	    .D3             (0), 
         .D_OUT          (ALU_forward_muxA)
-    ); 
+    );  
 
     mux_4t1_nb #(.n(32)) forwardB_mux (
         .SEL            (forwardB_E),
@@ -227,15 +253,7 @@ module OTTER_MCU (
 // ********************************************************************************************************************
 // Memory (Data Memory) stage 
 // ********************************************************************************************************************
-    // pipeline register signals
-    logic regWrite_M, memWrite_M, memRead2_M;
-    logic [1:0] rf_wr_sel_M;
-    logic [2:0] memWrite_size_M;
-    logic [4:0] rd_M;
-    logic [31:0] ALU_result_M, write_data_M, PC_plus4_M;
-
-    // internal stage signals
-    logic [31:0] memRead_data_M; 
+    
 
     Pipeline_reg_execute_memory pipeline_reg_E_M (
         .CLK            (CLK),
@@ -264,11 +282,7 @@ module OTTER_MCU (
 // ********************************************************************************************************************
 // Write (Write Back) stage
 // ********************************************************************************************************************
-    //pipeline register signals
-    logic regWrite_W;
-    logic [1:0] rf_wr_sel_W;
-    logic [4:0] rd_W;
-    logic [31:0] ALU_result_W, memRead_data_W, PC_plus4_W, rf_write_data_W;
+    
 
     Pipeline_reg_memory_writeback pipeline_reg_M_W (
         .CLK            (CLK),
@@ -299,8 +313,7 @@ module OTTER_MCU (
 // ********************************************************************************************************************
 // HAZARD UNUT
 // ********************************************************************************************************************
-    logic [1:0] forwardA_E, forwardB_E;
-    logic stall_F, stall_D, flush_E, flush_D;
+   
     Hazard_Unit hazard_unit (
         .rs1_D          (Instr_D[19:15]),
         .rs2_D          (Instr_D[24:20]),

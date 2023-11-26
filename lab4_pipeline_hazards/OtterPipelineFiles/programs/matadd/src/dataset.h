@@ -9,17 +9,17 @@
 
 typedef int data_t;static data_t input1_data[ARRAY_SIZE] = 
 {
-    0,   3,   2,   0,   3,   1,   0,   3,   2
+    3,   1,   1,   2,   2,   1,   2,   3,   0
 };
 
 static data_t input2_data[ARRAY_SIZE] = 
 {
-    1,   1,   0,   3,   1,   2,   0,   0,   0
+    3,   2,   3,   2,   3,   2,   1,   2,   3
 };
 
 static data_t verify_data[ARRAY_SIZE] = 
 {
-    1,   4,   2,   3,   4,   3,   0,   3,   2
+    6,   3,   4,   4,   5,   3,   3,   5,   3
 };
 
 
