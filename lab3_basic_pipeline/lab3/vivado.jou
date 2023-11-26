@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Oct 31 18:46:47 2023
+# Process ID: 21524
+# Current directory: C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/lab3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent30808 C:\Users\ryana\CPE333\cpe333\lab3_basic_pipeline\lab3\lab3.xpr
+# Log file: C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/lab3/vivado.log
+# Journal file: C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/lab3\vivado.jou
+# Running On: LAPTOP-I3MDA0LJ, OS: Windows, CPU Frequency: 1996 MHz, CPU Physical cores: 8, Host memory: 16497 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/lab3/lab3.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+set_property is_enabled true [get_files  C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu_pipeline_template_v2.sv]
+update_compile_order -fileset sources_1
+launch_simulation
+add_files -norecurse {C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/reg_file.sv C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/register_nb.sv C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/Decoder.sv C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/alu.sv C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/branch_gen.sv C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/control_unit_dcdr_v_1_05.sv C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/immed_gen.sv C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_memory.sv C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/control_unit_fsm_v_1_07.sv C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/register_nb.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_memory.sv] -no_script -reset -force -quiet
+remove_files  {C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/register_nb.sv C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/otter_memory.sv}
+add_files -norecurse C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/OtterPipelineFiles/otter_mcu/alu.sv
+close_project
+open_project C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/basic_pipeline/basic_pipeline.xpr
+update_compile_order -fileset sources_1
+save_project_as project_1 C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/project_1 -force
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation
+launch_simulation
+launch_simulation
+close_project
+open_project C:/Users/ryana/CPE333/cpe333-main/cpe333-main/Lab0_1_performance/lab3/lab3.xpr
+update_compile_order -fileset sources_1
+launch_simulation

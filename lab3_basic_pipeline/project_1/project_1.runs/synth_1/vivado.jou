@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Tue Oct 31 18:56:14 2023
+# Process ID: 20208
+# Current directory: C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log OTTER_MCU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_MCU.tcl
+# Log file: C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/project_1/project_1.runs/synth_1/OTTER_MCU.vds
+# Journal file: C:/Users/ryana/CPE333/cpe333/lab3_basic_pipeline/project_1/project_1.runs/synth_1\vivado.jou
+# Running On: LAPTOP-I3MDA0LJ, OS: Windows, CPU Frequency: 1996 MHz, CPU Physical cores: 8, Host memory: 16497 MB
+#-----------------------------------------------------------
+source OTTER_MCU.tcl -notrace
