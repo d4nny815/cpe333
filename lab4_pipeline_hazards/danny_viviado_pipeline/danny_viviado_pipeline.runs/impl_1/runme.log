@@ -1,0 +1,5 @@
+
+*** Running vivado
+    with args -log OTTER_MCU.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source OTTER_MCU.tcl -notrace
+
+
