@@ -21,7 +21,9 @@
 
 // TODO: implement the decoder module
 module Decoder(
-    input [31:0] instr,
+    input [6:0] opcode,
+    input [2:0] func3,
+    input func7,
     output logic regWrite,
     output logic memWrite,
     output logic memRead2,
@@ -48,7 +50,7 @@ module Decoder(
         SYS    = 7'b1110011
     } opcode_t;
     opcode_t OPCODE; //- define variable of new opcode type
-    assign OPCODE = opcode_t'(instr[6:0]); //- Cast input enum 
+    assign OPCODE = opcode_t'(opcode); //- Cast input enum 
 
 
     //- datatype for func3Symbols tied to values
@@ -62,7 +64,7 @@ module Decoder(
         BGEU = 3'b111
     } func3_t;    
     func3_t FUNC3; //- define variable of new opcode type
-    assign FUNC3 = func3_t'(instr[14:12]); //- Cast input enum 
+    assign FUNC3 = func3_t'(func3); //- Cast input enum 
 
 
     always_comb begin
@@ -131,7 +133,7 @@ module Decoder(
                     3'b111: alu_fun = 4'b0010;  // and
                     3'b001: alu_fun = 4'b0101;  // sll
                     3'b101: begin
-                        if (instr[30] == 1)
+                        if (func7 == 1)
                             alu_fun = 4'b0111;  // sra
                         else 
                             alu_fun = 4'b0110;  // srl
@@ -143,7 +145,7 @@ module Decoder(
             OP_RG3: begin
                 case(FUNC3)
                     3'b000: begin
-                        if (instr[30] == 1)
+                        if (func7 == 1)
                             alu_fun = 4'b0001;  // sub
                         else 
                             alu_fun = 4'b0000;  // add
@@ -155,7 +157,7 @@ module Decoder(
                     3'b111: alu_fun = 4'b0010;  // and
                     3'b001: alu_fun = 4'b0101;  // sll
                     3'b101: begin
-                        if (instr[30] == 1)
+                        if (func7 == 1)
                             alu_fun = 4'b0111;  // sra
                         else 
                             alu_fun = 4'b0110;  // srl

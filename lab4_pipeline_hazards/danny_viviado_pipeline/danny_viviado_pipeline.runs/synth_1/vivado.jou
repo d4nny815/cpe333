@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Sun Nov 26 04:35:24 2023
-# Process ID: 32308
+# Start of session at: Sun Nov 26 13:42:07 2023
+# Process ID: 36424
 # Current directory: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1
 # Command line: vivado.exe -log OTTER_MCU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_MCU.tcl
 # Log file: Z:/schoolfiles/school_files/cpe333/lab4_pipeline_hazards/danny_viviado_pipeline/danny_viviado_pipeline.runs/synth_1/OTTER_MCU.vds
