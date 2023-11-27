@@ -29,10 +29,9 @@ module test_pipeline();
         .INTR       (1'b0),
         .IOBUS_IN   (32'b0),
         .IOBUS_OUT  (),
-        .IOBUS_ADDR (),
+        .IOBUS_ADDR (), 
         .IOBUS_WR   () 
-    );
-
+    ); 
     always begin
     #10 clk = ~clk; 
     end  
