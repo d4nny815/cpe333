@@ -18,8 +18,10 @@ module Cache_FSM(
        st_checkL1,
        st_fill_dirty,
        st_load_write_MM,
-       st_write_cache,
-    }  state_type;
+       st_write_cache
+       }
+       state_type;
+       
     state_type  NS,PS;
 
     //- state registers (PS)

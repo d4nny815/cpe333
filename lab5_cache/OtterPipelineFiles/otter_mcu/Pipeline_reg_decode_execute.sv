@@ -75,7 +75,7 @@ module Pipeline_reg_decode_execute(
             PC_plus4_E <= 0;
         end
         else begin
-            if stall_E == 0 begin
+            if (stall_E == 0) begin
                 PC_E <= PC_D;
                 Instr_E <= Instr_D;
                 regWrite_E <= regWrite_D;

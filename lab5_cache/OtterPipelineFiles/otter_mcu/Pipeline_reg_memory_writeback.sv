@@ -37,7 +37,7 @@ module Pipeline_reg_memory_writeback(
     );
 
     always_ff @(posedge CLK ) begin
-        if (stall_E == 0) begin
+        if (stall_W == 0) begin
             regWrite_W <= regWrite_M;
             rf_wr_sel_W <= rf_wr_sel_M;
             rd_W <= rd_M;

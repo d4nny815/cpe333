@@ -319,11 +319,12 @@ module OTTER_MCU (
         .rd_E           (Instr_E[11:7]),
         .rd_M           (rd_M),
         .rd_W           (rd_W),
+        .regWrite_M     (regWrite_M),
+        .regWrite_W     (regWrite_W),
+        .pcSource_E     (pcSource_E),
         .rf_wr_sel_E    (rf_wr_sel_E),
         .memValid1      (memValid1),
         .memValid2      (memValid2),
-        .regWrite_M     (regWrite_M),
-        .regWrite_W     (regWrite_W),
         .forwardA_E     (forwardA_E),
         .forwardB_E     (forwardB_E),
         .stall_F        (stall_F),
@@ -333,6 +334,5 @@ module OTTER_MCU (
         .stall_W        (stall_W),
         .flush_E        (flush_E),
         .flush_D        (flush_D)
-        .pcSource_E     (pcSource_E),
     );
 endmodule

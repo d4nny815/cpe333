@@ -22,7 +22,7 @@ module Hazard_Unit (
     output logic stall_M,
     output logic stall_W,
     output logic flush_E,
-    output logic flush_D,
+    output logic flush_D
     );
     
     logic load;
@@ -59,10 +59,19 @@ module Hazard_Unit (
     end
 
     always_comb begin
-        if memValid1 == 0
-            stall_F = stall_D = stall_E = stall_M = stall_W = 1;
+        if (memValid1 == 0) begin
+            stall_F = 1;
+            stall_D = 1;
+            stall_E = 1;
+            stall_M = 1;
+            stall_W = 1;
+            end
         else
-            stall_F = stall_D = stall_E = stall_M = stall_W = 0;
+            stall_F = 0;
+            stall_D = 0;
+            stall_E = 0;
+            stall_M = 0;
+            stall_W = 0;
     end
 
 
