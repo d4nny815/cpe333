@@ -89,6 +89,8 @@ module OTTER_MCU (
     );
 
     MemoryWrapper OTTER_MEMORY(
+    
+        .RST            (RESET),
         .MEM_CLK        (CLK),
         .MEM_RDEN1      (1'b1),   
         .MEM_RDEN2      (memRead2_M),    

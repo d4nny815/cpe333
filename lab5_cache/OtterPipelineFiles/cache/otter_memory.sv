@@ -82,7 +82,7 @@
     end
     
     // BRAM requires all reads and writes to occur synchronously
-    always_ff @(negedge MEM_CLK) begin
+    always_ff @(posedge MEM_CLK) begin
     
       // save data (WD) to memory (ADDR2)
       if (weAddrValid == 1) begin  //(MEM_WE == 1) && (MEM_ADDR2 < 16'hFFFD)) begin   // write enable and valid address space

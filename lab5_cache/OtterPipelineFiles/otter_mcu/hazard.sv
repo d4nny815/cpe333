@@ -52,26 +52,27 @@ module Hazard_Unit (
 
     always_comb begin
         load = ((rf_wr_sel_E == 2'b01) & ((rs1_D == rd_E) | (rs2_D == rd_E)));
-        stall_F = load;
-        stall_D = load;
-        flush_E = load | pcSource_E;
-        flush_D = pcSource_E;
-    end
-
-    always_comb begin
-        if (memValid1 == 0) begin
+        
+        if (load == 1) begin
+            stall_F = load;
+            stall_D = load;
+            flush_E = load | pcSource_E;
+            flush_D = pcSource_E;
+        end
+        else if (memValid1 == 0) begin
             stall_F = 1;
             stall_D = 1;
             stall_E = 1;
             stall_M = 1;
             stall_W = 1;
-            end
-        else
+        end
+        else begin 
             stall_F = 0;
             stall_D = 0;
             stall_E = 0;
             stall_M = 0;
             stall_W = 0;
+        end        
     end
 
 

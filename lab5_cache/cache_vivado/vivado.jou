@@ -1,0 +1,158 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Nov 29 21:59:51 2023
+# Process ID: 14424
+# Current directory: Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24540 Z:\schoolfiles\school_files\cpe333\lab5_cache\cache_vivado\cache_vivado.xpr
+# Log file: Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/vivado.log
+# Journal file: Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado\vivado.jou
+# Running On: RaijinPC, OS: Windows, CPU Frequency: 4200 MHz, CPU Physical cores: 32, Host memory: 33457 MB
+#-----------------------------------------------------------
+start_gui
+open_project Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/cache_vivado.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_memory_behav.wcfg
+source test_memory.tcl
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_memory_behav.wcfg
+source test_memory.tcl
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_memory_behav.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_memory_behav.wcfg}
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_memory_behav.wcfg
+source test_memory.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+relaunch_sim
+run 10 us
+relaunch_sim
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+relaunch_sim
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_memory_behav.wcfg
+source test_memory.tcl
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_memory_behav.wcfg}
+relaunch_sim
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/cache/reg_nb_sync_clr_v1_01.v] -no_script -reset -force -quiet
+remove_files  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/cache/reg_nb_sync_clr_v1_01.v
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_simulation
+launch_simulation
+open_wave_config Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_memory_behav.wcfg
+source test_memory.tcl
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_memory_behav.wcfg}
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_memory_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_memory_behav.wcfg}
+update_compile_order -fileset sources_1
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_memory_behav.wcfg}
+relaunch_sim
+close_sim
+launch_simulation
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+open_wave_config Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_memory_behav.wcfg
+source test_memory.tcl
+relaunch_sim
+relaunch_sim
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_memory_behav.wcfg}
+relaunch_sim
+relaunch_sim
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_memory_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_memory_behav.wcfg}
+close_sim
+set_property is_enabled true [get_files  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/test_pipeline.sv]
+update_compile_order -fileset sim_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top test_pipeline [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_memory_behav.wcfg] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_memory_behav.wcfg
+launch_simulation
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+source test_pipeline.tcl
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_pipeline_behav.wcfg}
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_pipeline_behav.wcfg}
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_pipeline_behav.wcfg}
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_pipeline_behav.wcfg}
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_pipeline_behav.wcfg}
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_pipeline_behav.wcfg}
+relaunch_sim
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_pipeline_behav.wcfg}
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 10 us
+relaunch_sim
+run 10 us
+relaunch_sim
+run 10 us
+relaunch_sim
+run 10 us
+relaunch_sim
+run 10 us
+relaunch_sim
+run 10 us
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_pipeline_behav.wcfg}
+relaunch_sim
+run 10 us
+relaunch_sim
+run 10 us
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/test_pipeline_behav.wcfg}
+close_sim

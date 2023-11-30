@@ -1,5 +1,4 @@
 `timescale 1ns / 1ps
-`default_nettype none
 //////////////////////////////////////////////////////////////////////////////////
 // Company: Ratner Surf Designs
 // Engineer: James Ratner
@@ -57,5 +56,3 @@ module clk_2n_div_test  #(parameter n=13) (
     end
 	
 endmodule
-
-`default_nettype wire

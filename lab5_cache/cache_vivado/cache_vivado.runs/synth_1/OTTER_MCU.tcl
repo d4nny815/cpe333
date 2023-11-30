@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/ryana/CPE333/cpe333/lab5_cache/cache_vivado/cache_vivado.runs/synth_1/OTTER_MCU.tcl"
+  variable script "Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/cache_vivado.runs/synth_1/OTTER_MCU.tcl"
   variable category "vivado_synth"
 }
 
@@ -76,37 +76,37 @@ create_project -in_memory -part xc7k70tfbv676-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/ryana/CPE333/cpe333/lab5_cache/cache_vivado/cache_vivado.cache/wt [current_project]
-set_property parent.project_path C:/Users/ryana/CPE333/cpe333/lab5_cache/cache_vivado/cache_vivado.xpr [current_project]
+set_property webtalk.parent_dir Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/cache_vivado.cache/wt [current_project]
+set_property parent.project_path Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/cache_vivado.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/ryana/CPE333/cpe333/lab5_cache/cache_vivado/cache_vivado.cache/ip [current_project]
+set_property ip_output_repo z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/cache_vivado.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_mem C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_memory.mem
+read_mem Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_memory.mem
 read_verilog -library xil_defaultlib -sv {
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Decoder.sv
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/alu.sv
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_adapter.sv
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_fsm.sv
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/hazard.sv
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/immed_gen.sv
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/instr_cache.sv
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/memory_wrapper.sv
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/otter_memory.sv
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/reg_file.sv
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/register_nb.sv
-  C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Decoder.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/alu.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_adapter.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_fsm.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/cache/clk_div.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/hazard.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/immed_gen.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/cache/instr_cache.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/cache/memory_wrapper.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/cache/otter_memory.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/reg_file.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/register_nb.sv
+  Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv
 }
-read_verilog -library xil_defaultlib C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/clk_2n_div_test_v1_01.v
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -117,6 +117,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/cache_vivado.srcs/utils_1/imports/synth_1/OTTER_MCU.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
