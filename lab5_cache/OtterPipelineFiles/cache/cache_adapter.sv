@@ -27,9 +27,9 @@ module cache_adapter (
         end
         else if (next == 1)
             counter <= counter + 1;
-
+            // full <= counter == 3;
     end
-    // assign full = counter == 3;
+    assign full = counter == 3;
 
     always_comb begin
         // if (we_cache | we_mem)
@@ -41,15 +41,14 @@ module cache_adapter (
     end
 
     always_ff @(negedge CLK) begin
-        full = counter == 3;
         if (we_cache == 1) begin
-            cache_buffer[4] = addr_i;
-            cache_buffer[counter] = data_i;
+            cache_buffer[4] <= addr_i;
+            cache_buffer[counter] <= data_i;
         end
         else if (we_mem == 1) begin
             dirty = 1; 
-            memory_buffer[4] = addr_i;
-            memory_buffer[counter] = data_i;
+            memory_buffer[4] <= addr_i;
+            memory_buffer[counter] <= data_i;
         end
     end
 

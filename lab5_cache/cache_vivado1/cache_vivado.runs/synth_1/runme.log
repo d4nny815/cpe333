@@ -1,0 +1,54 @@
+
+*** Running vivado
+    with args -log OTTER_MCU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_MCU.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source OTTER_MCU.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/cache_vivado.srcs/utils_1/imports/synth_1/OTTER_MCU.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/cache_vivado.srcs/utils_1/imports/synth_1/OTTER_MCU.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top OTTER_MCU -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 34376
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'addr_i', assumed default net type 'wire' [Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/cache/memory_wrapper.sv:72]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 826.109 ; gain = 409.875
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'OTTER_MCU' [Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mux_2t1_nb' [Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv:31]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-226] default block is never used [Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv:39]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2t1_nb' (0#1) [Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv:31]
+INFO: [Synth 8-6157] synthesizing module 'reg_nb' [Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/register_nb.sv:24]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'reg_nb' (0#1) [Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/register_nb.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'MemoryWrapper' [Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/cache/memory_wrapper.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'Cache_FSM' [Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_fsm.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'Cache_FSM' (0#1) [Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_fsm.sv:2]
+ERROR: [Synth 8-448] named port connection 'dirty_adt' does not exist for instance 'CACHE_FSM' of module 'Cache_FSM' [Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/cache/memory_wrapper.sv:45]
+INFO: [Synth 8-6157] synthesizing module 'instr_cache' [Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/cache/instr_cache.sv:3]
+ERROR: [Synth 8-6156] failed synthesizing module 'instr_cache' [Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/cache/instr_cache.sv:3]
+ERROR: [Synth 8-6156] failed synthesizing module 'MemoryWrapper' [Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/cache/memory_wrapper.sv:2]
+ERROR: [Synth 8-6156] failed synthesizing module 'OTTER_MCU' [Z:/schoolfiles/school_files/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 916.457 ; gain = 500.223
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 0 Warnings, 0 Critical Warnings and 5 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 30 01:26:26 2023...

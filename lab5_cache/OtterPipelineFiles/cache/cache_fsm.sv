@@ -88,7 +88,7 @@ module Cache_FSM(
                 next = MM_clk;
                 dir = 1;
                 MM_re1 = 1;
-                if (full == 1) begin                  // done loading new line
+                if (full == 1 && MM_clk == 1) begin                  // done loading new line
                     apt_clr = 1;
                     NS = st_write_cache;
                 end
@@ -102,7 +102,7 @@ module Cache_FSM(
                 we_apt_cache = 0;
                 we_apt_mem = 0;
                 we_MM = 0;
-                next = MM_clk;
+                next = 1;
                 dir = 1;
                 MM_re1 = 0;
                 if (full == 1)                  // done writing new line

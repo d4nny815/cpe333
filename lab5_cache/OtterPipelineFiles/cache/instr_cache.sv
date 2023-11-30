@@ -97,26 +97,31 @@ always_ff @(negedge CLK) begin
     if (WE == 1) begin
         if (two_way_set_associative[set_index][USE_BIT1_INDEX] == 0) begin
             two_way_set_associative[set_index][VALID_BIT1_INDEX] <= 1;
-            two_way_set_associative[set_index][USE_BIT1_INDEX] <= 1;
-            two_way_set_associative[set_index][USE_BIT2_INDEX] <= 0;
+           
             two_way_set_associative[set_index][TAG_BIT_INDEX_START:TAG_BIT_INDEX_END] <= tag;
             case (block_offset)
                 2'b00: two_way_set_associative[set_index][SET1_DATA0_INDEX +: WORD_BITS] <= data_i;
                 2'b01: two_way_set_associative[set_index][SET1_DATA1_INDEX +: WORD_BITS] <= data_i;
                 2'b10: two_way_set_associative[set_index][SET1_DATA2_INDEX +: WORD_BITS] <= data_i;
-                2'b11: two_way_set_associative[set_index][SET1_DATA3_INDEX +: WORD_BITS] <= data_i;
+                2'b11: begin
+                    two_way_set_associative[set_index][USE_BIT1_INDEX] <= 1;
+                    two_way_set_associative[set_index][USE_BIT2_INDEX] <= 0; 
+                    two_way_set_associative[set_index][SET1_DATA3_INDEX +: WORD_BITS] <= data_i;
+                end
             endcase
         end
         else begin
             two_way_set_associative[set_index][VALID_BIT2_INDEX] <= 1;
-            two_way_set_associative[set_index][USE_BIT1_INDEX] <= 0;
-            two_way_set_associative[set_index][USE_BIT2_INDEX] <= 1;
             two_way_set_associative[set_index][TAG_BIT_INDEX_START:TAG_BIT_INDEX_END] <= tag;
             case (block_offset)
                 2'b00: two_way_set_associative[set_index][SET2_DATA0_INDEX +: WORD_BITS] <= data_i;
                 2'b01: two_way_set_associative[set_index][SET2_DATA1_INDEX +: WORD_BITS] <= data_i;
                 2'b10: two_way_set_associative[set_index][SET2_DATA2_INDEX +: WORD_BITS] <= data_i;
-                2'b11: two_way_set_associative[set_index][SET2_DATA3_INDEX +: WORD_BITS] <= data_i;
+                2'b11: begin
+                    two_way_set_associative[set_index][USE_BIT1_INDEX] <= 0;
+                    two_way_set_associative[set_index][USE_BIT2_INDEX] <= 1;
+                    two_way_set_associative[set_index][SET2_DATA3_INDEX +: WORD_BITS] <= data_i;
+                end
             endcase
         end
     end        

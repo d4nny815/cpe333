@@ -1,0 +1,350 @@
+
+*** Running vivado
+    with args -log OTTER_MCU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_MCU.tcl
+
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source OTTER_MCU.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1287.082 ; gain = 0.000
+Command: synth_design -top OTTER_MCU -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 29712
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1287.082 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'OTTER_MCU' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mux_2t1_nb' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv:31]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv:39]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2t1_nb' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv:31]
+INFO: [Synth 8-6157] synthesizing module 'reg_nb' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/register_nb.sv:24]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'reg_nb' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/register_nb.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'MemoryWrapper' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/memory_wrapper.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'Cache_FSM' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_fsm.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'Cache_FSM' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_fsm.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'instr_cache' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/instr_cache.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'instr_cache' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/instr_cache.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'cache_adapter' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_adapter.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'cache_adapter' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_adapter.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'clk_2n_div_test' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/clk_div.sv:1]
+	Parameter n bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clk_2n_div_test' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/clk_div.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'Memory' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/otter_memory.sv:47]
+INFO: [Synth 8-3876] $readmem data file 'otter_memory.mem' is read successfully [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/otter_memory.sv:72]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/otter_memory.sv:89]
+INFO: [Synth 8-6155] done synthesizing module 'Memory' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/otter_memory.sv:47]
+INFO: [Synth 8-6155] done synthesizing module 'MemoryWrapper' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/memory_wrapper.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'Pipeline_reg_fetch_decode' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'Pipeline_reg_fetch_decode' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'Decoder' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Decoder.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Decoder.sv:127]
+INFO: [Synth 8-226] default block is never used [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Decoder.sv:146]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Decoder.sv:75]
+INFO: [Synth 8-6155] done synthesizing module 'Decoder' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Decoder.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'RegFile' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/reg_file.sv:37]
+INFO: [Synth 8-6155] done synthesizing module 'RegFile' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/reg_file.sv:37]
+INFO: [Synth 8-6157] synthesizing module 'immed_gen' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/immed_gen.sv:27]
+INFO: [Synth 8-6155] done synthesizing module 'immed_gen' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/immed_gen.sv:27]
+INFO: [Synth 8-6157] synthesizing module 'Pipeline_reg_decode_execute' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'Pipeline_reg_decode_execute' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'branch_cond_gen' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+INFO: [Synth 8-6155] done synthesizing module 'branch_cond_gen' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+INFO: [Synth 8-6157] synthesizing module 'mux_4t1_nb' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv:24]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv:35]
+INFO: [Synth 8-6155] done synthesizing module 'mux_4t1_nb' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/alu.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/alu.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'Pipeline_reg_execute_memory' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'Pipeline_reg_execute_memory' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv:25]
+INFO: [Synth 8-6157] synthesizing module 'Pipeline_reg_memory_writeback' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'Pipeline_reg_memory_writeback' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'Hazard_Unit' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/hazard.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'Hazard_Unit' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/hazard.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_MCU' (0#1) [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+WARNING: [Synth 8-87] always_comb on 'NS_reg' did not result in combinational logic [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_fsm.sv:55]
+WARNING: [Synth 8-6014] Unused sequential element cache_buffer_reg[4] was removed.  [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_adapter.sv:46]
+WARNING: [Synth 8-6014] Unused sequential element memory_buffer_reg[4] was removed.  [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_adapter.sv:51]
+WARNING: [Synth 8-3848] Net IO_WR in module/entity MemoryWrapper does not have driver. [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/memory_wrapper.sv:14]
+WARNING: [Synth 8-3848] Net MEM_DOUT2 in module/entity MemoryWrapper does not have driver. [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/memory_wrapper.sv:16]
+WARNING: [Synth 8-3848] Net memValid2 in module/entity MemoryWrapper does not have driver. [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/memory_wrapper.sv:18]
+WARNING: [Synth 8-87] always_comb on 'flush_E_reg' did not result in combinational logic [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/hazard.sv:59]
+WARNING: [Synth 8-87] always_comb on 'flush_D_reg' did not result in combinational logic [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/hazard.sv:60]
+WARNING: [Synth 8-87] always_comb on 'stall_E_reg' did not result in combinational logic [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/hazard.sv:65]
+WARNING: [Synth 8-87] always_comb on 'stall_M_reg' did not result in combinational logic [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/hazard.sv:66]
+WARNING: [Synth 8-87] always_comb on 'stall_W_reg' did not result in combinational logic [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/hazard.sv:67]
+WARNING: [Synth 8-7129] Port memValid2 in module Hazard_Unit is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read in module Cache_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port IO_WR in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[31] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[30] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[29] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[28] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[27] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[26] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[25] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[24] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[23] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[22] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[21] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[20] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[19] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[18] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[17] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[16] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[15] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[14] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[13] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[12] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[11] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[10] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[9] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[8] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[7] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[6] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[5] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[4] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[3] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[2] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[1] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DOUT2[0] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memValid2 in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_RDEN2 in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_WE2 in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[31] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[30] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[29] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[28] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[27] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[26] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[25] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[24] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[23] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[22] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[21] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[20] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[19] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[18] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[17] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[16] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[15] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[14] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[13] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[12] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[11] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[10] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[9] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[8] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[7] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[6] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[5] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[4] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[3] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[2] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[1] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_ADDR2[0] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[31] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[30] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[29] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[28] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[27] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[26] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[25] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[24] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[23] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[22] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[21] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[20] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[19] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[18] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[17] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[16] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[15] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[14] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[13] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[12] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[11] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[10] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[9] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[8] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[7] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[6] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[5] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[4] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[3] in module MemoryWrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MEM_DIN2[2] in module MemoryWrapper is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:11 . Memory (MB): peak = 1287.082 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1287.082 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1287.082 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'Cache_FSM'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_NS_reg' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_fsm.sv:55]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_NS_reg' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_fsm.sv:55]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              st_checkL1 |                             0001 |                               00
+           st_fill_dirty |                             0010 |                               01
+        st_load_write_MM |                             0100 |                               10
+          st_write_cache |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'one-hot' in module 'Cache_FSM'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_NS_reg' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_fsm.sv:55]
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+WARNING: [Synth 8-327] inferring latch for variable 'stall_E_reg' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/hazard.sv:65]
+WARNING: [Synth 8-327] inferring latch for variable 'flush_E_reg' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/hazard.sv:59]
+WARNING: [Synth 8-327] inferring latch for variable 'flush_D_reg' [C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/hazard.sv:60]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1287.082 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 4     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	              269 Bit    Registers := 8     
+	               32 Bit    Registers := 27    
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 12    
++---RAMs : 
+	             512K Bit	(16384 X 32 bit)          RAMs := 1     
+	             1024 Bit	(32 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   4 Input  269 Bit        Muxes := 24    
+	   2 Input  269 Bit        Muxes := 32    
+	   2 Input   32 Bit        Muxes := 80    
+	   4 Input   32 Bit        Muxes := 7     
+	   9 Input   32 Bit        Muxes := 2     
+	  16 Input   32 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 16    
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 5     
+	   8 Input    4 Bit        Muxes := 2     
+	  10 Input    4 Bit        Muxes := 1     
+	  10 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	  10 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 83    
+	   4 Input    1 Bit        Muxes := 7     
+	   9 Input    1 Bit        Muxes := 1     
+	  10 Input    1 Bit        Muxes := 7     
+	   6 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MEMORY/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MEMORY/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MEMORY/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MEMORY/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MEMORY/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MEMORY/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MEMORY/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MEMORY/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MEMORY/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MEMORY/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MEMORY/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MEMORY/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MEMORY/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MEMORY/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MEMORY/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MEMORY/OTTER_MEMORY/memory_reg"
+WARNING: [Synth 8-3332] Sequential element (i_0) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_2) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_4) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_6) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_8) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_10) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_12) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_14) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_16) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_18) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_20) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_22) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_24) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_26) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_28) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_30) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_32) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_34) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_36) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_38) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_40) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_42) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_44) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_46) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_48) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_50) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_52) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_54) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_56) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_58) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_60) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_62) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (i_64) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (OTTER_MEMORY/memory_reg_mux_sel_a_pos_3) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (OTTER_MEMORY/memory_reg_mux_sel_a_pos_2) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (OTTER_MEMORY/memory_reg_mux_sel_a_pos_1) is unused and will be removed from module MemoryWrapper.
+WARNING: [Synth 8-3332] Sequential element (OTTER_MEMORY/memory_reg_mux_sel_a_pos_0) is unused and will be removed from module MemoryWrapper.
