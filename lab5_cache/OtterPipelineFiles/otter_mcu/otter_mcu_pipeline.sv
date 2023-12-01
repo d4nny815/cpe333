@@ -65,7 +65,8 @@ module OTTER_MCU (
     logic [31:0] ALU_result_W, memRead_data_W, PC_plus4_W, rf_write_data_W;
 
     // HAZARD SIGNALS
-    logic stall_F, stall_D, stall_E, stall_M, stall_W, flush_D, flush_E, memValid1, memValid2;
+    logic stall_F, stall_D, stall_E, stall_M, stall_W, 
+            flush_F, flush_D, flush_E, flush_M, flush_W, memValid1, memValid2;
     logic [1:0] forwardA_E, forwardB_E;
 
 // ************************************************************************************************
@@ -84,12 +85,11 @@ module OTTER_MCU (
         .data_in        (PC_i), 
         .ld             (stall_F), 
         .clk            (CLK), 
-        .clr            (RESET), 
+        .clr            (flush_F), 
         .data_out       (PC_F)
     );
 
     MemoryWrapper OTTER_MEMORY(
-    
         .RST            (RESET),
         .MEM_CLK        (CLK),
         .MEM_RDEN1      (1'b1),   
@@ -257,6 +257,7 @@ module OTTER_MCU (
     Pipeline_reg_execute_memory pipeline_reg_E_M (
         .CLK            (CLK),
         .stall_M        (stall_M),
+        .flush_M        (flush_M),
         .regWrite_E     (regWrite_E),
         .memWrite_E     (memWrite_E),
         .memRead2_E     (memRead2_E),
@@ -286,6 +287,7 @@ module OTTER_MCU (
     Pipeline_reg_memory_writeback pipeline_reg_M_W (
         .CLK            (CLK),
         .stall_W        (stall_W),
+        .flush_W        (flush_W),
         .regWrite_M     (regWrite_M),
         .rf_wr_sel_M    (rf_wr_sel_M),
         .rd_M           (rd_M),
@@ -314,6 +316,7 @@ module OTTER_MCU (
 // * HAZARD UNUT
 // ************************************************************************************************
     Hazard_Unit hazard_unit (
+        .RST            (RESET),
         .rs1_D          (Instr_D[19:15]),
         .rs2_D          (Instr_D[24:20]),
         .rs1_E          (Instr_E[19:15]),
@@ -334,7 +337,10 @@ module OTTER_MCU (
         .stall_E        (stall_E),
         .stall_M        (stall_M),
         .stall_W        (stall_W),
+        .flush_F        (flush_F),
         .flush_E        (flush_E),
-        .flush_D        (flush_D)
+        .flush_D        (flush_D),
+        .flush_M        (flush_M),
+        .flush_W        (flush_W)
     );
 endmodule

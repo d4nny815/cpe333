@@ -25,6 +25,7 @@
 module Pipeline_reg_execute_memory(
     input CLK,
     input stall_M,
+    input flush_M,
     input regWrite_E,
     input memWrite_E,
     input memRead2_E,
@@ -46,7 +47,18 @@ module Pipeline_reg_execute_memory(
     );
 
     always_ff @(posedge CLK) begin
-        if (stall_M == 0) begin
+        if (flush_M == 1) begin
+            regWrite_M <= 0;
+            rf_wr_sel_M <= 0;
+            memWrite_M <= 0;
+            memRead2_M <= 0;
+            ALU_result_M <= 0;
+            write_data_M <= 0;
+            rd_M <= 0;
+            memWrite_size_M <= 0;
+            PC_plus4_M <= 0;
+        end
+        else if (stall_M == 0) begin
             regWrite_M <= regWrite_E;
             rf_wr_sel_M <= rf_wr_sel_E;
             memWrite_M <= memWrite_E;

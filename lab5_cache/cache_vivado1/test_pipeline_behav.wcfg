@@ -12,14 +12,18 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="657.501 ns"></ZoomEndTime>
-      <Cursor1Time time="411.000 ns"></Cursor1Time>
+      <ZoomEndTime time="334.904 ns"></ZoomEndTime>
+      <Cursor1Time time="0.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="149"></NameColumnWidth>
-      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+      <ValueColumnWidth column_width="64"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="130" />
+   <WVObjectSize size="120" />
+   <wave_markers>
+      <marker time="730000" label="" />
+      <marker time="810000" label="" />
+   </wave_markers>
    <wvobject fp_name="/test_pipeline/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -40,65 +44,21 @@
       <obj_property name="ElementShortName">Instr_F[31:0]</obj_property>
       <obj_property name="ObjectShortName">Instr_F[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/rs1_D" type="array">
-      <obj_property name="ElementShortName">rs1_D[4:0]</obj_property>
-      <obj_property name="ObjectShortName">rs1_D[4:0]</obj_property>
+   <wvobject fp_name="/test_pipeline/my_otter/pipeline_reg_D_E/PC_E" type="array">
+      <obj_property name="ElementShortName">PC_E[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_E[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/rs2_D" type="array">
-      <obj_property name="ElementShortName">rs2_D[4:0]</obj_property>
-      <obj_property name="ObjectShortName">rs2_D[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/rs1_E" type="array">
-      <obj_property name="ElementShortName">rs1_E[4:0]</obj_property>
-      <obj_property name="ObjectShortName">rs1_E[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/rs2_E" type="array">
-      <obj_property name="ElementShortName">rs2_E[4:0]</obj_property>
-      <obj_property name="ObjectShortName">rs2_E[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/rd_E" type="array">
-      <obj_property name="ElementShortName">rd_E[4:0]</obj_property>
-      <obj_property name="ObjectShortName">rd_E[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/rd_M" type="array">
-      <obj_property name="ElementShortName">rd_M[4:0]</obj_property>
-      <obj_property name="ObjectShortName">rd_M[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/rd_W" type="array">
-      <obj_property name="ElementShortName">rd_W[4:0]</obj_property>
-      <obj_property name="ObjectShortName">rd_W[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/regWrite_M" type="logic">
-      <obj_property name="ElementShortName">regWrite_M</obj_property>
-      <obj_property name="ObjectShortName">regWrite_M</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/regWrite_W" type="logic">
-      <obj_property name="ElementShortName">regWrite_W</obj_property>
-      <obj_property name="ObjectShortName">regWrite_W</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/pcSource_E" type="logic">
-      <obj_property name="ElementShortName">pcSource_E</obj_property>
-      <obj_property name="ObjectShortName">pcSource_E</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/rf_wr_sel_E" type="array">
-      <obj_property name="ElementShortName">rf_wr_sel_E[1:0]</obj_property>
-      <obj_property name="ObjectShortName">rf_wr_sel_E[1:0]</obj_property>
+   <wvobject fp_name="/test_pipeline/my_otter/pipeline_reg_D_E/Instr_E" type="array">
+      <obj_property name="ElementShortName">Instr_E[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Instr_E[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/memValid1" type="logic">
       <obj_property name="ElementShortName">memValid1</obj_property>
       <obj_property name="ObjectShortName">memValid1</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/memValid2" type="logic">
-      <obj_property name="ElementShortName">memValid2</obj_property>
-      <obj_property name="ObjectShortName">memValid2</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/forwardA_E" type="array">
-      <obj_property name="ElementShortName">forwardA_E[1:0]</obj_property>
-      <obj_property name="ObjectShortName">forwardA_E[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/forwardB_E" type="array">
-      <obj_property name="ElementShortName">forwardB_E[1:0]</obj_property>
-      <obj_property name="ObjectShortName">forwardB_E[1:0]</obj_property>
+   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/load" type="logic">
+      <obj_property name="ElementShortName">load</obj_property>
+      <obj_property name="ObjectShortName">load</obj_property>
    </wvobject>
    <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/stall_F" type="logic">
       <obj_property name="ElementShortName">stall_F</obj_property>
@@ -120,6 +80,10 @@
       <obj_property name="ElementShortName">stall_W</obj_property>
       <obj_property name="ObjectShortName">stall_W</obj_property>
    </wvobject>
+   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/flush_F" type="logic">
+      <obj_property name="ElementShortName">flush_F</obj_property>
+      <obj_property name="ObjectShortName">flush_F</obj_property>
+   </wvobject>
    <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/flush_E" type="logic">
       <obj_property name="ElementShortName">flush_E</obj_property>
       <obj_property name="ObjectShortName">flush_E</obj_property>
@@ -128,9 +92,13 @@
       <obj_property name="ElementShortName">flush_D</obj_property>
       <obj_property name="ObjectShortName">flush_D</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/load" type="logic">
-      <obj_property name="ElementShortName">load</obj_property>
-      <obj_property name="ObjectShortName">load</obj_property>
+   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/flush_M" type="logic">
+      <obj_property name="ElementShortName">flush_M</obj_property>
+      <obj_property name="ObjectShortName">flush_M</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/flush_W" type="logic">
+      <obj_property name="ElementShortName">flush_W</obj_property>
+      <obj_property name="ObjectShortName">flush_W</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider1465">
       <obj_property name="label">CACHE</obj_property>
@@ -275,10 +243,6 @@
    <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/MM_CLK" type="logic">
       <obj_property name="ElementShortName">MM_CLK</obj_property>
       <obj_property name="ObjectShortName">MM_CLK</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/MM_instruction" type="array">
-      <obj_property name="ElementShortName">MM_instruction[31:0]</obj_property>
-      <obj_property name="ObjectShortName">MM_instruction[31:0]</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider1466">
       <obj_property name="label">FSM</obj_property>
@@ -501,12 +465,13 @@
       <obj_property name="ObjectShortName">dirty</obj_property>
    </wvobject>
    <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/CACHE_ADAPTER/cache_buffer" type="array">
-      <obj_property name="ElementShortName">cache_buffer[4:0][31:0]</obj_property>
-      <obj_property name="ObjectShortName">cache_buffer[4:0][31:0]</obj_property>
+      <obj_property name="ElementShortName">cache_buffer[3:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">cache_buffer[3:0][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/CACHE_ADAPTER/memory_buffer" type="array">
-      <obj_property name="ElementShortName">memory_buffer[4:0][31:0]</obj_property>
-      <obj_property name="ObjectShortName">memory_buffer[4:0][31:0]</obj_property>
+      <obj_property name="ElementShortName">memory_buffer[3:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">memory_buffer[3:0][31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/CACHE_ADAPTER/counter" type="array">
       <obj_property name="ElementShortName">counter[1:0]</obj_property>

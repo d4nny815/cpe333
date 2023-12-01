@@ -22,6 +22,7 @@
 module Pipeline_reg_memory_writeback(
     input CLK,
     input stall_W,
+    input flush_W,
     input regWrite_M,
     input [1:0] rf_wr_sel_M,
     input [4:0] rd_M,
@@ -37,7 +38,15 @@ module Pipeline_reg_memory_writeback(
     );
 
     always_ff @(posedge CLK ) begin
-        if (stall_W == 0) begin
+        if (flush_W == 1) begin
+            regWrite_W <= 0;
+            rf_wr_sel_W <= 0;
+            rd_W <= 0;
+            ALU_result_W <= 0;
+            memRead_data_W <= 0;
+            PC_plus4_W <= 0;
+        end
+        else if (stall_W == 0) begin
             regWrite_W <= regWrite_M;
             rf_wr_sel_W <= rf_wr_sel_M;
             rd_W <= rd_M;

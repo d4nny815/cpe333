@@ -29,7 +29,7 @@ module Cache_FSM(
     state_type  NS,PS;
 
     //- state registers (PS)
-    always @ (posedge CLK) begin
+    always_ff @(posedge CLK) begin
         if (RST == 1)
             PS <= st_checkL1;
         else
@@ -49,7 +49,6 @@ module Cache_FSM(
                 dir = 0;
                 next = 0;
                 MM_re1 = 0;
-                // if (hit == 1 || read == 0) begin       // hit
                 if (hit == 1) begin       // hit
                     memValid1 = 1;
                     NS = st_checkL1;
@@ -62,6 +61,7 @@ module Cache_FSM(
                     apt_clr = 1;
                     NS = st_load_write_MM;
                 end
+                else NS = st_checkL1;
             end
             st_fill_dirty: begin
                 apt_clr = 0;
@@ -110,7 +110,7 @@ module Cache_FSM(
                 else
                     NS = st_write_cache;
             end
-
+            default: NS = st_checkL1;
 
         endcase
     end

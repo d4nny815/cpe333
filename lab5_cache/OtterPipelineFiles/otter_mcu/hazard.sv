@@ -1,6 +1,7 @@
 `timescale 1ns / 1ps
 
 module Hazard_Unit (
+    input RST,
     input [4:0] rs1_D,
     input [4:0] rs2_D,
     input [4:0] rs1_E,
@@ -21,8 +22,11 @@ module Hazard_Unit (
     output logic stall_E,
     output logic stall_M,
     output logic stall_W,
+    output logic flush_F,
     output logic flush_E,
-    output logic flush_D
+    output logic flush_D,
+    output logic flush_M,
+    output logic flush_W
     );
     
     logic load;
@@ -52,28 +56,16 @@ module Hazard_Unit (
 
     always_comb begin
         load = ((rf_wr_sel_E == 2'b01) & ((rs1_D == rd_E) | (rs2_D == rd_E)));
-        
-        if (load == 1) begin
-            stall_F = load;
-            stall_D = load;
-            flush_E = load | pcSource_E;
-            flush_D = pcSource_E;
-        end
-        else if (memValid1 == 0) begin
-            stall_F = 1;
-            stall_D = 1;
-            stall_E = 1;
-            stall_M = 1;
-            stall_W = 1;
-        end
-        else begin 
-            stall_F = 0;
-            stall_D = 0;
-            stall_E = 0;
-            stall_M = 0;
-            stall_W = 0;
-        end        
+        stall_F = ~memValid1 | load;
+        stall_D = ~memValid1 | load;
+        stall_E = ~memValid1;
+        stall_M = ~memValid1;
+        stall_W = ~memValid1;
+        flush_F = RST;
+        flush_E = load | pcSource_E | RST;
+        flush_D = pcSource_E | RST;
+        flush_M = RST;
+        flush_W = RST;
     end
-
 
 endmodule

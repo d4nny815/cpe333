@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado/cache_vivado.runs/synth_1'
+HD_PWD='Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado1/cache_vivado.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

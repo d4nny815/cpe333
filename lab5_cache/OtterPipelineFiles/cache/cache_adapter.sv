@@ -16,8 +16,8 @@ module cache_adapter (
 
     parameter DATA_WIDTH = 32;
 
-    logic [DATA_WIDTH - 1:0] cache_buffer [4:0]; // MM -> L1
-    logic [DATA_WIDTH - 1:0] memory_buffer [4:0]; // L1 -> MM
+    logic [DATA_WIDTH - 1:0] cache_buffer [3:0]; // MM -> L1
+    logic [DATA_WIDTH - 1:0] memory_buffer [3:0]; // L1 -> MM
 
     logic [1:0] counter;
     always_ff @(posedge CLK) begin
@@ -42,12 +42,10 @@ module cache_adapter (
 
     always_ff @(negedge CLK) begin
         if (we_cache == 1) begin
-            cache_buffer[4] <= addr_i;
             cache_buffer[counter] <= data_i;
         end
         else if (we_mem == 1) begin
             dirty = 1; 
-            memory_buffer[4] <= addr_i;
             memory_buffer[counter] <= data_i;
         end
     end
