@@ -1,0 +1,27 @@
+0.7
+2020.2
+Apr 18 2022
+16:05:34
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_adapter.sv,1701382803,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_fsm.sv,,cache_adapter,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_fsm.sv,1701382662,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/clk_div.sv,,Cache_FSM,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/clk_div.sv,1701379636,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/hazard.sv,,clk_2n_div_test,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/instr_cache.sv,1701379636,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/memory_wrapper.sv,,instr_cache,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/memory_wrapper.sv,1701379636,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv,,MemoryWrapper,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/otter_memory.sv,1701379636,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv,,Memory,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv,1701379636,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Decoder.sv,,branch_cond_gen,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Decoder.sv,1701379636,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv,,Decoder,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv,1701379636,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv,,Pipeline_reg_decode_execute,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv,1701379636,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv,,Pipeline_reg_execute_memory,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv,1701379636,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/alu.sv,,Pipeline_reg_memory_writeback,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/alu.sv,1701379636,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/cache_adapter.sv,,ALU,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/hazard.sv,1701379636,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/immed_gen.sv,,Hazard_Unit,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/immed_gen.sv,1701379636,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/instr_cache.sv,,immed_gen,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv,1701379636,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv,,mux_2t1_nb,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv,1701379636,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv,,mux_4t1_nb,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv,1701379636,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/cache/otter_memory.sv,,OTTER_MCU,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv,1701379636,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/reg_file.sv,,Pipeline_reg_fetch_decode,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/reg_file.sv,1701379636,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/register_nb.sv,,RegFile,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/otter_mcu/register_nb.sv,1701379636,systemVerilog,,C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/test_pipeline.sv,,reg_nb,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/test_memory.sv,1701379636,systemVerilog,,,,test_memory,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/OtterPipelineFiles/test_pipeline.sv,1701379636,systemVerilog,,,,test_pipeline,,uvm,,,,,,
+C:/Users/ryana/CPE333/cpe333/lab5_cache/cachelab/cachelab.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,uvm,,,,,,

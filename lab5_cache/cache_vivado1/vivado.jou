@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Dec  4 20:55:45 2023
+# Process ID: 34328
+# Current directory: Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent32184 Z:\schoolfiles\school_files\cpe333\lab5_cache\cache_vivado1\cache_vivado.xpr
+# Log file: Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado1/vivado.log
+# Journal file: Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado1\vivado.jou
+# Running On: RaijinPC, OS: Windows, CPU Frequency: 4200 MHz, CPU Physical cores: 32, Host memory: 33457 MB
+#-----------------------------------------------------------
+start_gui
+open_project Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado1/cache_vivado.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado1/cache_vivado.srcs/sim_1/imports/danny_viviado_pipeline/test_pipeline_behav1.wcfg
+source test_pipeline.tcl
+run 80 us
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado1/cache_vivado.srcs/sim_1/imports/danny_viviado_pipeline/test_pipeline_behav1.wcfg}
+relaunch_sim
+run 80 us
+relaunch_sim
+run 80 us
+relaunch_sim
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado1/cache_vivado.srcs/sim_1/imports/danny_viviado_pipeline/test_pipeline_behav1.wcfg}
+run 80 us
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado1/cache_vivado.srcs/sim_1/imports/danny_viviado_pipeline/test_pipeline_behav1.wcfg}
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado1/cache_vivado.srcs/sim_1/imports/danny_viviado_pipeline/test_pipeline_behav1.wcfg}
+relaunch_sim
+run 80 us
+relaunch_sim
+run 80 us
+relaunch_sim
+run 80 us
+relaunch_sim
+run 80 us
+run 80 us
+relaunch_sim
+relaunch_sim
+run 80 us
+relaunch_sim
+run 80 us
+run 80 us
+relaunch_sim
+run 80 us
+relaunch_sim
+run 80 us
+save_wave_config {Z:/schoolfiles/school_files/cpe333/lab5_cache/cache_vivado1/cache_vivado.srcs/sim_1/imports/danny_viviado_pipeline/test_pipeline_behav1.wcfg}
