@@ -40,7 +40,7 @@ module MemoryWrapper (
         .read           (MEM_RDEN1),
         .hit            (IM_hit),
         .full           (full),
-        .MM_clk         (MM_CLK),
+        .MM_clk         (MM_memValid1),
         .dirty_apt      (dirty_adt),
         .dirty_DM       (1'b0),
         .memValid1      (memValid1),
@@ -84,27 +84,22 @@ module MemoryWrapper (
         .dirty          (dirty_adt)
     );
 
-    // memory clock gets divided down to add an artificial delay
-    clk_2n_div_test #(.n(3)) MM_DIV (
-        .clockin        (MEM_CLK), 
-        .rst            (RST),          
-        .clockout       (MM_CLK)   
-    );
-
-    Memory OTTER_MEMORY(
-        .MEM_CLK        (MM_CLK),
+    Memory MAIN_MEMORY(
+        .RST            (apt_clr),
+        .MEM_CLK        (MEM_CLK),
         .MEM_RDEN1      (MM_re1),    // read enable Instruction
-        .MEM_RDEN2      (),    // read enable data
-        .MEM_WE2        (),      // write enable.
+        .MEM_RDEN2      (MEM_RDEN2),    // read enable data
+        .MEM_WE2        (MEM_WE2),      // write enable.
         .MEM_ADDR1      (adt_addr_o[15:2]),    // Instruction Memory word Addr (Connect to PC[15:2])
-        .MEM_ADDR2      (),    // Data Memory Addr
-        .MEM_DIN2       (),     // Data to save
-        .MEM_SIZE       (),     // 0-Byte, 1-Half, 2-Word
-        .MEM_SIGN       (),     // 1-unsigned 0-signed
+        .MEM_ADDR2      (MEM_ADDR2),    // Data Memory Addr
+        .MEM_DIN2       (MEM_DIN2),     // Data to save
+        .MEM_SIZE       (MEM_SIZE),     // 0-Byte, 1-Half, 2-Word
+        .MEM_SIGN       (MEM_SIGN),     // 1-unsigned 0-signed
         .IO_IN          (32'b0),        // Data from IO     
         .IO_WR          (),        // IO 1-write 0-read
         .MEM_DOUT1      (MM_instruction),    // Instruction
-        .MEM_DOUT2      ()     // Data
+        .MEM_DOUT2      (MEM_DOUT2),     // Data
+        .memValid1      (MM_memValid1)
     ); 
     
 endmodule

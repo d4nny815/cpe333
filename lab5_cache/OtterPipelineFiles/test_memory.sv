@@ -30,7 +30,7 @@ module test_memory();
 
     initial begin
         clk = 0; we = 0; re1 = 0; re2 = 0; din2 = 32'b0; addr2 = 32'b0; addr1 = 14'b0; reset = 1;
-        #10;
+        #16;
         reset = 0;
         #5;
         addr1 = 14'b1;

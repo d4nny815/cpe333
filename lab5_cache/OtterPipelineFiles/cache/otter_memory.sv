@@ -45,6 +45,7 @@
 //////////////////////////////////////////////////////////////////////////////////
                                                                                                                              
   module Memory (
+    input RST,
     input MEM_CLK,
     input MEM_RDEN1,        // read enable Instruction
     input MEM_RDEN2,        // read enable data
@@ -57,11 +58,18 @@
     input [31:0] IO_IN,     // Data from IO     
     output logic IO_WR,     // IO 1-write 0-read
     output logic [31:0] MEM_DOUT1,  // Instruction
-    output logic [31:0] MEM_DOUT2   // Data
+    output logic [31:0] MEM_DOUT2,   // Data
+    output logic memValid1
     ); 
+
+    clk_2n_div_test #(.n(3)) MM_DIV (
+        .clockin        (MEM_CLK), 
+        .rst            (RST),          
+        .clockout       (memValid1)   
+    );
     
     logic [13:0] wordAddr1, wordAddr2;
-    logic [31:0] memReadWord, ioBuffer, memReadSized;
+    logic [31:0] memReadWord, ioBuffer, memReadSized, _MEM_DOUT1;
     logic [1:0] byteOffset;
     logic weAddrValid;      // active when saving (WE) to valid memory address
        
@@ -80,32 +88,33 @@
         if(MEM_RDEN2)
             ioBuffer <= IO_IN;
     end
+    assign MEM_DOUT1 = memValid1 == 1 ? _MEM_DOUT1 : 32'hdeadbeef;
     
     // BRAM requires all reads and writes to occur synchronously
-    always_ff @(posedge MEM_CLK) begin
-    
-      // save data (WD) to memory (ADDR2)
-      if (weAddrValid == 1) begin  //(MEM_WE == 1) && (MEM_ADDR2 < 16'hFFFD)) begin   // write enable and valid address space
-        case({MEM_SIZE,byteOffset})
-            4'b0000: memory[wordAddr2][7:0]   <= MEM_DIN2[7:0];     // sb at byte offsets
-            4'b0001: memory[wordAddr2][15:8]  <= MEM_DIN2[7:0];
-            4'b0010: memory[wordAddr2][23:16] <= MEM_DIN2[7:0];
-            4'b0011: memory[wordAddr2][31:24] <= MEM_DIN2[7:0];
-            4'b0100: memory[wordAddr2][15:0]  <= MEM_DIN2[15:0];    // sh at byte offsets
-            4'b0101: memory[wordAddr2][23:8]  <= MEM_DIN2[15:0];
-            4'b0110: memory[wordAddr2][31:16] <= MEM_DIN2[15:0];
-            4'b1000: memory[wordAddr2]        <= MEM_DIN2;          // sw
+    always_ff @(negedge MEM_CLK) begin
+        // save data (WD) to memory (ADDR2)
+        if (weAddrValid == 1) begin  //(MEM_WE == 1) && (MEM_ADDR2 < 16'hFFFD)) begin   // write enable and valid address space
+            case({MEM_SIZE,byteOffset})
+                4'b0000: memory[wordAddr2][7:0]   <= MEM_DIN2[7:0];     // sb at byte offsets
+                4'b0001: memory[wordAddr2][15:8]  <= MEM_DIN2[7:0];
+                4'b0010: memory[wordAddr2][23:16] <= MEM_DIN2[7:0];
+                4'b0011: memory[wordAddr2][31:24] <= MEM_DIN2[7:0];
+                4'b0100: memory[wordAddr2][15:0]  <= MEM_DIN2[15:0];    // sh at byte offsets
+                4'b0101: memory[wordAddr2][23:8]  <= MEM_DIN2[15:0];
+                4'b0110: memory[wordAddr2][31:16] <= MEM_DIN2[15:0];
+                4'b1000: memory[wordAddr2]        <= MEM_DIN2;          // sw
 			
-			//default: memory[wordAddr2] <= 32'b0  // unsupported size, byte offset combination
-			// removed to avoid mistakes causing memory to be zeroed.
-        endcase
+			    //default: memory[wordAddr2] <= 32'b0  // unsupported size, byte offset combination
+			    // removed to avoid mistakes causing memory to be zeroed.
+            endcase
         end
-        // read all data synchronously required for BRAM
-        if(MEM_RDEN1)                       // need EN for extra load cycle to not change instruction
-            MEM_DOUT1 <= memory[MEM_ADDR1];
-
         if(MEM_RDEN2)                         // Read word from memory
             memReadWord <= memory[wordAddr2];
+    end
+
+    always_ff @(posedge MEM_CLK) begin
+        if(MEM_RDEN1)                         // Read word from memory
+            _MEM_DOUT1 <= memory[MEM_ADDR1];
     end
        
     // Change the data word into sized bytes and sign extend 

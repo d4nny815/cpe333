@@ -56,7 +56,7 @@ module Hazard_Unit (
 
     always_comb begin
         load = ((rf_wr_sel_E == 2'b01) & ((rs1_D == rd_E) | (rs2_D == rd_E)));
-        stall_F = ~memValid1 | load;
+        stall_F = (~memValid1 | load) && ~pcSource_E;
         stall_D = ~memValid1 | load;
         stall_E = ~memValid1;
         stall_M = ~memValid1;

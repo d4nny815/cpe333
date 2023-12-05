@@ -11,18 +11,18 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="334.904 ns"></ZoomEndTime>
-      <Cursor1Time time="0.000 ns"></Cursor1Time>
+      <ZoomStartTime time="29,407.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="29,698.601 ns"></ZoomEndTime>
+      <Cursor1Time time="29,640.400 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="149"></NameColumnWidth>
       <ValueColumnWidth column_width="64"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="120" />
+   <WVObjectSize size="123" />
    <wave_markers>
-      <marker time="730000" label="" />
-      <marker time="810000" label="" />
+      <marker time="710000" label="" />
+      <marker time="18710000" label="" />
    </wave_markers>
    <wvobject fp_name="/test_pipeline/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
@@ -55,6 +55,10 @@
    <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/memValid1" type="logic">
       <obj_property name="ElementShortName">memValid1</obj_property>
       <obj_property name="ObjectShortName">memValid1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/pcSource_E" type="logic">
+      <obj_property name="ElementShortName">pcSource_E</obj_property>
+      <obj_property name="ObjectShortName">pcSource_E</obj_property>
    </wvobject>
    <wvobject fp_name="/test_pipeline/my_otter/hazard_unit/load" type="logic">
       <obj_property name="ElementShortName">load</obj_property>
@@ -367,6 +371,7 @@
    <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/IM_L1/two_way_set_associative" type="array">
       <obj_property name="ElementShortName">two_way_set_associative[7:0][268:0]</obj_property>
       <obj_property name="ObjectShortName">two_way_set_associative[7:0][268:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/IM_L1/set_index" type="array">
       <obj_property name="ElementShortName">set_index[2:0]</obj_property>
@@ -481,28 +486,36 @@
       <obj_property name="label">Main Memory</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/OTTER_MEMORY/MEM_CLK" type="logic">
+   <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/MAIN_MEMORY/MEM_CLK" type="logic">
       <obj_property name="ElementShortName">MEM_CLK</obj_property>
       <obj_property name="ObjectShortName">MEM_CLK</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/OTTER_MEMORY/MEM_RDEN1" type="logic">
+   <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/MAIN_MEMORY/MEM_RDEN1" type="logic">
       <obj_property name="ElementShortName">MEM_RDEN1</obj_property>
       <obj_property name="ObjectShortName">MEM_RDEN1</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/OTTER_MEMORY/MEM_ADDR1" type="array">
+   <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/MAIN_MEMORY/MEM_ADDR1" type="array">
       <obj_property name="ElementShortName">MEM_ADDR1[13:0]</obj_property>
       <obj_property name="ObjectShortName">MEM_ADDR1[13:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/OTTER_MEMORY/IO_IN" type="array">
+   <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/MAIN_MEMORY/IO_IN" type="array">
       <obj_property name="ElementShortName">IO_IN[31:0]</obj_property>
       <obj_property name="ObjectShortName">IO_IN[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/OTTER_MEMORY/IO_WR" type="logic">
+   <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/MAIN_MEMORY/IO_WR" type="logic">
       <obj_property name="ElementShortName">IO_WR</obj_property>
       <obj_property name="ObjectShortName">IO_WR</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/OTTER_MEMORY/MEM_DOUT1" type="array">
+   <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/MAIN_MEMORY/MEM_DOUT1" type="array">
       <obj_property name="ElementShortName">MEM_DOUT1[31:0]</obj_property>
       <obj_property name="ObjectShortName">MEM_DOUT1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/MAIN_MEMORY/MEM_DOUT2" type="array">
+      <obj_property name="ElementShortName">MEM_DOUT2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_DOUT2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_pipeline/my_otter/OTTER_MEMORY/MAIN_MEMORY/memValid1" type="logic">
+      <obj_property name="ElementShortName">memValid1</obj_property>
+      <obj_property name="ObjectShortName">memValid1</obj_property>
    </wvobject>
 </wave_config>

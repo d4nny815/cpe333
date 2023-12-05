@@ -28,7 +28,6 @@ module reg_nb #(parameter n=8) (
 	input ld, // active low
     output logic [n-1:0] data_out  
     ); 
-
     
     always_ff @(posedge clk) begin 
         if (clr == 1)       // synch clr

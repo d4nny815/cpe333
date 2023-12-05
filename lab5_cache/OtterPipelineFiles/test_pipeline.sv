@@ -40,7 +40,7 @@ module test_pipeline();
         clk = 0; rst = 0;
         #5;
         rst = 1'b1;
-        #6;
+        #16;
         rst = 1'b0;
         #400;
         $finish;

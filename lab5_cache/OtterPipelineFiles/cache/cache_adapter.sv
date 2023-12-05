@@ -15,9 +15,10 @@ module cache_adapter (
     );
 
     parameter DATA_WIDTH = 32;
+    parameter BLOCK_SIZE = 4; 
 
-    logic [DATA_WIDTH - 1:0] cache_buffer [3:0]; // MM -> L1
-    logic [DATA_WIDTH - 1:0] memory_buffer [3:0]; // L1 -> MM
+    logic [DATA_WIDTH - 1:0] cache_buffer [BLOCK_SIZE - 1:0]; // MM -> L1
+    logic [DATA_WIDTH - 1:0] memory_buffer [BLOCK_SIZE - 1:0]; // L1 -> MM
 
     logic [1:0] counter;
     always_ff @(posedge CLK) begin
@@ -27,16 +28,13 @@ module cache_adapter (
         end
         else if (next == 1)
             counter <= counter + 1;
-            // full <= counter == 3;
     end
-    assign full = counter == 3;
 
     always_comb begin
-        // if (we_cache | we_mem)
-        //     addr_o = addr_i + (counter << 2);  // get next address for next word in line
-        // else
-        //     addr_o = addr_i;
-        addr_o = addr_i + (counter << 2);
+        full = counter == 3;
+        addr_o = {addr_i[31:4], 4'b0000} + (counter << 2);
+
+        // addr_o = dir == 1 ? addr_i[31:5] + (counter << 2) : addr_i + (counter << 2);
         data_o = dir == 1 ? cache_buffer[counter] : memory_buffer[counter];
     end
 

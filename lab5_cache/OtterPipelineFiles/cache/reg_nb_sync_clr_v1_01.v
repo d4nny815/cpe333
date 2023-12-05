@@ -41,7 +41,7 @@ module reg_nb_sclr #(parameter n=8) (
     output reg [n-1:0] data_out  ); 
 
 
-    always @(posedge clk)
+    always @(negedge clk)
     begin 
        if (clr == 1'b1)       // asynch clr
           data_out <= 0;
