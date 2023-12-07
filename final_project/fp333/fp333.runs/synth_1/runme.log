@@ -1,0 +1,865 @@
+
+*** Running vivado
+    with args -log OTTER_MCU.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_MCU.tcl
+
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source OTTER_MCU.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/ryana/CPE333/cpe333/final_project/fp333/fp333.srcs/utils_1/imports/synth_1/OTTER_MCU.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/ryana/CPE333/cpe333/final_project/fp333/fp333.srcs/utils_1/imports/synth_1/OTTER_MCU.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top OTTER_MCU -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 22024
+WARNING: [Synth 8-8756] 2147483648 as 32-bit signed integer overflows, using -2147483648 instead [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv:71]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1290.324 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'OTTER_MCU' [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'mux_2t1_nb' [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv:31]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv:39]
+INFO: [Synth 8-6155] done synthesizing module 'mux_2t1_nb' (0#1) [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv:31]
+INFO: [Synth 8-6157] synthesizing module 'reg_nb' [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/register_nb.sv:24]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'reg_nb' (0#1) [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/register_nb.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'Memory' [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_memory.sv:47]
+INFO: [Synth 8-3876] $readmem data file 'otter_memory.mem' is read successfully [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_memory.sv:72]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_memory.sv:94]
+INFO: [Synth 8-6155] done synthesizing module 'Memory' (0#1) [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_memory.sv:47]
+INFO: [Synth 8-6157] synthesizing module 'Pipeline_reg_fetch_decode' [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'Pipeline_reg_fetch_decode' (0#1) [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'Decoder' [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Decoder.sv:22]
+INFO: [Synth 8-226] default block is never used [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Decoder.sv:126]
+INFO: [Synth 8-226] default block is never used [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Decoder.sv:145]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Decoder.sv:74]
+INFO: [Synth 8-6155] done synthesizing module 'Decoder' (0#1) [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Decoder.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'RegFile' [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/reg_file.sv:37]
+INFO: [Synth 8-6155] done synthesizing module 'RegFile' (0#1) [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/reg_file.sv:37]
+INFO: [Synth 8-6157] synthesizing module 'immed_gen' [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/immed_gen.sv:27]
+INFO: [Synth 8-6155] done synthesizing module 'immed_gen' (0#1) [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/immed_gen.sv:27]
+INFO: [Synth 8-6157] synthesizing module 'Pipeline_reg_decode_execute' [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'Pipeline_reg_decode_execute' (0#1) [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'branch_cond_gen' [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+INFO: [Synth 8-6155] done synthesizing module 'branch_cond_gen' (0#1) [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:28]
+INFO: [Synth 8-6157] synthesizing module 'mux_4t1_nb' [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv:24]
+	Parameter n bound to: 32 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv:35]
+INFO: [Synth 8-6155] done synthesizing module 'mux_4t1_nb' (0#1) [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv:24]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'Pipeline_reg_execute_memory' [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'Pipeline_reg_execute_memory' (0#1) [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv:25]
+INFO: [Synth 8-6157] synthesizing module 'Pipeline_reg_memory_writeback' [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'Pipeline_reg_memory_writeback' (0#1) [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'Hazard_Unit' [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/hazard.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'Hazard_Unit' (0#1) [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/hazard.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_MCU' (0#1) [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+WARNING: [Synth 8-7129] Port INTR in module OTTER_MCU is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1290.324 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1290.324 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1290.324 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1290.324 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   64 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 7     
+	   3 Input   32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 19    
+	                5 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 11    
++---Multipliers : 
+	              32x32  Multipliers := 1     
++---RAMs : 
+	             512K Bit	(16384 X 32 bit)          RAMs := 1     
+	             1024 Bit	(32 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 11    
+	   9 Input   32 Bit        Muxes := 2     
+	  16 Input   32 Bit        Muxes := 2     
+	   4 Input   32 Bit        Muxes := 3     
+	   5 Input   32 Bit        Muxes := 2     
+	   6 Input   32 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 3     
+	   3 Input    5 Bit        Muxes := 1     
+	  10 Input    5 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 5     
+	   2 Input    3 Bit        Muxes := 1     
+	  10 Input    3 Bit        Muxes := 1     
+	  10 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	   9 Input    1 Bit        Muxes := 1     
+	  10 Input    1 Bit        Muxes := 7     
+	   2 Input    1 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP mult640, operation Mode is: A*B.
+DSP Report: operator mult640 is absorbed into DSP mult640.
+DSP Report: operator mult640 is absorbed into DSP mult640.
+DSP Report: Generating DSP mult640, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult640 is absorbed into DSP mult640.
+DSP Report: operator mult640 is absorbed into DSP mult640.
+DSP Report: Generating DSP mult640, operation Mode is: A*B.
+DSP Report: operator mult640 is absorbed into DSP mult640.
+DSP Report: operator mult640 is absorbed into DSP mult640.
+DSP Report: Generating DSP mult640, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult640 is absorbed into DSP mult640.
+DSP Report: operator mult640 is absorbed into DSP mult640.
+DSP Report: Generating DSP mult641, operation Mode is: A*B.
+DSP Report: operator mult641 is absorbed into DSP mult641.
+DSP Report: operator mult641 is absorbed into DSP mult641.
+DSP Report: Generating DSP mult641, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult641 is absorbed into DSP mult641.
+DSP Report: operator mult641 is absorbed into DSP mult641.
+DSP Report: Generating DSP mult641, operation Mode is: A*B.
+DSP Report: operator mult641 is absorbed into DSP mult641.
+DSP Report: operator mult641 is absorbed into DSP mult641.
+DSP Report: Generating DSP mult641, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult641 is absorbed into DSP mult641.
+DSP Report: operator mult641 is absorbed into DSP mult641.
+WARNING: [Synth 8-7129] Port INTR in module OTTER_MCU is either unconnected or has no load
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 1290.324 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|OTTER_MCU   | OTTER_MEMORY/memory_reg | 16 K x 32(READ_FIRST)  | W | R | 16 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 16     | 
++------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+-----------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object                  | Inference | Size (Depth x Width) | Primitives   | 
++------------+-----------------------------+-----------+----------------------+--------------+
+|OTTER_MCU   | OTTER_reg_file/reg_file_reg | Implied   | 32 x 32              | RAM32M x 12  | 
++------------+-----------------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ALU         | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:37 . Memory (MB): peak = 1290.324 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|OTTER_MCU   | OTTER_MEMORY/memory_reg | 16 K x 32(READ_FIRST)  | W | R | 16 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 16     | 
++------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++------------+-----------------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object                  | Inference | Size (Depth x Width) | Primitives   | 
++------------+-----------------------------+-----------+----------------------+--------------+
+|OTTER_MCU   | OTTER_reg_file/reg_file_reg | Implied   | 32 x 32              | RAM32M x 12  | 
++------------+-----------------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+Found timing loop:
+     0: i_7695/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     1: i_7695/I1 (LUT3)
+     2: i_7746/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     3: i_7746/I4 (LUT6)
+     4: i_7695/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_7695"
+Found timing loop:
+     0: i_7696/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     1: i_7696/I1 (LUT3)
+     2: i_7747/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     3: i_7747/I4 (LUT6)
+     4: i_7696/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_7696"
+Found timing loop:
+     0: i_7689/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     1: i_7689/I1 (LUT3)
+     2: i_7748/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     3: i_7748/I4 (LUT6)
+     4: i_7689/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_7689"
+Found timing loop:
+     0: i_7690/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     1: i_7690/I1 (LUT3)
+     2: i_7749/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     3: i_7749/I4 (LUT6)
+     4: i_7690/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_7690"
+Found timing loop:
+     0: i_7691/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     1: i_7691/I1 (LUT3)
+     2: i_7750/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     3: i_7750/I4 (LUT6)
+     4: i_7691/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_7691"
+Found timing loop:
+     0: i_7692/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     1: i_7692/I1 (LUT3)
+     2: i_7751/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     3: i_7751/I4 (LUT6)
+     4: i_7692/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_7692"
+Found timing loop:
+     0: i_7693/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     1: i_7693/I1 (LUT3)
+     2: i_7752/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     3: i_7752/I4 (LUT6)
+     4: i_7693/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_7693"
+Found timing loop:
+     0: i_7694/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     1: i_7694/I1 (LUT3)
+     2: i_7753/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     3: i_7753/I4 (LUT6)
+     4: i_7694/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_7694"
+Found timing loop:
+     0: i_7688/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     1: i_7688/I1 (LUT3)
+     2: i_7755/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     3: i_7755/I4 (LUT6)
+     4: i_7688/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_7688"
+Found timing loop:
+     0: i_7687/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     1: i_7687/I1 (LUT3)
+     2: i_7756/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     3: i_7756/I4 (LUT6)
+     4: i_7687/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_7687"
+Found timing loop:
+     0: i_7686/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     1: i_7686/I1 (LUT3)
+     2: i_7757/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     3: i_7757/I4 (LUT6)
+     4: i_7686/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_7686"
+Found timing loop:
+     0: i_7685/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     1: i_7685/I1 (LUT3)
+     2: i_7758/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     3: i_7758/I4 (LUT6)
+     4: i_7685/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_7685"
+Found timing loop:
+     0: i_7684/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     1: i_7684/I1 (LUT3)
+     2: i_7759/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     3: i_7759/I4 (LUT6)
+     4: i_7684/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_7684"
+Found timing loop:
+     0: i_7683/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     1: i_7683/I1 (LUT3)
+     2: i_7760/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     3: i_7760/I4 (LUT6)
+     4: i_7683/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_7683"
+Found timing loop:
+     0: i_7682/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     1: i_7682/I1 (LUT3)
+     2: i_7761/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     3: i_7761/I4 (LUT6)
+     4: i_7682/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_7682"
+Found timing loop:
+     0: i_7681/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     1: i_7681/I1 (LUT3)
+     2: i_7762/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     3: i_7762/I4 (LUT6)
+     4: i_7681/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_7681"
+Found timing loop:
+     0: i_7680/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     1: i_7680/I1 (LUT3)
+     2: i_7763/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     3: i_7763/I4 (LUT6)
+     4: i_7680/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_7680"
+Found timing loop:
+     0: i_7679/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     1: i_7679/I1 (LUT3)
+     2: i_7764/O (LUT6)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     3: i_7764/I4 (LUT6)
+     4: i_7679/O (LUT3)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O i_7679"
+Found timing loop:
+     0: i_7860/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: i_7860/I0 (LUT2)
+     2: i_7282/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     3: i_7282/I1 (LUT4)
+     4: i_7860/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I0 -to O i_7860"
+Found timing loop:
+     0: i_7861/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: i_7861/I0 (LUT2)
+     2: i_7284/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     3: i_7284/I1 (LUT4)
+     4: i_7861/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I0 -to O i_7861"
+Found timing loop:
+     0: i_7862/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: i_7862/I0 (LUT2)
+     2: i_7286/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     3: i_7286/I1 (LUT4)
+     4: i_7862/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I0 -to O i_7862"
+Found timing loop:
+     0: i_7863/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: i_7863/I0 (LUT2)
+     2: i_7288/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     3: i_7288/I1 (LUT4)
+     4: i_7863/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I0 -to O i_7863"
+Found timing loop:
+     0: i_7864/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: i_7864/I0 (LUT2)
+     2: i_7290/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     3: i_7290/I1 (LUT4)
+     4: i_7864/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I0 -to O i_7864"
+Found timing loop:
+     0: i_7865/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: i_7865/I0 (LUT2)
+     2: i_7292/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     3: i_7292/I1 (LUT4)
+     4: i_7865/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I0 -to O i_7865"
+Found timing loop:
+     0: i_7866/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: i_7866/I0 (LUT2)
+     2: i_7294/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     3: i_7294/I1 (LUT4)
+     4: i_7866/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I0 -to O i_7866"
+Found timing loop:
+     0: i_7867/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: i_7867/I0 (LUT2)
+     2: i_7296/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     3: i_7296/I1 (LUT4)
+     4: i_7867/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I0 -to O i_7867"
+Found timing loop:
+     0: i_7868/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: i_7868/I0 (LUT2)
+     2: i_7298/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     3: i_7298/I1 (LUT4)
+     4: i_7868/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I0 -to O i_7868"
+Found timing loop:
+     0: i_7869/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: i_7869/I0 (LUT2)
+     2: i_7300/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     3: i_7300/I1 (LUT4)
+     4: i_7869/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I0 -to O i_7869"
+Found timing loop:
+     0: i_7870/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: i_7870/I0 (LUT2)
+     2: i_7302/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     3: i_7302/I1 (LUT4)
+     4: i_7870/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I0 -to O i_7870"
+Found timing loop:
+     0: i_7871/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: i_7871/I0 (LUT2)
+     2: i_7304/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     3: i_7304/I1 (LUT4)
+     4: i_7871/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I0 -to O i_7871"
+Found timing loop:
+     0: i_7872/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: i_7872/I0 (LUT2)
+     2: i_7306/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     3: i_7306/I1 (LUT4)
+     4: i_7872/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I0 -to O i_7872"
+Found timing loop:
+     0: i_7873/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: i_7873/I0 (LUT2)
+     2: i_7308/O (LUT4)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv:50]
+     3: i_7308/I1 (LUT4)
+     4: i_7873/O (LUT2)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I0 -to O i_7873"
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 1290.324 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:46 . Memory (MB): peak = 1290.324 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:46 . Memory (MB): peak = 1290.324 ; gain = 0.000
+---------------------------------------------------------------------------------
+Found timing loop:
+     0: \ALU_result_M[14]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: \ALU_result_M[14]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[14]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[14]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[13]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: \ALU_result_M[13]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[13]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[13]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[11]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: \ALU_result_M[11]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[11]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[11]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[9]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: \ALU_result_M[9]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[9]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[9]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[8]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: \ALU_result_M[8]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[8]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[8]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[7]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: \ALU_result_M[7]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[7]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[7]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[4]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: \ALU_result_M[4]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[4]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[4]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[3]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: \ALU_result_M[3]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[3]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[3]_i_1 "
+Found timing loop:
+     0: \ALU_result_M[2]_i_1 /O (LUT5)
+      [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+     1: \ALU_result_M[2]_i_1 /I1 (LUT5)
+     2: \ALU_result_M[2]_i_1 /O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
+Inferred a: "set_disable_timing -from I1 -to O \ALU_result_M[2]_i_1 "
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:46 . Memory (MB): peak = 1290.324 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:46 . Memory (MB): peak = 1290.324 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:46 . Memory (MB): peak = 1290.324 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:46 . Memory (MB): peak = 1290.324 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ALU         | A*B          | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | PCIN>>17+A*B | 30     | 18     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | PCIN>>17+A*B | 17     | 18     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | A*B          | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | PCIN>>17+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | PCIN>>17+A*B | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |  1259|
+|3     |DSP48E1  |     8|
+|4     |LUT1     |   408|
+|5     |LUT2     |   377|
+|6     |LUT3     |  4192|
+|7     |LUT4     |   329|
+|8     |LUT5     |   471|
+|9     |LUT6     |   923|
+|10    |MUXF7    |   128|
+|11    |MUXF8    |    64|
+|12    |RAM32M   |    10|
+|13    |RAM32X1D |     4|
+|14    |RAMB36E1 |    16|
+|15    |FDRE     |   608|
+|16    |IBUF     |    34|
+|17    |OBUF     |    65|
++------+---------+------+
+
+Report Instance Areas: 
++------+---------------------+------------------------------+------+
+|      |Instance             |Module                        |Cells |
++------+---------------------+------------------------------+------+
+|1     |top                  |                              |  8897|
+|2     |  OTTER_ALU          |ALU                           |  5522|
+|3     |  OTTER_MEMORY       |Memory                        |   546|
+|4     |  OTTER_reg_file     |RegFile                       |    14|
+|5     |  Program_Counter    |reg_nb                        |    57|
+|6     |  branch_conditional |branch_cond_gen               |    11|
+|7     |  pipeline_reg_D_E   |Pipeline_reg_decode_execute   |  1334|
+|8     |  pipeline_reg_E_M   |Pipeline_reg_execute_memory   |   958|
+|9     |  pipeline_reg_F_D   |Pipeline_reg_fetch_decode     |   152|
+|10    |  pipeline_reg_M_W   |Pipeline_reg_memory_writeback |   169|
++------+---------------------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:46 . Memory (MB): peak = 1290.324 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 41 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:46 . Memory (MB): peak = 1290.324 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:46 . Memory (MB): peak = 1290.324 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.128 . Memory (MB): peak = 1290.324 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1489 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 46 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1290.324 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 14 instances were transformed.
+  RAM32M => RAM32M (inverted pins: WCLK) (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (inverted pins: WCLK) (RAMD32(x2)): 4 instances
+
+Synth Design complete, checksum: 59248860
+INFO: [Common 17-83] Releasing license: Synthesis
+117 Infos, 4 Warnings, 41 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:51 . Memory (MB): peak = 1290.324 ; gain = 0.000
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ryana/CPE333/cpe333/final_project/fp333/fp333.runs/synth_1/OTTER_MCU.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file OTTER_MCU_utilization_synth.rpt -pb OTTER_MCU_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Dec  6 16:09:28 2023...

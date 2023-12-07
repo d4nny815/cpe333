@@ -24,17 +24,17 @@ init:
     bne x6, x5, fail
 
     
-    #li x4, 7
-    #li x3, 2
-    #li x5, 1
-    #remu x6, x4, x3
-    #bne x6, x5, fail
+    li x4, 7
+    li x3, 2
+    li x5, 1
+    remu x6, x4, x3
+    bne x6, x5, fail
 
-    #li x4, 7
-    #li x3, -2
-    #li x5, 1
-    #rem x6, x4, x3
-    #bne x6, x5, fail
+    li x4, 7
+    li x3, -2
+    li x5, 1
+    rem x6, x4, x3
+    bne x6, x5, fail
 
     
     li x3, 100 # div by 0
