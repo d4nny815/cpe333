@@ -1,0 +1,21 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv,1700119210,systemVerilog,,Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/Decoder.sv,,branch_cond_gen,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/Decoder.sv,1701776186,systemVerilog,,Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv,,Decoder,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv,1701775100,systemVerilog,,Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv,,Pipeline_reg_decode_execute,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv,1700124292,systemVerilog,,Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv,,Pipeline_reg_execute_memory,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv,1700119188,systemVerilog,,Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv,,Pipeline_reg_memory_writeback,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv,1701779500,systemVerilog,,Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/hazard.sv,,ALU,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/hazard.sv,1700119210,systemVerilog,,Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/immed_gen.sv,,Hazard_Unit,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/immed_gen.sv,1701034066,systemVerilog,,Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv,,immed_gen,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv,1700119188,systemVerilog,,Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv,,mux_2t1_nb,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv,1700119188,systemVerilog,,Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv,,mux_4t1_nb,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv,1701774948,systemVerilog,,Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_memory.sv,,OTTER_MCU,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_memory.sv,1700998724,systemVerilog,,Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv,,Memory,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv,1700119210,systemVerilog,,Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/reg_file.sv,,Pipeline_reg_fetch_decode,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/reg_file.sv,1700119188,systemVerilog,,Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/register_nb.sv,,RegFile,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/register_nb.sv,1700119210,systemVerilog,,Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/test_pipeline.sv,,reg_nb,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/test_pipeline.sv,1700622634,systemVerilog,,,,test_pipeline,,uvm,,,,,,
+Z:/schoolfiles/school_files/cpe333/final_project/vivado_final/vivado_final.sim/sim_1/behav/xsim/glbl.v,1665704904,verilog,,,,glbl,,uvm,,,,,,

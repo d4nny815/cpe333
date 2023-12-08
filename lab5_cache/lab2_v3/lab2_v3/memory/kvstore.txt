@@ -1,0 +1,451 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <signal.h>
+#include <errno.h>
+
+int terminate = 0; //while loop runs while this variable is 0, kvstore process terminates once var is changed
+
+typedef struct {
+	char key[33]; //keys can be up to 32 characters
+	char value[1025]; //values can be up to 1024 characters
+	int lineNumber; //used to know where "key,value" is located in file, necessary for replacing information
+} Node;
+
+//Hashtable
+typedef struct {
+	    Node* n; //view above
+	    int size; //needed for rehashing
+	    int count;
+} HashTable;
+
+//Used to keep track of what line to write to when adding new key and value
+struct info {
+	int size;
+}info;
+
+int fileExists(const char* filename);
+void sigQuit();
+void readFile(const char* filename, HashTable* table);
+void writetoFile(HashTable* table, const char* filename, const char* key, const char* value);
+void replace(HashTable* table, const char* filename, const char* string1, const char* string2, int lineNumber);
+
+//returns hash
+int hash(const char* key, int table_size) {
+	int hash = 0;
+	int len = strlen(key);
+	for (int i = 0; i < len; i++) {
+		hash = (hash * 31 + key[i]) % table_size; //hash value
+	}
+	return hash;
+}
+
+//initializes hash table
+void makeHashTable(HashTable* table) {
+	table->n = (Node*)malloc(10 * sizeof(Node));
+	table->size = 10;
+	table->count = 0;
+	for (int i = 0; i < table->size; i++) {
+		table->n[i].key[0] = '\0'; //initializing to something
+		table->n[i].lineNumber = -1; //basically acts as NULL val
+	}
+}
+
+//resizes hash table
+void resizeHashTable(HashTable* table) {
+	int new_size = table->size * 2; //doubling table size for new hash
+        Node* new_hash = (Node*)malloc(new_size * sizeof(Node));
+	for (int i = 0; i < new_size; i++) {
+		new_hash[i].key[0] = '\0'; //initializing values
+		new_hash[i].lineNumber = -1;
+	}
+	for (int i = 0; i < table->size; i++) {
+		if (table->n[i].key[0] != '\0') {
+	        	int index = hash(table->n[i].key, new_size); //new hash
+	        	while (new_hash[index].key[0] != '\0') {
+	                	index = (index + 1) % new_size; //next value
+			}
+			//copying over data to new hash
+			strcpy(new_hash[index].key, table->n[i].key);
+			strcpy(new_hash[index].value, table->n[i].value);
+			new_hash[index].lineNumber = table->n[i].lineNumber;
+		}
+	}
+	//freeing allocated data
+	free(table->n);
+
+	//updating size and pointer
+	table->n = new_hash;
+        table->size = new_size;
+}
+
+//inserting data to hash table
+void insert(HashTable* table, const char* key, const char* value, int lineNumber) {
+	//If the table is more than 70% full, rehash
+	if ((float)table->count / table->size >= 0.7) {
+		resizeHashTable(table);
+	}
+	//hash for new value
+	int index = hash(key, table->size);
+
+	//move to empty index OR index where value is
+	while (table->n[index].key[0] != '\0' && strcmp(table->n[index].key, key) != 0) {
+		index = (index + 1) % table->size;
+	}
+
+	//update data if key is found, if not then create key and input other data
+	if (strcmp(table->n[index].key, key) == 0) {
+		strcpy(table->n[index].value, value);
+		table->n[index].lineNumber = lineNumber;
+	} 
+	else {
+		strcpy(table->n[index].key, key);
+		strcpy(table->n[index].value, value);
+		table->n[index].lineNumber = lineNumber;
+		table->count++;
+	}						       
+}
+
+//Returns value associated with key
+const char* getVALUE(const HashTable* table, const char* key) {
+	int index = hash(key, table->size);
+	while (table->n[index].key[0] != '\0') {
+		if (strcmp(table->n[index].key, key) == 0) { //key with value found
+			return table->n[index].value;
+		}				       
+	        index = (index + 1) % table->size; //next index
+	}
+	//when value is not found, returns NULL
+	return NULL;
+}
+
+//Returns line number associated with key
+int getLINE(const HashTable* table, const char* key) {
+	int index = hash(key, table->size);
+	while (table->n[index].key[0] != '\0') {
+		if (strcmp(table->n[index].key, key) == 0) { //key with lineNumber found
+			return table->n[index].lineNumber;
+		}
+		index = (index + 1) % table->size; //next index
+	}
+	//-1 acts as NULL value
+	return -1; 
+}
+
+//freeing memory in hash
+void cleanupHash(HashTable* table) {
+	free(table->n);
+	table->size = 0;
+	table->count = 0;
+}
+
+int main(int argc, char *argv[]) {
+
+	//Program takes two command line arguments, (3 total)
+	if (argc != 3) {
+		exit(1); //terminates program
+	}
+	//First argument is file name
+	const char* fileNAME = argv[1];
+
+	//Checking if file exists, creating one if not
+	if (fileExists(fileNAME) != 1) {
+		FILE *f = fopen(fileNAME, "w");
+		if (f == NULL) {
+			printf("UNABLE TO CREATE FILE");
+			exit(1);
+		}
+		fclose(f);
+	}
+	
+	//Creating and Initilizing Hash Table
+	HashTable table;
+	makeHashTable(&table);
+	
+	//Reading given file, readFile function sends data to hashtable
+	readFile(fileNAME, &table);
+
+	//Second argument is file name of FIFO file
+	const char* fifoNAME = argv[2];
+	
+	//Cheking if FIFO file already exists, creating one if not
+	if (fileExists(fifoNAME) != 1) {
+		if (mkfifo(fifoNAME, 0666) == -1) {
+			printf("ERROR OCCURED WHILE MAKING FIFO FILE");
+		}
+	}
+
+	//Opening FIFO file
+	int fd = open(fifoNAME,O_RDONLY); 
+	
+	//Handling potential error while opening file, terminates program...
+	if (fd == -1) {
+		printf("Error while opening file");
+		exit (1);
+	}
+
+	//Program will continue running until it recieves "SIGQUIT" signal
+	signal(SIGQUIT, sigQuit);
+	
+	//Creating second FIFO to send messages back to kvclient if needed
+	const char* fifoREAD = "fifoREAD";
+	if (fileExists("fifoREAD") != 1) {
+		if (mkfifo(fifoREAD, 0666) == -1) {
+			//printf("ERROR OCCURED WHILE MAKING FIFOREAD FILE (from prog 1)");
+			//perror("Error creating named pipe");
+                }
+	}
+
+	char message[1500] = "";
+
+	//Program continues running, waits for inputs of kvclient and will stay running after each request
+	while (!terminate) {
+		
+		//Reading from kvclient/ storing it to message var
+		ssize_t numBytes = read(fd, message, sizeof(message));
+		
+		//Potential Error check
+                if (numBytes == -1) {
+			printf("Error while reading from FIFO file");
+			exit(1);
+		} 
+		//MESSAGE RECIEVED! Checking what message is:
+		else if (numBytes != 0) {
+			char* token = strtok(message, " "); //seperating by space
+			char strVAL[1025] = ""; //value up to 1024 chars
+			int count = 1;
+			char cmd[4] = ""; //will be either "get" or "set"
+			char key[33] = ""; //keys up to 32 chars
+			while ((token != NULL)) {
+				if (count > 2) { //This is the value for set
+					strcat(strVAL, token);
+					strcat(strVAL, " ");
+				}
+				else {
+					if (count == 1) { //"get" or "set"
+						strcpy(cmd, token);
+					}
+					if (count == 2) {
+						strcpy(key, token); //key
+					}
+				}
+				token = strtok(NULL, " ");
+				count++;
+			}
+		        if (strspn(message, " \t\n\r") != strlen(message)) {
+				//printf("Argument: %s\n", strVAL);
+			}
+
+			//"get" function requires kvstore to write back to kvclient
+			if (strcmp(cmd, "get") == 0) {
+				int fd_write = open(fifoREAD, O_WRONLY); //writing mode
+    				if (fd_write == -1) {
+        				printf("Error while opening FIFO_2 for writing");
+       	 				exit(1);
+				}
+				char response[1500] = "";
+				
+				//last element for key needs to be null'd out for hash
+				int length = strlen(key);
+				if (length > 1) {
+					key[length - 1] = '\0';
+				}
+				
+				//Checking if the key exists
+				const char* val = getVALUE(&table, key);
+				
+				//If key does not exists, sending message back that says "key <value> does not exist."
+				if (val == NULL) {
+					char main[100] = "Key ";
+					char s3[100] = " does not exist.";
+					strcat(main, key);
+					strcat(main, s3);
+					strcpy(response, main);
+				}
+				//If key does exist, send back corresponding value
+				else {
+					strcpy(response, val);
+				}
+				//writing response back
+				ssize_t responseBytes = write(fd_write, response, strlen(response));
+				if (responseBytes == -1) {
+					perror("Error while writing to FIFO_2");
+					exit(1);
+				}
+				close(fd_write);
+				exit(0);
+
+			}
+			//"set" function does not require writing to kvclient, but needs to store info in hash and write to file
+			if (strcmp(cmd, "set") == 0) {
+				
+				//last element of key needs to be null'd out for ease purposes
+				int length = strlen(key);
+				if ((length > 1) && (key[length] != '\0')) {
+			        	key[length - 1] = '\0';
+				}
+				
+				//If the key is new, call writetoFile() function that appends content to end of file
+				if (getVALUE(&table, key) == NULL) {
+					writetoFile(&table, fileNAME, key, strVAL);
+				}
+				//If the key already exists, call replace function that deletes the line of the old function and appends new content to the end of the file. It also adds new content to hash,
+				//replacing the old value
+				else {
+					replace(&table, fileNAME, key, strVAL, getLINE(&table, key)); //getLINE function here gives line number of the previous value, for deletion purposes
+				}
+				exit(0);	
+			}
+
+			memset(message, 0, sizeof(message)); //clear message
+		}	
+	}
+	cleanupHash(&table);
+	close(fd);	
+}
+
+//Returns 1 if file exists, 0 if not
+int fileExists(const char* filename) {
+	struct stat fileStat;
+	int x = stat(filename, &fileStat);
+	if (x == 0) {
+		return 1; //file exists
+	}
+	else {
+		return 0;
+	}
+}
+
+//Reads file, inputting info to hash
+void readFile(const char* filename, HashTable* table) {
+	FILE *file;
+	char line[1500];
+	int lineNumber = 1; //starts at 1, because line 1
+	file = fopen(filename, "r"); //opening file in read mode
+	info.size = 0; //initilized here to zero
+
+	if (file == NULL) {
+		printf("SOMETHING WENT WRONG READING FILE (readFILE function)");
+		exit(1);
+	}
+
+	char* val1 = malloc(33 * sizeof(char)); //key value (before comma)
+	char* val2 = malloc(1025 * sizeof(char)); //string value (after comma)
+	val1[0] = '\0';
+	val2[0] = '\0';
+	while (fgets(line, sizeof(line), file)) {
+		char* word = strtok(line, ","); //seperating by comma
+		int count = 1;
+		while (word != NULL) {
+			if (count == 1) {
+				strcpy(val1, word); //word is equal to key here
+			}
+			if (count == 2) {	 					                
+				strcpy(val2, word); //word is equal to value here
+			}
+			count++;
+			word = strtok(NULL, ",");
+		}
+		//if value is actually something, insert into hash table
+		if ((val1[0] != '\0') && (val2[0] != '\0')) {
+			insert(table, val1, val2, lineNumber);
+			info.size++; //number of keys + 1
+		}
+		lineNumber++; //increments for every line
+        }
+	fclose(file);
+
+	//freeing malloc'd memory
+	free(val1);
+	free(val2);
+}
+
+//This function is used to appending at the end of a file ONLY, is called when key is NEW
+void writetoFile(HashTable* table, const char* filename, const char* key, const char* value) {
+	FILE* file = fopen(filename, "a"); //file opened in append mode
+	if (file == NULL) {
+		printf("Error when opening file in append mode");
+		exit(1);
+	}
+	else {
+		//important to trim value here, there is a lot of unneeded whitespace
+		char trimmedString2[1025];
+		strcpy(trimmedString2, value);
+		char* newline = strchr(trimmedString2, '\n');
+		if (newline != NULL) {
+			*newline = '\0';
+		}
+
+		//printing to EOF
+		fprintf(file, "%s,%s\n", key, trimmedString2);
+		
+		//Adding data to hashtable and updating number of keys
+		info.size++;
+		insert(table, key, trimmedString2, info.size);
+		
+		//close file
+		fclose(file);
+	}
+}
+
+//This function is used to delete content given a number, and to add new content at EOF
+//Function is called when updating the value of an EXISTING KEY
+void replace(HashTable* table, const char* filename, const char* string1, const char* string2, int lineNumber) {
+	FILE* file = fopen(filename, "r+"); //opened in read+ mode
+	if (file == NULL) {
+		printf("Error: Could not open the file.\n");
+	        exit(1);
+	}
+
+	//important to trim value here, there is a lot of unneeded whitespace
+	char trimmedString2[1025];
+        strcpy(trimmedString2, string2);
+	char* newline = strchr(trimmedString2, '\n');
+	if (newline != NULL) {
+		*newline = '\0';
+	}
+
+	//temporary file created
+	FILE* temp_file = fopen("temp.txt", "w");
+        if (temp_file == NULL) {
+		printf("Failed to create temporary file.\n");
+		fclose(file);
+        	return;
+	}
+	char buffer[1500];
+	int current_line = 1;
+	
+	//adding everyting from temp file EXCEPT content on the line given
+	while (fgets(buffer, sizeof(buffer), file)) {
+		if (current_line != lineNumber) {
+			fputs(buffer, temp_file);
+		}
+		current_line++;
+	}
+	
+	//apprending new data to the EOF
+	fprintf(temp_file, "%s,%s\n", string1, trimmedString2);
+
+	//closing files
+	fclose(file);
+	fclose(temp_file);
+
+	//Replacing old file with temp file by deleting old and renaming temp file
+	remove(filename);
+	if (rename("temp.txt", filename) != 0) {
+		printf("Failed to rename the temporary file.\n");
+	}
+	
+	//Inserting data into hash table
+	insert(table, string1, trimmedString2, current_line - 1);
+}
+
+//Terminates program if sigquit signal is recieved
+void sigQuit() {
+	terminate = 1;
+}

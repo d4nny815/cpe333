@@ -1,0 +1,34 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module branch_cond_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/Decoder.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_decode_execute
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_execute_memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_memory_writeback
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+WARNING: [VRFC 10-9277] overflow of 32-bit signed integer 2147483648; using -2147483648 instead [Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv:83]
+WARNING: [VRFC 10-9277] overflow of 32-bit signed integer 2147483648; using -2147483648 instead [Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv:84]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/hazard.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Hazard_Unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/immed_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module immed_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2t1_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4t1_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module OTTER_MCU
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_memory.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Pipeline_reg_fetch_decode
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/reg_file.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/register_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_nb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/test_pipeline.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_pipeline

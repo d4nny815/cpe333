@@ -1,0 +1,7 @@
+Time resolution is 1 ps
+$finish called at time : 411 ns : File "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/test_pipeline.sv" Line 46
+FATAL_ERROR: Vivado Simulator kernel has discovered an exceptional condition from which it cannot recover. Process will terminate. For technical support on this issue, please open a WebCase with this project attached at http://www.xilinx.com/support.
+Time: 750 ns  Iteration: 1  Process: /test_pipeline/my_otter/OTTER_ALU/Always54_18
+  File: Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv
+
+HDL Line: Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv:51

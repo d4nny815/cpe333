@@ -1,0 +1,445 @@
+//#include <arpa/inet.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <signal.h>
+
+//uses stat function to return filesize
+long get_filesize(const char* filename) {
+	struct stat st;
+	if (stat(filename, &st) == 0) {
+		return st.st_size;
+	}
+	return -1;
+}
+
+//Used to get arguments of commands
+char* word_Getter(const char* buffer, int word_number) {
+	int count = 0;
+	char* buffcpy = strdup(buffer);
+	//char* buffcpy = (char*) buffer;
+	char* token = strtok(buffcpy, " \t\n");
+
+	while (token != NULL && count < word_number) {
+		token = strtok(NULL, " \t\n");
+		count++;
+	}
+
+	char* result = NULL;
+
+	if (count == word_number && token != NULL) {
+		result = strdup(token);
+		//return strdup(token);
+	}
+
+	free(buffcpy);
+	return result;
+}
+
+//returns char* variable of the contents of specefied file
+char* get_filecontents(const char* filename) {
+	FILE* file = fopen(filename, "rb");
+	if (file == NULL) {
+		fprintf(stderr, "Failed to open file: %s\n", filename);
+		return NULL;
+	}
+
+	fseek(file, 0, SEEK_END);
+	long size = ftell(file);
+	fseek(file, 0, SEEK_SET);
+
+	char* buf = (char*)malloc(size + 1);
+	if (buf == NULL) {
+		fclose(file);
+	        fprintf(stderr, "Memory allocation failed\n");
+	        return NULL;
+	}
+
+	size_t readnum = fread(buf, 1, size, file);
+	if (readnum != (size_t) size) {
+		fclose(file);
+		free(buf);
+		fprintf(stderr, "Failed to read file: %s\n", filename);
+		return NULL;
+	}
+
+	buf[size] = '\0';
+
+	fclose(file);
+
+	return buf;
+}
+
+//gets the argument of command, used for PUT function
+char* getArgument(const char* sentence) {
+	int startIndex = 15;
+	const char* takeout = " \t\n";
+	char* token;
+	char* remainingString = strdup(sentence);
+	int count = 0;
+
+	token = strtok(remainingString, takeout);
+	while (token != NULL && count < startIndex - 1) {
+		token = strtok(NULL, takeout);
+		count++;
+	}
+
+	if (token == NULL) {
+		free(remainingString);
+		return NULL;
+	}
+
+	char* result = strdup(token);
+	free(remainingString);
+	return result;
+}
+
+//checks to see if file exists
+int fileExists(const char* filename) {
+	struct stat fileStat;
+	int x = stat(filename, &fileStat);
+	if (x == 0) {
+		return 1;
+	}
+	else {
+		return 0;
+	}
+}
+
+//called by child process to process the request
+void process_request(int newsock, const char* fifoNAME) {
+	char buff[1024];
+	
+	//recieveing command for socket
+	recv(newsock, buff, sizeof(buff), 0);
+
+	
+	//doing parsing to find out what the action will be 
+	printf("buff: %s\n", buff);
+	char* loc = word_Getter(buff, 1);
+	printf("2: %s\n", loc);
+	char* cmd = word_Getter(buff, 0);
+	char* status = "HTTP/1.1 200 OK"; //this will be changed if we run into problems
+	
+	//if the action is GET
+	if (strcmp(cmd, "GET") == 0) {
+		printf("\nGET COMMAND\n");
+		free(cmd); //for valgrind
+		char* old_loc = loc;
+		
+		//This runs if it is not a key value store request
+		if (strncmp(loc, "/kv", 3) != 0) { 
+			loc++;
+			printf("Loc: %s\n", loc);
+			int contentLength = get_filesize(loc);
+			printf("contentLength: %d\n", contentLength);
+			if (contentLength == -1) {
+				printf("Something went wrong while getting content length of file\n");
+				status = "HTTP/1.1 404 Not Found";
+				contentLength = 0;
+				//exit(1);
+			}
+			char* contents = get_filecontents(loc);
+			if (contents == NULL) {
+				printf("Something went wrong while getting file contents\n");
+				status = "HTTP/1.1 404 Not Found";
+				contentLength = 0;
+			}
+			if (contentLength != 0) {
+				char response[contentLength + 300];
+				snprintf(response, sizeof(response), "%s\r\nContent-Type: text/html\r\nContent-Length: %d\r\n\r\n%s", status, contentLength, contents);
+				int response_length = strlen(response);
+
+				//sending reply
+				int bytes_sent = send(newsock, response, response_length, 0);
+				if (bytes_sent != response_length) {
+					perror("Error sending response");
+				}
+				if (contents != NULL) {
+					free(contents);
+				}
+			}
+
+			//if the content length is 0 (ran into an error)
+			else {
+				char response[300];
+				snprintf(response, sizeof(response), "%s\r\nContent-Type: text/html\r\nContent-Length: %d\r\n\r\n", status, contentLength);
+				int response_length = strlen(response);
+				send(newsock, response, response_length, 0);
+			}
+		}
+		//Key value store request, need to communicate with KVSTORE through FIFO
+		else {
+			if (fileExists(fifoNAME) != 1) {
+				if (mkfifo(fifoNAME, 0666) == -1) {
+					printf("ERROR OCCURED WHILE MAKING FIFO FILE");
+				}
+			}
+
+			pid_t pid = fork(); //to run execvp() without program stopping
+
+			if (pid == -1) {
+				perror("fork");
+			}
+			else if (pid == 0) {
+				
+				loc++;
+				loc++;
+				loc++;
+				loc++;
+				
+				printf("LOC: %s", loc);
+
+				//creating message to send
+				int fd = open(fifoNAME, O_WRONLY);
+				char message[1500] = "";
+				sprintf(message, "get %s\n", loc);
+
+			        write(fd, message, strlen(message));
+				
+				//char *args[] = {"./kvstore", "test.db", "FIFO", NULL};
+				//execvp(args[0], args);
+				//perror("execvp");
+				//exit(1);
+			}
+			else {
+				char fifoNAMEcpy[strlen(fifoNAME) + 1];
+				strcpy(fifoNAMEcpy, fifoNAME);	
+				char *args[] = {"./kvstore", "test.db", fifoNAMEcpy, NULL};
+				execvp(args[0], args);
+				perror("execvp"); //parent process stops here, child continues to run
+				exit(1);
+				//int fd = open(fifoNAME, O_WRONLY);
+				//char message[1500] = "get a\n";
+				//ssize_t numBytes = write(fd, message, strlen(message));
+			}	
+				int fifo = open("fifoREAD", O_RDONLY);
+				if (fifo == -1) {
+					perror("open");
+					
+				}
+
+			char getVAL[1025] = "";
+			read(fifo, getVAL, sizeof(getVAL)); //reading response from FIFO
+
+			printf("Received response from program2: %s\n", getVAL);
+			
+			close(fifo);
+
+			unlink(fifoNAME);
+			
+			int contentLength = strlen(getVAL);
+			
+			printf("GET VALUE: %s\n", getVAL);
+			char getNULLcheck[100] = "";
+
+			//if key does not exist, use specefic error for status
+			snprintf(getNULLcheck, sizeof(getNULLcheck), "Key %s does not exist.", loc);
+			if (strcmp(getNULLcheck, getVAL) == 0) {
+				status = "HTTP/1.1 404 Not Found";
+				char response[contentLength + 300];
+				contentLength = 0;
+			        snprintf(response, sizeof(response), "%s\r\nContent-Type: text/html\r\nContent-Length: %d\r\n\r\n", status, contentLength);
+			        int response_len = strlen(response);
+				send(newsock, response, response_len, 0);	
+			}
+			else {
+				char response[contentLength + 300];
+				snprintf(response, sizeof(response), "%s\r\nContent-Type: text/html\r\nContent-Length: %d\r\n\r\n%s", status, contentLength, getVAL);
+				int response_len = strlen(response);
+		        	send(newsock, response, response_len, 0);
+			}
+
+			if (pid != 0) {
+				kill(pid, SIGTERM);
+			}	
+			
+		}
+		free(old_loc);
+	}
+	//HEAD REQUEST
+	else if (strcmp(cmd, "HEAD") == 0) {
+		free(cmd);
+		char* old_loc = loc;
+		loc++; //moving past the first char of loc (ALWAYS '/')
+		int contentLength = get_filesize(loc);
+		if (contentLength == -1) {
+			printf("Something went wrong when getting content length of file\n");
+			status = "HTTP/1.1 400 Bad Request";
+		}
+		contentLength = 0;
+		char response[8000];
+		snprintf(response, sizeof(response), "%s\r\nContent-Type: text/html\r\nContent-Length: %d\r\n\r\n", status, contentLength);
+		//const char* response = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\nContent-Length: 16\r\n\r\n";
+		int response_length = strlen(response);
+		int bytes_sent = send(newsock, response, response_length, 0);
+		free(old_loc);
+		if (bytes_sent != response_length) {
+			perror("Error sending response");
+		}
+	}
+	else if (strcmp(cmd, "PUT") == 0) {
+		printf("PUT command\n");
+		free(cmd);
+		char* old_loc = loc;
+		char* newVAL = getArgument(buff);
+		printf("\nNEWVAL: %s\n", newVAL);
+		if (fileExists(fifoNAME) != 1) {
+			if (mkfifo(fifoNAME, 0666) == -1) {
+				printf("ERROR OCCURED WHILE MAKING FIFO FILE");
+			}
+		}
+
+		pid_t pid = fork(); //to run execvp for KVSTORE
+
+		if (pid == -1) {
+			perror("fork");
+		}
+		else if (pid == 0) {
+			loc++;
+			loc++;
+			loc++;
+			loc++;
+			printf("loc: %s\n", loc);
+			int fd = open(fifoNAME, O_WRONLY);
+			char message[1500] = "";
+			sprintf(message, "set %s %s\n", loc, newVAL);
+			printf("message: %s\n", message);
+			write(fd, message, strlen(message));
+			//char response[300];
+			//int contentLength = 0;
+			//snprintf(response, sizeof(response), "%s\r\nContent-Type: Content-Length: %d\r\n\r\n", status, contentLength);
+			//int response_len = strlen(response);
+			//send(newsock, response, response_len, 0);
+		}
+		else {
+			char fifoNAMEcpy[strlen(fifoNAME) + 1];
+			strcpy(fifoNAMEcpy, fifoNAME);	
+			char *args[] = {"./kvstore", "test.db", fifoNAMEcpy, NULL};
+			execvp(args[0], args);
+			perror("execvp");
+			exit(1);
+		}
+		unlink(fifoNAME);
+		char response[300];
+		int contentLength = 0;
+		snprintf(response, sizeof(response), "%s\r\nContent-Type: Content-Length: %d\r\n\r\n", status, contentLength);
+		int response_len = strlen(response);
+		send(newsock, response, response_len, 0);
+		free(old_loc);
+		free(newVAL);
+	}
+
+	//if it is not a command required by project specefications
+	else {
+		status = "HTTP/1.1 501 Not Implemented";
+		int contentLength = 0;
+		char response[300];
+		snprintf(response, sizeof(response), "%s\r\nContent-Type: text/html\r\nContent-Length: %d\r\n\r\n", status, contentLength);
+		int response_length = strlen(response);
+		send(newsock, response, response_length, 0);
+	}
+	
+	close(newsock);
+}
+
+
+int main(int argc, char *argv[]) {
+	
+	//Program takes two command line arguments, (3 total arguments)
+	if (argc != 3) {
+		printf("INVALID NUMBER OF ARGUMENTS\n");
+		exit(1);
+	}
+	
+	//First argument is name of FIFO File
+	//WILL USE THIS LATER FOR GET AND PUT REQUESTS
+	const char* fifoNAME = argv[1];
+	
+	//Second argument is the port number
+	int port_num;
+	char *endptr;
+	long port_long = strtol(argv[2], &endptr, 10);
+	port_num = (int) port_long; 
+	
+	//If the value is not between 1024 and 65535, exit and terminate program
+	if (!(port_num >= 1024 && port_num <= 65535)) {
+		printf("INVALID PORT NUMBER\n");
+		exit(1);
+	}
+	
+	int sock_fd, newsock;
+	struct sockaddr_in sa, newsockinfo;
+	socklen_t len;
+
+	//char localaddr[INET_ADDRSTRLEN], peeraddr[INET_ADDRSTRLEN], buff[1000+1];
+	
+	sock_fd = socket(AF_INET, SOCK_STREAM, 0);
+
+	memset(&sa, 0, sizeof(sa));
+
+	sa.sin_family = AF_INET;
+	sa.sin_port = htons(port_num);
+	sa.sin_addr.s_addr = htonl(INADDR_ANY);
+
+	if (bind(sock_fd, (struct sockaddr *) &sa, sizeof(sa)) == -1) {
+		printf("Something went wrong while calling bind()\n");
+		exit(1);
+	}
+
+	if (listen(sock_fd, 50) == -1) {
+		printf("Something went wrong while calling listen()\n");
+		exit(1);
+	}
+
+	//printf("PORT NUMBER: %d\n", port_num);
+	
+	//int mlen = -1;
+
+	while (1) {
+		
+		len = sizeof(newsockinfo);
+		newsock = accept(sock_fd, (struct sockaddr *) &newsockinfo, &len);
+		
+		//mlen = recv(newsock, buff, sizeof(buff), 0);
+		//write(STDOUT_FILENO,buff,mlen);
+
+
+		if (newsock == -1) {
+			printf("Something went wrong while calling accept()\n");
+			exit(1);
+		}
+
+		pid_t pid = fork();
+		
+		printf("Processing PID: %d\n", pid);
+
+		if (pid == 0) {
+			close(sock_fd);
+			printf("0 PID: %d\n", pid);
+			process_request(newsock, fifoNAME);
+			close(newsock);
+			exit(0);
+		}
+		else if (pid < 0) {
+			printf("Something went wrong while forking");
+			close(newsock);
+			continue;
+		}
+		else {
+			close(newsock);
+			while (waitpid(-1, NULL, WNOHANG) > 0);
+		}
+	}
+
+	close(newsock);
+	return 0;
+}
