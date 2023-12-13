@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed Dec  6 13:48:35 2023
+# Process ID: 15664
+# Current directory: C:/Users/ryana/CPE333/cpe333/final_project/vivado_final
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22792 C:\Users\ryana\CPE333\cpe333\final_project\vivado_final\vivado_final.xpr
+# Log file: C:/Users/ryana/CPE333/cpe333/final_project/vivado_final/vivado.log
+# Journal file: C:/Users/ryana/CPE333/cpe333/final_project/vivado_final\vivado.jou
+# Running On: LAPTOP-I3MDA0LJ, OS: Windows, CPU Frequency: 1996 MHz, CPU Physical cores: 8, Host memory: 16497 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/ryana/CPE333/cpe333/final_project/vivado_final/vivado_final.xpr
+create_project fp333 C:/Users/ryana/CPE333/cpe333/final_project/fp333 -part xc7k70tfbv676-1
+add_files -norecurse {C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/register_nb.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/reg_file.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Decoder.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/hazard.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/immed_gen.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_memory.sv}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -norecurse C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_memory.mem
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/test_pipeline.sv
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+source test_pipeline.tcl

@@ -18,7 +18,7 @@ Compiling module xil_defaultlib.immed_gen
 Compiling module xil_defaultlib.Pipeline_reg_decode_execute
 Compiling module xil_defaultlib.branch_cond_gen
 Compiling module xil_defaultlib.mux_4t1_nb(n=32)
-Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.ALU_default
 Compiling module xil_defaultlib.Pipeline_reg_execute_memory
 Compiling module xil_defaultlib.Pipeline_reg_memory_writeback
 Compiling module xil_defaultlib.Hazard_Unit

@@ -51,26 +51,27 @@ module ALU(
     assign ALU_FUN = alu_fun_t'(alu_fun); //- Cast input enum 
 
     parameter DATA_WIDTH = 32;
-    parameter signed MAX_UNSIGNED = $signed(2 ** DATA_WIDTH - 1);
+    parameter MAX_UNSIGNED = 2 ** DATA_WIDTH - 1;
     parameter MAX_SIGNED_NEG = -(2 ** (DATA_WIDTH - 1));
+    parameter NEG_ONE = 32'hFFFF_FFFF;
 
 
     logic [63:0] mult64;
-    logic [31:0] div_by_0, reg_ops, sign_overflow, mult32;
+    logic [31:0] div_by_0, reg_ops, mult32;
     logic [1:0] mux_sel;
 
-    // * decoder
+    // decoder
     always_comb begin
         //divide by
         if ((srcB == 0) && (ALU_FUN == DIV || ALU_FUN == DIVU || ALU_FUN == REMU || ALU_FUN == REM)) begin
             mux_sel = 2'b00;
+        
         //mult
-        end else if (ALU_FUN == MUL) begin
+        end 
+        else if (ALU_FUN == MUL || ALU_FUN == MULH || ALU_FUN == MULHSU || ALU_FUN == MULHU) begin
             mux_sel = 2'b10;
-        //overflow
-        end else if ((srcA == -2147483648 && srcB == -1) && (ALU_FUN == DIV || ALU_FUN == DIVU || ALU_FUN == REM || ALU_FUN == REMU)) begin
-            mux_sel = 2'b11;
         end
+        
         //regular operations
         else begin
             mux_sel = 2'b01;
@@ -97,14 +98,6 @@ module ALU(
             default: mult64 = 32'hDEAD_BEEF;
         endcase
         mult32 = mult64[31:0];
-
-        // overflow
-        case (ALU_FUN)
-            DIV: sign_overflow = MAX_SIGNED_NEG;
-            REM: sign_overflow = 0;
-            default: sign_overflow = 32'hDEAD_BEEF;
-        endcase
-
         // reg
         case (ALU_FUN)
             ADD:        reg_ops = srcA + srcB; 
@@ -118,9 +111,15 @@ module ALU(
             SLT:        reg_ops = $signed(srcA) < $signed(srcB); 
             SLTU:       reg_ops = srcA < srcB; 
             LUI:        reg_ops = srcB; 
-            DIV:        reg_ops = srcA == 32'h8000_0000 && srcB == 32'hffff_ffff ? 0 : $signed(srcA) / $signed(srcB);
+            DIV: begin
+                if (srcA == MAX_SIGNED_NEG && srcB == NEG_ONE) reg_ops = 32'h8000_0000;
+                else reg_ops = $signed(srcA) / $signed(srcB);
+            end
             DIVU:       reg_ops = srcA / srcB;
-            REM:        reg_ops = srcA == 32'h8000_0000 && srcB == 32'hffff_ffff ? 0 : $signed(srcA) % $signed(srcB);
+            REM: begin
+                if (srcA == MAX_SIGNED_NEG && srcB == NEG_ONE) reg_ops = 0;
+                else reg_ops = $signed(srcA) % $signed(srcB);
+            end
             REMU:       reg_ops = srcA % srcB;
             default:    reg_ops = 32'hDEAD_BEEF;
         endcase
@@ -133,7 +132,7 @@ module ALU(
             2'b00: result = div_by_0;
             2'b01: result = reg_ops;
             2'b10: result = mult32;
-            2'b11: result = sign_overflow;
+            default: result = 32'hDEAD_BEEF;
         endcase
     end
 

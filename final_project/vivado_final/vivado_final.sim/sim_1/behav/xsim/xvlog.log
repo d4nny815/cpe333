@@ -10,8 +10,6 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/c
 INFO: [VRFC 10-311] analyzing module Pipeline_reg_memory_writeback
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ALU
-WARNING: [VRFC 10-9277] overflow of 32-bit signed integer 2147483648; using -2147483648 instead [Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv:83]
-WARNING: [VRFC 10-9277] overflow of 32-bit signed integer 2147483648; using -2147483648 instead [Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv:84]
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/hazard.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Hazard_Unit
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/immed_gen.sv" into library xil_defaultlib

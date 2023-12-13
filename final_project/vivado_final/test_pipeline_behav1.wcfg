@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="79.834 ns"></ZoomStartTime>
-      <ZoomEndTime time="196.435 ns"></ZoomEndTime>
-      <Cursor1Time time="120.634 ns"></Cursor1Time>
+      <ZoomStartTime time="2,482.334 ns"></ZoomStartTime>
+      <ZoomEndTime time="2,768.335 ns"></ZoomEndTime>
+      <Cursor1Time time="2,616.134 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="173"></NameColumnWidth>
-      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+      <ValueColumnWidth column_width="68"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="101" />
+   <WVObjectSize size="100" />
    <wave_markers>
       <marker time="490000" label="" />
    </wave_markers>
@@ -158,18 +158,21 @@
       <obj_property name="ObjectShortName">srcA[31:0]</obj_property>
       <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_pipeline/my_otter/OTTER_ALU/srcB" type="array">
       <obj_property name="ElementShortName">srcB[31:0]</obj_property>
       <obj_property name="ObjectShortName">srcB[31:0]</obj_property>
       <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_pipeline/my_otter/OTTER_ALU/result" type="array">
       <obj_property name="ElementShortName">result[31:0]</obj_property>
       <obj_property name="ObjectShortName">result[31:0]</obj_property>
       <obj_property name="CustomSignalColor">#FFD700</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/test_pipeline/my_otter/OTTER_ALU/div_by_0" type="array">
       <obj_property name="ElementShortName">div_by_0[31:0]</obj_property>
@@ -178,10 +181,6 @@
    <wvobject fp_name="/test_pipeline/my_otter/OTTER_ALU/reg_ops" type="array">
       <obj_property name="ElementShortName">reg_ops[31:0]</obj_property>
       <obj_property name="ObjectShortName">reg_ops[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_pipeline/my_otter/OTTER_ALU/sign_overflow" type="array">
-      <obj_property name="ElementShortName">sign_overflow[31:0]</obj_property>
-      <obj_property name="ObjectShortName">sign_overflow[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/test_pipeline/my_otter/OTTER_ALU/mult32" type="array">
       <obj_property name="ElementShortName">mult32[31:0]</obj_property>

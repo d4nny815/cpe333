@@ -21,12 +21,11 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 35052
+INFO: [Synth 8-7075] Helper process launched with PID 44876
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
-WARNING: [Synth 8-11057] overflow of 32-bit signed integer 2147483648; using -2147483648 instead [Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv:83]
-WARNING: [Synth 8-11057] overflow of 32-bit signed integer 2147483648; using -2147483648 instead [Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv:84]
+WARNING: [Synth 8-11057] overflow of 32-bit signed integer 2147483648; using -2147483648 instead [Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv:71]
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 826.703 ; gain = 409.734
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 827.152 ; gain = 408.449
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'OTTER_MCU' [Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'mux_2t1_nb' [Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv:31]
@@ -70,39 +69,37 @@ INFO: [Synth 8-6155] done synthesizing module 'Hazard_Unit' (0#1) [Z:/schoolfile
 INFO: [Synth 8-6155] done synthesizing module 'OTTER_MCU' (0#1) [Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv:23]
 WARNING: [Synth 8-7129] Port INTR in module OTTER_MCU is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 933.602 ; gain = 516.633
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 935.273 ; gain = 516.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 933.602 ; gain = 516.633
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 935.273 ; gain = 516.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k70tfbv676-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 933.602 ; gain = 516.633
----------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7k70tfbv676-1
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
-INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
-WARNING: [Synth 8-327] inferring latch for variable 'result_reg' [Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv:56]
-WARNING: [Synth 8-327] inferring latch for variable 'result64_reg' [Z:/schoolfiles/school_files/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv:67]
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 935.273 ; gain = 516.570
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 933.602 ; gain = 516.633
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "Memory:/memory_reg"
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 935.273 ; gain = 516.570
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -127,11 +124,12 @@ Detailed RTL Component Info :
 	             512K Bit	(16384 X 32 bit)          RAMs := 1     
 	             1024 Bit	(32 X 32 bit)          RAMs := 1     
 +---Muxes : 
-	  20 Input   64 Bit        Muxes := 1     
-	   2 Input   32 Bit        Muxes := 8     
+	   2 Input   32 Bit        Muxes := 11    
 	   9 Input   32 Bit        Muxes := 2     
-	  16 Input   32 Bit        Muxes := 1     
+	  16 Input   32 Bit        Muxes := 2     
 	   4 Input   32 Bit        Muxes := 3     
+	   5 Input   32 Bit        Muxes := 2     
+	   6 Input   32 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 3     
 	   3 Input    5 Bit        Muxes := 1     
 	  10 Input    5 Bit        Muxes := 1     
@@ -140,13 +138,11 @@ Detailed RTL Component Info :
 	   2 Input    3 Bit        Muxes := 1     
 	  10 Input    3 Bit        Muxes := 1     
 	  10 Input    2 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 4     
 	   9 Input    1 Bit        Muxes := 1     
 	  10 Input    1 Bit        Muxes := 7     
 	   2 Input    1 Bit        Muxes := 1     
 	   6 Input    1 Bit        Muxes := 1     
-	  25 Input    1 Bit        Muxes := 1     
-	  20 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -164,30 +160,30 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-DSP Report: Generating DSP result640, operation Mode is: A*B.
-DSP Report: operator result640 is absorbed into DSP result640.
-DSP Report: operator result640 is absorbed into DSP result640.
-DSP Report: Generating DSP result640, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator result640 is absorbed into DSP result640.
-DSP Report: operator result640 is absorbed into DSP result640.
-DSP Report: Generating DSP result640, operation Mode is: A*B.
-DSP Report: operator result640 is absorbed into DSP result640.
-DSP Report: operator result640 is absorbed into DSP result640.
-DSP Report: Generating DSP result640, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator result640 is absorbed into DSP result640.
-DSP Report: operator result640 is absorbed into DSP result640.
-DSP Report: Generating DSP result641, operation Mode is: A*B.
-DSP Report: operator result641 is absorbed into DSP result641.
-DSP Report: operator result641 is absorbed into DSP result641.
-DSP Report: Generating DSP result641, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator result641 is absorbed into DSP result641.
-DSP Report: operator result641 is absorbed into DSP result641.
-DSP Report: Generating DSP result641, operation Mode is: A*B.
-DSP Report: operator result641 is absorbed into DSP result641.
-DSP Report: operator result641 is absorbed into DSP result641.
-DSP Report: Generating DSP result641, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator result641 is absorbed into DSP result641.
-DSP Report: operator result641 is absorbed into DSP result641.
+DSP Report: Generating DSP mult640, operation Mode is: A*B.
+DSP Report: operator mult640 is absorbed into DSP mult640.
+DSP Report: operator mult640 is absorbed into DSP mult640.
+DSP Report: Generating DSP mult640, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult640 is absorbed into DSP mult640.
+DSP Report: operator mult640 is absorbed into DSP mult640.
+DSP Report: Generating DSP mult640, operation Mode is: A*B.
+DSP Report: operator mult640 is absorbed into DSP mult640.
+DSP Report: operator mult640 is absorbed into DSP mult640.
+DSP Report: Generating DSP mult640, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult640 is absorbed into DSP mult640.
+DSP Report: operator mult640 is absorbed into DSP mult640.
+DSP Report: Generating DSP mult641, operation Mode is: A*B.
+DSP Report: operator mult641 is absorbed into DSP mult641.
+DSP Report: operator mult641 is absorbed into DSP mult641.
+DSP Report: Generating DSP mult641, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult641 is absorbed into DSP mult641.
+DSP Report: operator mult641 is absorbed into DSP mult641.
+DSP Report: Generating DSP mult641, operation Mode is: A*B.
+DSP Report: operator mult641 is absorbed into DSP mult641.
+DSP Report: operator mult641 is absorbed into DSP mult641.
+DSP Report: Generating DSP mult641, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator mult641 is absorbed into DSP mult641.
+DSP Report: operator mult641 is absorbed into DSP mult641.
 WARNING: [Synth 8-7129] Port INTR in module OTTER_MCU is either unconnected or has no load
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
@@ -205,40 +201,8 @@ INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of 
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "OTTER_MCU/OTTER_MEMORY/memory_reg"
-WARNING: [Synth 8-3332] Sequential element (result64_reg[63]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[62]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[61]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[60]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[59]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[58]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[57]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[56]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[55]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[54]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[53]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[52]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[51]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[50]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[49]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[48]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[47]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[46]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[45]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[44]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[43]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[42]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[41]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[40]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[39]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[38]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[37]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[36]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[35]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[34]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[33]) is unused and will be removed from module ALU.
-WARNING: [Synth 8-3332] Sequential element (result64_reg[32]) is unused and will be removed from module ALU.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1220.059 ; gain = 803.090
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1200.609 ; gain = 781.906
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -285,7 +249,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1220.059 ; gain = 803.090
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1209.453 ; gain = 790.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -312,38 +276,6 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[31]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[30]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[29]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[28]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[27]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[26]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[25]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[24]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[23]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[22]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[21]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[20]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[19]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[18]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[17]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[16]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[15]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[14]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[13]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[12]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[11]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[10]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[9]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[8]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[7]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[6]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[5]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[4]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[3]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[2]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[1]) is unused and will be removed from module OTTER_MCU.
-WARNING: [Synth 8-3332] Sequential element (OTTER_ALU/result_reg[0]) is unused and will be removed from module OTTER_MCU.
 INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
@@ -377,7 +309,7 @@ INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_14
 INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance OTTER_MEMORY/memory_reg_bram_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1220.059 ; gain = 803.090
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1213.664 ; gain = 794.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -395,37 +327,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1221.617 ; gain = 804.648
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1228.383 ; gain = 809.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1221.617 ; gain = 804.648
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1228.383 ; gain = 809.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1221.617 ; gain = 804.648
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1228.383 ; gain = 809.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1221.617 ; gain = 804.648
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1228.383 ; gain = 809.680
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1221.617 ; gain = 804.648
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1228.406 ; gain = 809.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1221.617 ; gain = 804.648
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1228.406 ; gain = 809.703
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -456,65 +388,63 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |BUFG     |     2|
+|1     |BUFG     |     1|
 |2     |CARRY4   |  1259|
 |3     |DSP48E1  |     8|
-|4     |LUT1     |   402|
-|5     |LUT2     |   382|
-|6     |LUT3     |  4173|
-|7     |LUT4     |   316|
-|8     |LUT5     |   520|
-|9     |LUT6     |   841|
+|4     |LUT1     |   408|
+|5     |LUT2     |   379|
+|6     |LUT3     |  4160|
+|7     |LUT4     |   370|
+|8     |LUT5     |   495|
+|9     |LUT6     |   942|
 |10    |MUXF7    |   128|
 |11    |MUXF8    |    64|
 |12    |RAM32M   |    10|
 |13    |RAM32X1D |     4|
 |14    |RAMB36E1 |    16|
-|15    |FDRE     |   609|
-|16    |LD       |    32|
-|17    |IBUF     |    34|
-|18    |OBUF     |    65|
+|15    |FDRE     |   610|
+|16    |IBUF     |    34|
+|17    |OBUF     |    65|
 +------+---------+------+
 
 Report Instance Areas: 
 +------+---------------------+------------------------------+------+
 |      |Instance             |Module                        |Cells |
 +------+---------------------+------------------------------+------+
-|1     |top                  |                              |  8865|
-|2     |  OTTER_ALU          |ALU                           |  5859|
+|1     |top                  |                              |  8953|
+|2     |  OTTER_ALU          |ALU                           |  5523|
 |3     |  OTTER_MEMORY       |Memory                        |   546|
 |4     |  OTTER_reg_file     |RegFile                       |    14|
 |5     |  Program_Counter    |reg_nb                        |    57|
 |6     |  branch_conditional |branch_cond_gen               |    11|
-|7     |  pipeline_reg_D_E   |Pipeline_reg_decode_execute   |   939|
-|8     |  pipeline_reg_E_M   |Pipeline_reg_execute_memory   |   982|
-|9     |  pipeline_reg_F_D   |Pipeline_reg_fetch_decode     |   153|
+|7     |  pipeline_reg_D_E   |Pipeline_reg_decode_execute   |  1385|
+|8     |  pipeline_reg_E_M   |Pipeline_reg_execute_memory   |   960|
+|9     |  pipeline_reg_F_D   |Pipeline_reg_fetch_decode     |   154|
 |10    |  pipeline_reg_M_W   |Pipeline_reg_memory_writeback |   169|
 +------+---------------------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1221.617 ; gain = 804.648
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1228.406 ; gain = 809.703
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 71 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1221.617 ; gain = 804.648
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1221.617 ; gain = 804.648
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1228.406 ; gain = 809.703
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1228.406 ; gain = 809.703
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.084 . Memory (MB): peak = 1233.664 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1521 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.081 . Memory (MB): peak = 1240.457 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1489 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 46 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1261.359 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1267.145 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 46 instances were transformed.
-  LD => LDCE: 32 instances
+  A total of 14 instances were transformed.
   RAM32M => RAM32M (inverted pins: WCLK) (RAMD32(x6), RAMS32(x2)): 10 instances
   RAM32X1D => RAM32X1D (inverted pins: WCLK) (RAMD32(x2)): 4 instances
 
-Synth Design complete, checksum: b7a42d98
+Synth Design complete, checksum: 1230a43e
 INFO: [Common 17-83] Releasing license: Synthesis
-118 Infos, 71 Warnings, 0 Critical Warnings and 0 Errors encountered.
+118 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1261.359 ; gain = 851.652
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1267.145 ; gain = 856.152
 INFO: [Common 17-1381] The checkpoint 'Z:/schoolfiles/school_files/cpe333/final_project/vivado_final/vivado_final.runs/synth_1/OTTER_MCU.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file OTTER_MCU_utilization_synth.rpt -pb OTTER_MCU_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Dec  5 04:33:01 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 12 15:29:44 2023...

@@ -1,25 +1,60 @@
 #-----------------------------------------------------------
-# Vivado v2022.1 (64-bit)
-# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
-# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Wed Dec  6 13:48:35 2023
-# Process ID: 15664
-# Current directory: C:/Users/ryana/CPE333/cpe333/final_project/vivado_final
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22792 C:\Users\ryana\CPE333\cpe333\final_project\vivado_final\vivado_final.xpr
-# Log file: C:/Users/ryana/CPE333/cpe333/final_project/vivado_final/vivado.log
-# Journal file: C:/Users/ryana/CPE333/cpe333/final_project/vivado_final\vivado.jou
-# Running On: LAPTOP-I3MDA0LJ, OS: Windows, CPU Frequency: 1996 MHz, CPU Physical cores: 8, Host memory: 16497 MB
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Dec 12 15:24:38 2023
+# Process ID: 30036
+# Current directory: Z:/schoolfiles/school_files/cpe333/final_project/vivado_final
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent35520 Z:\schoolfiles\school_files\cpe333\final_project\vivado_final\vivado_final.xpr
+# Log file: Z:/schoolfiles/school_files/cpe333/final_project/vivado_final/vivado.log
+# Journal file: Z:/schoolfiles/school_files/cpe333/final_project/vivado_final\vivado.jou
+# Running On: RaijinPC, OS: Windows, CPU Frequency: 4200 MHz, CPU Physical cores: 32, Host memory: 33457 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/ryana/CPE333/cpe333/final_project/vivado_final/vivado_final.xpr
-create_project fp333 C:/Users/ryana/CPE333/cpe333/final_project/fp333 -part xc7k70tfbv676-1
-add_files -norecurse {C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/mux_2t1_nb.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/mux_4t1_nb.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/pipeline_reg_fetch_decode.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/register_nb.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/reg_file.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/alu.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Decoder.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_memory_writeback.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Branch_cond_gen.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_execute_memory.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/hazard.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/Pipeline_reg_decode_execute.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_mcu_pipeline.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/immed_gen.sv C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_mcu/otter_memory.sv}
+open_project Z:/schoolfiles/school_files/cpe333/final_project/vivado_final/vivado_final.xpr
 update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-add_files -norecurse C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/otter_memory.mem
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse C:/Users/ryana/CPE333/cpe333/final_project/OtterPipelineFiles/test_pipeline.sv
-update_compile_order -fileset sim_1
-update_compile_order -fileset sim_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
 launch_simulation
+open_wave_config Z:/schoolfiles/school_files/cpe333/final_project/vivado_final/test_pipeline_behav1.wcfg
 source test_pipeline.tcl
+run 2 us
+run 2 us
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+relaunch_sim
+relaunch_sim
+run 2 us
+run 2 us
+relaunch_sim
+relaunch_sim
+run 2 us
+run 2 us
+save_wave_config {Z:/schoolfiles/school_files/cpe333/final_project/vivado_final/test_pipeline_behav1.wcfg}
+relaunch_sim
+run 2 us
+run 2 us
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+relaunch_sim
+run 2 us
+run 2 us
+relaunch_sim
+relaunch_sim
+run 2 us
+run 2 us
+run 2 us
+relaunch_sim
+run 4 us
+relaunch_sim
+run 4 us
+run 4 us
+relaunch_sim
+run 4 us
+relaunch_sim
+relaunch_sim
+relaunch_sim
+run 4 us

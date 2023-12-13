@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1701779548" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/OTTER_MCU.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1702423750" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/OTTER_MCU.dcp">
   <File Type="PA-TCL" Name="OTTER_MCU.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="OTTER_MCU_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="OTTER_MCU_reports.tcl"/>
@@ -149,9 +149,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
